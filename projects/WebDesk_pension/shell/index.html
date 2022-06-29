@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>shell://</title>
+    <link rel="stylesheet" href="../styles/base.css">
+    <link rel="stylesheet" href="../styles/shell.css">
+    <script src="../csjs/index.js"></script>
+    <style>
+    body {
+        background-color: black;
+    }
+    </style>
+    <script>
+    function cmd() {
+        var commandt = document.getElementById('input').value
+        var command = commandt.toLowerCase()
+        if (command == 'logout') {
+            sessionStorage.removeItem('logged')
+            window.top.location.reload(true)
+            document.getElementById('output').innerHTML = document.getElementById('output').innerHTML + "<br>logout"
+        }
+        else if (command == '$style > -s color') {
+            var hex = prompt('Enter color code or name', localStorage.getItem('color'))
+            localStorage.setItem('color', hex)
+            document.getElementById('output').innerHTML = document.getElementById('output').innerHTML + "<br>chnage -color"
+            window.top.location.reload()
+        }
+        else if (command == '$root > -s password') {
+                var newpsw = prompt('Enter new password')
+                localStorage.setItem('unlkepsw', btoa(btoa(btoa(newpsw))))
+                localStorage.setItem('nulkepsw', btoa(btoa(btoa(btoa(newpsw)))))
+                document.getElementById('output').innerHTML = document.getElementById('output').innerHTML + "<br>change -password : success"
+        }
+        else if (command == 'b64') {
+            var cont = btoa(prompt())
+            makeFile(cont, 'utf-8')
+            document.getElementById('output').innerHTML = document.getElementById('output').innerHTML + "<br>"+cont
+        }
+        else if (command == 'system.config = null => delete') {
+            sublogexdelrun()
+        }
+        else if (command == 'exit') {
+            window.open(history.back(), 'window')
+        }
+        else if (command == '-a close') {
+            window.open('../desktop.html', 'window')
+            window.top.location.reload(true)
+        }
+        else if (command == 'install') {
+            var burl = prompt('Enter Install-URL', btoa('https://example.com'))
+            localStorage.setItem('installed', localStorage.getItem('installed').replace(null, "")+("<a href="+atob(burl)+"><img src=../favicons/app.png class=launcher></a>"))
+            window.top.location.reload(true)
+        }
+        else {
+            document.getElementById('output').innerHTML = document.getElementById('output').innerHTML + "<br><font color=red>Bad command</font>"
+        }
+    }
+    </script>
+    <script>
+        function sizer() {
+        var txt = document.getElementById('input').value
+        var leg = txt.length * 20 - 30
+        document.getElementById('input').style.width = leg+'px'
+    }
+    </script>
+</head>
+<body>
+    <div class="title" style="margin-bottom: 0px; background-color: rgb(37, 37, 37); color: rgb(0, 255, 98);">shell://index.html</div>
+<!-- Notes: Neues CSS, Div mit lines und texteingabe feld class=!!; Js if== => -->
+<div class="output" id="output" style="font-family: monospace; font-size: 14pt;">
+
+</div>
+<input type="text" name="" id="input" placeholder="input" class="input" style="border-color: lime; font-family: monospace; font-size: 14pt;" onkeydown="sizer()" onchange="cmd()" multiple>
+</body>
+</html>

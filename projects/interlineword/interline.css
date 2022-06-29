@@ -1,0 +1,47 @@
+textarea.text {
+    border-width: 1px;
+    border-color: rgb(110, 110, 110);
+    border-style: solid;
+    border-radius: 5px;
+    padding: 10px;
+    resize: none;
+    margin: 5px;
+    height: 29.7cm;
+    width: 21.0cm;
+    font-family: Poppins, 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 14pt;
+    letter-spacing: 0.1cm;
+    line-break: loose;
+    word-wrap: break-word;
+}
+
+textarea.small {
+    border-width: 1px;
+    border-color: rgb(110, 110, 110);
+    border-style: solid;
+    border-radius: 5px;
+    padding: 10px;
+    resize: none;
+    margin: 5px;
+    height: 90vh;
+    width: 90vw;
+    font-family: Poppins, 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 14pt;
+    letter-spacing: 0.1cm;
+    line-break: loose;
+    word-wrap: break-word;
+}
+
+
+div.page {
+    background-color: #ececec;
+}
+
+div.name {
+    height: 14pt;
+    padding: 10px;
+    background-color: #08e79d;
+    font-size: 12pt;
+    color: #0b4128;
+    font-weight: 500;
+}

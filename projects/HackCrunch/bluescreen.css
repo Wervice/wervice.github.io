@@ -1,0 +1,16 @@
+body {
+    background-color: none;
+    color: rgb(255, 0, 0);
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 14pt;
+    font-weight: 100;
+    cursor: none;
+    padding: 10px;
+    margin: 0px;
+    height: 3cm;
+}
+
+hr {
+    border-style: solid;
+    border-color: red;
+}

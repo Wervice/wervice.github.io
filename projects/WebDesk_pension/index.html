@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html id="page">
+
+<head>
+    <title>WebDesk</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="manifest" href="manifest.webmanifest">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="application-name" content="WebDesk">
+    <meta name="apple-mobile-web-app-title" content="WebDesk">
+    <meta name="theme-color" content="#ebebeb">
+    <meta name="msapplication-navbutton-color" content="#efefef">
+    <script src="csjs/index.js"></script>
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <script src="/projects/WebDesk/script/nocontext.js"></script>
+
+    <script> // Show Prompt Script
+        function showpwprompt() {
+            document.getElementById('passwordprompt').hidden = false;
+        }
+    </script>
+    <script> // Onloader
+        sessionStorage.removeItem('logged')
+        if (localStorage.getItem('welcome') == true) {
+            localStorage.clear()
+            sessionStorage.clear()
+        }
+    </script>
+    <script>
+        function fullScreen(element) {
+            if (element.requestFullscreen) {
+                element.requestFullscreen();
+            } else if (element.webkitrequestFullscreen) {
+                element.webkitRequestFullscreen();
+            } else if (element.mozRequestFullscreen) {
+                element.mozRequestFullscreen();
+            }
+        }
+
+        var html = document.documentElement;
+    </script>
+    <style>
+        /* Design */
+
+
+        @keyframes lh {
+            0% {}
+
+            50% {
+                filter: brightness(70%);
+            }
+
+            100% {}
+        }
+
+        .infot {
+            color: rgb(255, 255, 255);
+            width: calc(100vw - 10px);
+            height: 20px;
+            background-color: rgb(0, 102, 153);
+            padding-top: 10px;
+            padding-bottom: 10px;
+            padding-left: 10px;
+            font-size: 18px;
+            border-style: solid;
+            border-width: 0px;
+            cursor: default;
+        }
+
+
+
+        .menu {
+            width: 80vw;
+        }
+
+        .content {
+            margin: 10px;
+        }
+
+        .folder {
+            height: 6.5vh;
+            width: 6.5vh;
+            background-size: cover;
+            background-position: center;
+            cursor: pointer;
+        }
+
+        .folder:hover {
+            animation-name: btnbumb;
+            animation-duration: 1s;
+        }
+
+        @keyframes btnbumb {
+            0% {}
+
+            50% {
+                filter: drop-shadow(0 0 0.25rem rgba(0, 0, 0, 0.5));
+            }
+
+            100% {}
+        }
+
+        .blue {
+            background-image: url(folder_blue.png);
+        }
+
+        .folderbox {
+            width: 5.5vw;
+            font-size: 15px;
+            color: white;
+            text-shadow: 0px 0px 5px black;
+            cursor: pointer;
+            min-width: 80px;
+            max-width: 250px;
+        }
+
+        .invalid {
+            filter: grayscale(100%);
+        }
+
+
+        img.start {
+            border-radius: 0px;
+            height: 40px;
+            width: 40px;
+            margin-right: 20px;
+            margin-bottom: 5px;
+            margin-left: 10px;
+            filter: opacity(80%);
+        }
+
+        .program {
+            width: 5.5vw;
+            font-size: 15px;
+            color: white;
+            text-shadow: 0px 0px 5px black;
+            cursor: pointer;
+            min-width: 80px;
+            max-width: 250px;
+        }
+
+        .seno {
+            background-image: url(favicons/sessionNotes.png);
+        }
+
+        .idesk {
+            width: 100vw;
+            height: calc(100vh - 70px);
+        }
+    </style>
+    <script> // Desktop Script
+        function folder_welcome() {
+            welcome = window.open('welcome/index.html', "/welcome", "left=80,top=150,width=490,height=450")
+        }
+
+        function program_tabnum() {
+            tabnum = window.open('Formlary/index.html', "/numform", "left=80,top=150,width=950,height=700")
+        }
+
+        function program_flysky() {
+            flysky = window.open('FlySheeter/index.html', "/flysky", "left=80,top=150,width=800,height=700")
+        }
+
+        function program_execu() {
+            execu = window.open('FinancesNoticeBoard/index.html', "/watercheck", "left=80,top=150,width=800,height=700")
+        }
+
+        function program_letter() {
+            letter = window.open('LetterWizzzard/index.html', "/watercheck", "left=80,top=150,width=800,height=700")
+        }
+
+        function program_notes() {
+            cmd = prompt("Enter: nw or gt");
+            if (cmd == "nw") {
+                msg = prompt("Message");
+                sessionStorage.setItem("notes:", sessionStorage.getItem("notes:") + "\n---------------------\n" + msg + "\n");
+                alert(msg + " saved.")
+            }
+
+            else {
+                alert(sessionStorage.getItem("notes:"))
+            }
+            run = window.open("run.html", '', "top=100,left=200,width=500,height=150")
+            run.close()
+
+        }
+
+        function run() {
+            runw = window.open("run.html", '', "top=100,left=200,width=500,height=150")
+        }
+
+        function keysig() {
+            console.log("Running via Key.")
+            var audio = new Audio(
+                'beep.mp3');
+            audio.play();
+        }
+    </script>
+
+    <script> // On Try Login
+
+        function ontlogin() {
+            var epw = document.getElementById('password').value;
+            if ((epw == atob(atob(atob(localStorage.getItem('unlkepsw'))))) && (atob(atob(atob(atob(localStorage.getItem('nulkepsw'))))))) {
+                document.getElementById('secure').hidden = false;
+                document.getElementById('passwordprompt').hidden = true;
+                sessionStorage.setItem('logged', true)
+                if (localStorage.getItem('unlkepsw') == null || localStorage.getItem('unlkepsw') == "") {
+                    localStorage.clear()
+                    sessionStorage.clear()
+                }
+            }
+            else {
+                window.stop()
+                document.documentElement.style.filter = "opacity(0%)"
+                document.documentElement.hidden = true;
+                location.href = "locked.html"
+                location.replace('about:blank')
+            }
+
+        }
+
+        if (localStorage.getItem('unlkepsw') == null || localStorage.getItem('unlkepsw') == "") {
+            localStorage.clear()
+            sessionStorage.clear()
+        }
+
+        function kauth() {
+            var epw = document.getElementById('password').value;
+            if ((epw == atob(atob(atob(localStorage.getItem('unlkepsw'))))) && (atob(atob(atob(atob(localStorage.getItem('nulkepsw'))))))) {
+                document.getElementById('password').blur()
+                document.getElementById('secure').hidden = false;
+                document.getElementById('passwordprompt').hidden = true;
+                sessionStorage.setItem('logged', true)
+                if (localStorage.getItem('unlkepsw') == null || localStorage.getItem('unlkepsw') == "") {
+                    localStorage.clear()
+                    sessionStorage.clear()
+                }
+            }
+        }
+    </script>
+    <script> // Log Out
+        function logout() {
+            sessionStorage.removeItem('logged')
+            location.reload(true)
+        }
+    </script>
+    <script>
+        window.onload = function () {
+            document.getElementById('load').hidden = true;
+        }
+    </script>
+</head>
+
+<body lang="en" translate="no" id="site">
+    <div class="materless" id="load" style="height: 3cm; padding: 10px;">
+        WebDesk is loading...<br>This may take some seconds<br>
+        ---------------------------------------------------
+    </div>
+    <div class="materless" id="passwordprompt" hidden>
+
+        <div class="title" style="margin-bottom: 0px;"><a onclick=""><button class="close"
+                    style="background-color: silver;"></button></a> <button class="close"
+                style="background-color: silver;"></button>
+            <button class="close" style="background-color: silver;"></button>&ThickSpace;Log In
+        </div><br><br>
+        <div align="center">
+            <img src="favicons/user.png" alt="" srcset="" height="90" width="90" class="account">
+        </div>
+        <h2 align="center" style="margin-left: 0px; font-weight: normal;" id="username">username</h2>
+        <input type="password" onkeyup="kauth()" name="" id="password" tabindex="1" placeholder="pasword"><br>
+        <button class="ui" style="margin-left: 10px;" tabindex="2" onclick="ontlogin()">Confirm</button>
+        <br><br><br><br><br>
+
+    </div>
+
+
+    <script>
+        document.getElementById('username').innerHTML = atob(localStorage.getItem('unlkeuse'))
+    </script>
+
+    <noscript>
+        <div style="visibility: hidden;">
+    </noscript>
+    <div id="secure" hidden="true">
+        <iframe src="desktop.html" frameborder="0" class="idesk" name="window"
+            style="background-color: white; border: 0px;">
+        </iframe>
+        <div class="taskbar" align="left">
+            <img src="favicons/lock.png" onclick=logout(); class="launcher">
+            <a href="desktop.html" target="window"><img src="favicons/desktop.png" class="launcher"
+                    title="Close everything" oncontextmenu="location.reload(true)" tabindex="3"></a>
+            <a href="Formlary/index.html" target="window"><img src="favicons/tabnum.png" class="launcher"
+                    tabindex="4"></a>
+            <a href="FlySheeter/index.html" target="window"><img src="favicons/fylersky.png" class="launcher"
+                    tabindex="5"></a>
+            <a href="ListOrdner/index.html" target="window"><img src="favicons/ListOrdner.png" class="launcher"
+                    tabindex="6"></a>
+            <a href="FinancesNoticeBoard/index.html" target="window"><img src="favicons/ExecuBoard.png" class="launcher"
+                    tabindex="7"></a>
+            <a href="System/index.html" target="window"><img src="favicons/settings.png" class="launcher"
+                    tabindex="8"></a>
+            <a href="pnotes/index.html" target="window"><img src="favicons/pnotes.png" class="launcher"
+                    tabindex="9"></a>
+            <a href="shell/index.html" target="window"><img src="favicons/shell.png" class="launcher" tabindex="10"></a>
+            <a href="qm/index.html" target="window"><img src="favicons/quickmenu.png" class="launcher"
+                    tabindex="10"></a>
+            <a href="fycode/index.html" target="window"><img src="favicons/fcode.png" class="launcher"
+                    tabindex="10"></a>
+            <a href="calendar/index.html" target="window"><img src="favicons/calendar.png" class="launcher"
+                    tabindex="10"></a>
+            <img src="favicons/fullscreen.png" class="launcher" tabindex="10"
+                onclick="fullScreen(html); this.hidden = true;">
+        </div>
+        <noscript>
+    </div></noscript>
+    <script>
+        if (localStorage.getItem('welcome') == null) {
+            window.open('privacy.html', 'window')
+        }
+    </script>
+    </div>
+    <script>
+        if (localStorage.getItem("unlkepsw") == "" || localStorage.getItem("unlkepsw") == null) {
+            var lsess = true
+            document.getElementById('secure').hidden = false;
+        }
+    </script>
+    <script>
+        if (localStorage.getItem('unlkepsw') != null) {
+            if (sessionStorage.getItem('logged') == null) {
+                showpwprompt()
+            }
+            else {
+                document.getElementById('secure').hidden = false;
+
+            }
+        }
+    </script>
+    <script>
+        if (localStorage.getItem('color') != null) {
+            document.documentElement.style.backgroundColor = localStorage.getItem('color')
+        }
+        else {
+            document.documentElement.style.backgroundColor = 'dodgerblue'
+        }
+    </script>
+
+
+    <script>
+        if (localStorage.getItem('unlkepsw') != atob(localStorage.getItem('nulkepsw')) && localStorage.getItem('unlkepsw') != null && localStorage.getItem('nulkepsw') != null) {
+            location.replace('unnu.html')
+        }
+    </script>
+</body>
+
+</html>

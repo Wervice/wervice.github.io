@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Settings</title>
+    <script src="../csjs/index.js"></script>
+    <script src="../script/execu.js"></script>
+    <script>
+        function fnb_cleardata() {
+            localStorage.removeItem("badge")
+            localStorage.removeItem("badge")
+            localStorage.removeItem("sales")
+            localStorage.removeItem("expenditures")
+            localStorage.removeItem("coll")
+            localStorage.removeItem("jobs")
+            localStorage.removeItem("mjobs")
+            setContent("fnbclear", "Finish")
+        }
+
+        function check(id) {
+            if (document.getElementById(id).attributes.checked == false)
+                document.getElementById(id).attributes.checked = true;
+            else {
+                document.getElementById(id).attributes.checked = false;
+            }
+        }
+        function col(id) {
+            localStorage.setItem('qls', document.getElementById(id).attributes.checked)
+            if (document.getElementById(id).attributes.checked == true)
+                document.getElementById('ql').style.backgroundColor = "#00FF99"
+            else {
+                document.getElementById('ql').style.backgroundColor = "white"
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="../styles/base.css">
+</head>
+
+<body>
+
+    <h1>Settings</h1>
+    <div class="seperfat"></div>
+    <h2>User Settings</h2>
+    <button class="ui" onclick="check('ql'); col('ql');" id="ql" style="margin-left: 20px;">Quick load</button>
+    <h2>FinancesNoticeBoard</h2>
+    <button class="ui" onclick="fnb_cleardata()" id="fnbclear" style="margin-left: 20px;">Delete Data</button>
+
+</body>
+
+</html>

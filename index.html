@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>Wervice - Software solutions</title>
+    <link rel="stylesheet" href="styles/global.css" type="text/css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="keywords" content="Wervice, Webapps, Wervice Webapps, Wervice">
+    <link rel="shortcut icon" href="./images/favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="./images/favicon.png" type="image/png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        div.tip {
+            background-color: rgb(255, 153, 0);
+            color: rgb(0, 0, 0);
+            padding: 10px;
+            font-size: large;
+        }
+
+        button.docs {
+            border-width: 0px;
+            border-radius: 0.2cm;
+            padding: 0.2cm;
+            width: calc(90vw - 3cm);
+            max-width: 10cm;
+            background: linear-gradient(90deg, rgba(255, 0, 202, 1) 0%, rgba(0, 159, 255, 1) 100%);
+            margin: 1cm;
+            font-size: large;
+            color: white;
+            box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.25);
+        }
+
+        button.docs:focus {
+            animation-name: glamour;
+            animation-duration: 0.5s;
+            animation-fill-mode: forwards;
+        }
+
+        @keyframes glamour {
+            0% {}
+
+            50% {
+                margin-right: -25px;
+            }
+
+            100% {}
+        }
+
+        button.herofocus {
+            border-radius: 5px;
+            border-width: 0px;
+            border-color: rgb(0, 0, 0);
+            background-color: dodgerblue;
+            padding: 7px;
+            color: white;
+            font-size: larger;
+            min-width: 200px;
+            margin: 5px;
+        }
+
+        button.herofocus:hover {
+            animation-name: focus;
+            animation-duration: 0.7s;
+        }
+
+        button.herofocus:focus {
+            background-color: rgb(24, 108, 192);
+        }
+
+        button.herodocs {
+            border-radius: 5px;
+            border-width: 2px;
+            border-color: dodgerblue;
+            background-color: #00000000;
+            padding: 5px;
+            color: dodgerblue;
+            font-size: larger;
+            min-width: 200px;
+            margin: 5px;
+        }
+
+        button.herodocs:hover {
+            animation-name: hdocs;
+            animation-duration: 0.7s;
+        }
+
+        @keyframes focus {
+            0% {}
+
+            50% {
+                background-color: rgb(12, 113, 214);
+            }
+
+            100% {}
+        }
+
+        @keyframes hdocs {
+            0% {}
+
+            50% {
+                background-color: rgb(210, 232, 255)
+            }
+
+            100% {}
+        }
+
+        a.h {
+            color: #0a6cdd;
+            text-decoration-color: black;
+            text-decoration-line: underline;
+            text-decoration-style: dashed;
+        }
+
+        a.h:hover {
+            color: #0a6cdd;
+            text-decoration-color: #0a6cdd;
+        }
+
+        a.h:focus {
+            color: red;
+        }
+    </style>
+    <script>
+        console.log('☕🌐☕😎☕☕\n☕😴☕😎☕☕☕☕\n☕😴☕☕☕😎☕☕🌐\n☕😴☕😎☕☕☕☕\n☕😎☕🌐☕☕\n😎☕\n😎☕\n😎☕\n😎☕\n😎☕\n😎☕\n\nHi 😀\n Enter developerassistant() to run the assistant for developers.')
+        console.log('Wervice | Visit: https://github.com/Wervice/Wervice')
+        function developerassistant() {
+            console.log('Hi, nice to see you! :-)')
+            console.log('What do you want to do?\n- Copy a picture: Enter allowContext()')
+        }
+        function allowContext() {
+            window.oncontextmenu = function () {
+                console.log('You may write: C.Volke, Wervice; Wervice.github.io\n Thank you for your fairness.')
+                return true;
+            }
+        }
+    </script>
+    <script src="./projects/Whitespace/database.js"></script>
+    <script src="./tracking/like.js"></script>
+    <style>
+        button.code:focus {
+            background-color: #efefef;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="terminal" hidden></div>
+    <table class="nav" style="width: 100%; height: 50px;" cellpadding="0" cellspacing="0" id="nav">
+        <tr>
+            <td style="font-size: x-large;">
+                <a href="/index.html"><img src="/images/logo-tagline.png" height="45" alt="Wervice"></a>
+            </td>
+            <td style="font-size: small;">
+                <div align="right">
+                    <a href="https:\\www.github.com\Wervice">
+                        <button class="BarButton">Fork code</button>
+                    </a>&nbsp;|&nbsp;<a href="\docs\explain\index.html">
+                        <button class="BarButton">Docs</button>
+                    </a>
+                </div>
+            </td>
+        </tr>
+    </table>
+    <div class="cover">
+        <div style="height:71px;"></div>
+        <div style="margin:10px;" align="center">
+            <h1>Wervice</h1>
+            <img src="hero.png" alt="image" style="width:20cm;max-width:90vw;"><br>
+            <div style="width: 70vw; min-width: 1cm; font-size: calc(2.0vh + 5px);" align="justify"><br>
+                Find free <a href="#opensource" class="h">open source</a> <a href="#apps" class="h">applications</a> for
+                business and home. The programs use modern <a href="#techs" class=h>web technologies</a> and common
+                platforms.
+                The applications will continue to be developed. And most times you do not have to install any apps or
+                programs on your
+                laptop or tablet because the apps work with most browsers.
+            </div>
+        </div>
+    </div>
+    <div class="gray" algin="center" id="apps"
+        style="text-align: center; height: 80vh; min-height: 600px; max-width: 700; padding:40px;"><br><br><br><br><br>
+        <h2 style="margin-top: 50px;" class="bigger">
+            Check this out...
+        </h2>
+        <div id="pwas">
+            <font style="font-size: large;font-family:Poppins-Medium;">Wervice Whitespace - Online Desktop Emulator
+            </font><br><br>
+            <img src="./images/whitespace.WebP" alt="This is an simple vecor illustration of Wervice whitespace."
+                style="width: 25vw; min-width: 5cm;">
+            <br><br>
+            <div style="padding-left: 5vw; padding-right: 5vw;font-family:Poppins;" align="center">
+                Wervice Whitespace is an cross-plattfotm desktop system for,<br> that works im any browser. It should
+                help <br>
+                people, who only have an old computer or a tablet<br> and need fast-working and simple-running
+                applications. <br>
+            </div>
+            <br><button class="ui" onclick="window.open('/projects/Whitespace/login.html')" style="width: 5cm;">Launch
+                Whitespace</button>
+        </div>
+    </div>
+    <br>
+    <br>
+    <br>
+    <div class="gray" algin="center"
+        style="text-align: center; height: 65vh; min-height: 600px; max-width: 650; padding:40px;">
+        <font style="font-size: large;font-family:Poppins-Medium;">No To Go - Private messages</font><br><br>
+        <img src="./images/notogo.WebP" alt="No To Go" style="width: 25vw; min-width: 5cm;"><br><br>
+        <font style="font-family: Poppins;">Encrypt your social messages easily. Your recipient has to decrypt<br> them
+            first. E.g. when your messages are shown on your friend's start<br>
+            screen, no one can read them <i>to go</i>. Use the free Webapp to encrypt<br> and decrypt them with only a
+            few short taps.</font> <br>
+        <br>
+        <button class="ui" onclick="window.open('projects/notogo/index.html', 'blank_ ')">Open NoToGo</button>
+    </div>
+    <div class="gray" algin="center"
+        style="text-align: center; height: 65vh; min-height: 600px; max-width: 650; padding:40px;">
+        <font style="font-size: large;font-family:Poppins-Medium;">Interline Word - Text Editor</font><br><br>
+        <img src="./images/writer.webp" alt="" style="width: 25vw; min-width: 5cm;"><br><br>
+        <font style="font-family: Poppins;">Write, print and share text everywhere on a tablet, laptop or
+            desktop.<br>Use InterlineText to write your text easily.<br>Connect InterlineText simple with InterlineCode
+            or Wervice Dashboard.</font> <br>
+        <br>
+        <button class="ui" onclick="window.open('projects/interlineword/index.html', 'blank_ ')">Start Interline
+            Word</button>
+    </div>
+    </div>
+    <div class="gray" algin="center"
+        style="text-align: center; height: calc(65vh - 4cm); min-height: 400px; padding:40px;">
+        <font style="font-size: large;font-family:Poppins-Medium;">Workspace Files - Manage your WS-Files</font><br><br>
+        <img src="./images/filemanager.WebP" alt="" style="width: 25vw; min-width: 5cm;"><br><br>
+        <font style="font-family: Poppins;">Rename, delete and open your Webspace Files.<br>Use WS Files to manage your
+            Webspace files and your Webspace Registry.
+            <br>
+            <button class="ui" onclick="window.open('projects/wsfiles/index.html', 'blank_2')">Start WS-Files</button>
+    </div>
+
+
+
+    <div class="gray" algin="center" style="text-align: center; height: calc(65vh - 4cm); min-height: 400px; padding:40px;" id="opensource">
+        <font style="font-size: large;font-family:Poppins-Medium;">Wervice Open Source - Reuse & Fork the code</font><br><br>
+        <img src="./images/osource.png" alt="" style="width: 25vw; min-width: 5cm;"><br><br>
+        <font style="font-family: Poppins;">Are you interested in the source code of the apps and tools?<br> You can read, copy and edit the code on GitHub.<br>
+            <button class="ui" onclick="location.replace('https:\/\/github.com/Wervice')">Visit the page</button>
+    </div>
+        <div class="gray" algin="center" style="text-align: center; height: calc(65vh - 4cm); min-height: 400px; padding:40px;"
+            id="techs">
+            <font style="font-size: large;font-family:Poppins-Medium;">The web techs</font>
+            <br><br>
+            <img src="./images/webtechs.png" alt="" style="width: 25vw; min-width: 5cm;"><br><br>
+            <font style="font-family: Poppins;">The apps use common web technologies like HTML, CSS and JavaScript.<br> The hosting of the apps works using GitHub Pages.<br>
+            From time to time, other third-party elements such as Icons8 are also installed in the applications.<br>
+        </div>
+
+    <footer><a href="/privacy policy/index.html">Privacy Policy</a> | <a href="/impress/index.html">Impress</a> | <a
+            href="/legal.html">Credits</a> | Made with ☕ and ❤ by Wervice | 3D illustrations made with <a
+            href="https://icons8.com/lunacy">Lunacy</a> by <a href="https://icons8.com/">Icons8</a> | Colored icons by
+        <a href="https://www.icons8.com">Icons8</a>
+    </footer>
+</body>
+
+</html>

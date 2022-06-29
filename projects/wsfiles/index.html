@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WS Files</title>
+    <script src="filesystem.js"></script>
+    <link rel="shortcut icon" href="favicon.png" type="image/png">
+    <link rel="stylesheet" href="wsfiles.css">
+    <link rel="stylesheet" href="/styles/global.css">
+    <link rel="stylesheet" href="/projects/WebDesk/styles/base.css">
+    <style>
+        ::selection {
+            background: #f0c60e;
+            color: black;
+        }
+
+        ::-moz-selection {
+            background: #f0c60e;
+            color: black;
+        }
+
+        ::-webkit-selection {
+            background: #f0c60e;
+            color: black;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="name" id="title">Webspace Files</div><br><br>
+    <font style="margin-left: 10px; margin-bottom: 5px; font-size: large;">Interline Word</font>
+    <div id="ilw">
+    </div>
+
+    <!-- Sets -->
+    <script>
+        document.getElementById('ilw').innerHTML = get_ilw_files().replaceAll('height=12', 'height=20 style=margin-bottom:-5px;').replace('null', '');
+    </script>
+    <!-- Sets -->
+    <div style="height: 100vh;"></div>
+<footer><a href="/privacy policy/index.html">Privacy Policy</a> | <a href="/impress/index.html">Impress</a> | <a
+        href="/legal.html">Credits</a> | Made with ☕ and ❤ by Wervice | 3D illustrations made with <a
+        href="https://icons8.com/lunacy">Lunacy</a> by <a href="https://icons8.com/">Icons8</a> | Colored icons by
+    <a href="https://www.icons8.com">Icons8</a>
+</footer>
+
+</body>
+
+</html>

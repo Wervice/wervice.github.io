@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hash / Enc</title>
+    <script>
+        // SHA512 Hasheing
+        function sha512(str) {
+            return crypto.subtle.digest("SHA-512", new TextEncoder("utf-8").encode(str)).then(buf => {
+                return Array.prototype.map.call(new Uint8Array(buf), x => (('00' + x.toString(16)).slice(-2))).join('');
+            });
+        }
+
+        function encodesha512() {
+            sha512(document.getElementById('data').value).then(x => document.getElementById('data').value = x);
+        }
+
+    </script>
+    <link rel="stylesheet" href="../styles/base.css">
+    <style>
+        div.chip {
+            margin: 10px;
+            border-radius: 10px;
+            padding: 20px;
+            background-color: rgb(255, 255, 255);
+            width: 7.5cm;
+            box-shadow: 0px 0px 5px grey;
+        }
+
+        div.chip:hover {
+            box-shadow: 0px 0px 7.5px grey;
+        }
+
+        input {
+            margin-left: 0px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="chip">
+        SHA-512 | JS Subtle <img src="../../ClearIcons/fill - love - red.png" alt="" height="15"><br>
+        <input type="text" class="ui" placeholder="data" id="data"><br>
+        <button class="focus" onclick="encodesha512()">Encode</button>
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,16 @@
+.output {
+    background-color: black;
+    color: lime;
+    font-family: monospace;
+    height: calc(100vh - 85px);
+}
+
+.input {
+    width: 50vw;
+    background-color: rgb(0, 48, 4);
+    box-shadow: none;
+    color: lime;
+    border-width: 0px;
+    border-color: lime;
+    font-family: monospace;
+}

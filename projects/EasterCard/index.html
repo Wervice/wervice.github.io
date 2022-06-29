@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="favicon.png" type="image/png">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../../styles/global.css">
+    <title>Happy Easter 🐰</title>
+    <style>
+    body {
+        color: rgb(20, 49, 0);
+    }
+
+    h1 {
+        background-color: rgba(255, 255, 255, 0.397);
+        margin: 0px;
+        padding: 10px;
+        box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    img.rabbit {
+        width: 8cm;
+        border-radius: 10px;
+        box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.432);
+    }
+
+    div.p {
+        padding: 10px;
+        font-size: 12pt;
+    }
+
+    a {
+        text-decoration: underline;
+        color: green;
+    }
+
+    img.arrow-down {
+        margin-bottom: 20px;
+        animation-iteration-count: infinite;
+        animation-duration: 2s;
+        animation-name: down;
+    }
+
+    @keyframes down {
+        0% {}
+        50% {margin-top: 20px; margin-bottom: 0px;}
+        100% {}
+    }
+
+    input {
+        max-width: 2cm;
+        margin-right: 10px;
+        border-width: 0px;
+        background-color: rgb(255, 255, 255);
+        padding: 5px;
+        border-radius: 2px;
+        margin-bottom: 0.2cm;
+    }
+
+    img.hidden {
+        border-radius: 0.5cm;
+        box-shadow: 0px 0px 5px green;
+    }
+
+    .egg {
+        opacity: 90%;
+        font-size: small;
+        margin-bottom: 20px;
+        animation-iteration-count: infinite;
+        animation-duration: 2s;
+        animation-name: hide;
+    }
+
+    @keyframes hide {
+        0% {}
+        50% {opacity: 50%; font-size: medium;}
+        100% {}
+    }
+
+    .stranger {
+        transform: rotate(0.5turn);
+    }
+
+    </style>
+    <script>
+    function check() {
+        alert('Rabbits: 3\nEggs: 7\nSimles: 2')
+    }
+    </script>
+</head>
+<body>
+<h1 align="center">Happy Easter</h1>
+<br>
+
+<br>
+<div align="center"><img src="rabbit.jpg" alt="" srcset="" class="rabbit"></div><br>
+<br>
+<div class="p">
+    Now it is easter. A time of happines, peace and rabbits 🐇. Not everyone can be happy now, but when <b>you</b> can, then be happy. In the morning you can look for presents<br>
+    or share <a href="whatsapp.png">this image</a> with you family, with your firends or with your parents. Start the day with a simle in the face.<br><br>
+    &ThickSpace; - Constantin Volke
+    <br><br><br>
+    Now you can look for easter eggs. There are also some on this website.<br><br>
+    &ThickSpace; - Rabbit ;-)
+</div>
+<h2 align="center"><img src="arrow-down.png" alt="" style="height: 1.5cm;" class="arrow-down"></h2>
+<div class="p" align="center">
+    <h3 align="center">Check out this picture.</h3>
+<img src="wimmelpicture.png" alt="Picture is loading..." style="width: 90vw;" class=hidden onclick="window.open(this.src)"><br>
+Count the Rabbits, Eggs and smiles.<br><br>
+<div align="left">
+<input type="number" id="rab" name="rab" value="0"><label for="rab">Rabbits</label><br>
+<input type="number" id="eggs" name="eggs" value="0"><label for="rab">Eggs</label><br>
+<input type="number" id="smil" name="smile" value="0"><label for="smile">Smiles</label><br>
+<button class="ui" onclick="check()">Check</button>
+<div align=right class=egg onclick="alert('1. Easter-egg\nCode: EE+1\n🐰')">🥚</div>
+</div>
+
+</div><br>
+<div class="p" align="center"><h2>Decode the message</h2>
+🍎 = A | 🐶 = D | G = G<br>
+🐻 = B | 🐘 = E | H = 🏠<br>
+🐱 = C | 🐟 = F | I = 🌐<br>
+🐰 = Rabbit<br>
+etc<br>
+<small>Which word is the em<font onclick="alert('2. Easter-egg\nCode: E0+2\n🐰')">🥚</font>ji in english?</small>
+<br><br>
+T🦔🐘 🐱O🐶🐘 🌐🐍 🐰🐱UT🐘.
+</div>
+<hr>
+<div class="p stranger">
+Codes:<br>
+ - EE+1<br>
+ - E0+1<br>
+ - RabbitCute</div><br>
+<footer><a href="/privacy policy/index.html">Privacy Policy</a> | <a href="/impress/index.html">Impress</a> | <a
+        href="/legal.html">Credits</a> | Made with ☕ and ❤ by Wervice | 3D illustrations made with <a
+        href="https://icons8.com/lunacy">Lunacy</a> by <a href="https://icons8.com/">Icons8</a> | Colored icons by
+    <a href="https://www.icons8.com">Icons8</a>
+</footer>
+
+</body>
+</html>

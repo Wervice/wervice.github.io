@@ -1,0 +1,16 @@
+:root {
+    /* Color */
+    --blue: #00aaff;
+    --red: #e61212;
+    --yellow: #ffd000;
+    --orange-juice: #ffa600;
+    --pink: #ff0080;
+    --soft-pink: #ff85c2;
+    --soft-yellow: #ffe365;
+    --steel: #323e44;
+    --snow: rgb(234, 247, 255);
+    /* Images */
+    --error: url(../images/crash.png);
+    --warning: url(../images/warning.png);
+    --beta: url(../images/beta-testing.png)
+}

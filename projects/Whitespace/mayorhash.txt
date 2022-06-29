@@ -1,0 +1,17 @@
+hash: 58FCE4CFBAFC7ADD014996ECF7FA0C52837449CAE057D25FB8EEE2A8C6CEFD5D42A0FC1BFA748955223AE5985FA7B41C4B086971EF934925080230AFE3A2F38D
+
+Obj1:
+if (systemBase.getItem("whsp://password.config") == atob('NThGQ0U0Q0ZCQUZDN0FERDAxNDk5NkVDRjdGQTBDNTI4Mzc0NDlDQUUwNTdEMjVGQjhFRUUyQThDNkNFRkQ1RDQyQTBGQzFCRkE3NDg5NTUyMjNBRTU5ODVGQTdCNDFDNEIwODY5NzFFRjkzNDkyNTA4MDIzMEFGRTNBMkYzOEQ=')) {
+            document.getElementById('password').hidden = true
+            window.needPass = atob('ZmFsc2U=')
+ }
+
+ if (systemBase.getItem("whsp://password.config") != atob('NThGQ0U0Q0ZCQUZDN0FERDAxNDk5NkVDRjdGQTBDNTI4Mzc0NDlDQUUwNTdEMjVGQjhFRUUyQThDNkNFRkQ1RDQyQTBGQzFCRkE3NDg5NTUyMjNBRTU5ODVGQTdCNDFDNEIwODY5NzFFRjkzNDkyNTA4MDIzMEFGRTNBMkYzOEQ=')) {
+                    location.href = "login.html"
+                }
+                else {
+                    document.getElementById('desktop').hidden = false
+                    console.log('No password DN')
+                    notify('You are logged in', 'LogIn')
+                }
+document.getElementById("desktop").hidden = false

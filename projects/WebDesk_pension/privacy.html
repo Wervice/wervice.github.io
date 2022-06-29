@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/base.css">
+    <title>system://privacy</title>
+    <script>
+        function priac() {
+            localStorage.setItem('welcome', true)
+            window.open('desktop.html', 'window')
+        }
+    </script>
+    <style>
+            body {
+                background-color: deepskyblue;
+                color: rgb(0, 0, 0);
+            }
+
+            .modal {
+                margin: 20px;
+                border-radius: 5px;
+                padding: 20px;
+                background-color: rgb(255, 255, 255);
+                width: 15cm;
+                height: 15cm;
+                box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5);
+            }
+
+            h1 {
+                font-weight: 100;
+            }
+
+            h2 {
+                font-weight: 100;
+                margin-left: 0px;
+            }
+    </style>
+</head>
+
+<body style="padding: 10px;">
+    <div class="modal">
+
+
+    <h1 style="margin: 0px;">Welcome</h1>
+    <h2>Privacy Policy</h2>
+    This pages uses cookies, local storage and session storage. This page needs this web storage technology to store
+    data and present a good performance.<br>
+    Only accept this when you're grown up.<br><br>
+    <div style="display: inline;">
+
+
+    <button class="focus" onclick="priac()">Accept</button><button class="ui" onclick="window.top.location.replace('about:blank')">Don't accept</button>
+   </div> <hr style="border-style: solid; border-color: #00000050;">
+    <h2>First Stepps</h2>
+    <a href="User Manual.pdf" download="firststeps.pdf" target="_blank"><button class="ui">Show PDF</button></a>
+    <a href="User Manual.pdf" target="window"><button class="ui">Show PDF in App</button></a>
+</body>
+
+</html>

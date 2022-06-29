@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../styles/global.css">
+    <title>Wervice Apps</title>
+    <style>
+        body {
+            font-family: Poppins, sans-serif;
+        }
+
+        h1 {
+            color: rgb(0, 113, 189);
+            margin: 10px;
+            border-left-style: solid;
+            border-left-color: rgb(0, 113, 189);
+            border-left-width: 0.2cm;
+            cursor: pointer;
+        }
+
+        h2 {
+            color: rgb(0, 113, 189);
+            margin: 10px;
+            border-left-style: solid;
+            border-left-color: rgb(0, 113, 189);
+            border-left-width: 0.2cm;
+            cursor: pointer;
+        }
+
+        h3 {
+            color: rgb(0, 113, 189);
+            margin: 10px;
+            border-left-style: solid;
+            border-left-color: rgb(0, 113, 189);
+            border-left-width: 0.2cm;
+            cursor: pointer;
+        }
+
+        p {
+            font-size: large;
+            max-width: 100vw;
+            width: 18cm;
+            cursor: default;
+        }
+
+        div.navbar {
+            margin: 0px;
+            padding: 10px;
+            background-color: rgb(17, 117, 184);
+            height: 30px;
+            color: rgba(255, 255, 255, 0.666);
+        }
+
+        button.gard {
+            background: linear-gradient(-135deg, rgba(255, 0, 202, 1) 0%, rgba(0, 159, 255, 1) 100%);
+            border-width: 0px;
+            color: white;
+            font-size: medium;
+            width: 5cm;
+            box-shadow: 0px 0px 10px rgb(255, 255, 255);
+        }
+
+        button.gard:hover {
+            filter: brightness(90%);
+        }
+
+        @keyframes glamour {
+            0% {}
+
+            100% {
+                box-shadow: 0px 0px 5px rgb(99, 99, 99);
+            }
+        }
+
+        b {
+            color: #318CE7;
+            cursor: default;
+        }
+
+        b:hover {
+            color: #1660aa;
+        }
+
+        svg.back {
+            cursor: pointer;
+        }
+
+        svg.back:hover {
+            color: rgba(0, 0, 0, 0.5);
+        }
+
+        svg.book {
+            cursor: pointer;
+        }
+
+        svg.book:hover {
+            color: rgba(0, 0, 0, 0.5);
+        }
+
+        svg.bulb {
+            color: rgb(252, 178, 19);
+            cursor: pointer;
+        }
+
+        svg.bulb:hover {
+            color: rgb(201, 142, 15);
+        }
+
+        ::selection {
+            background: #093653;
+            color: rgb(255, 255, 255);
+        }
+
+        ::-moz-selection {
+            background: #093653;
+            color: rgb(255, 255, 255);
+        }
+
+        ::-webkit-selection {
+            background: #093653;
+            color: rgb(255, 255, 255);
+        }
+    </style>
+    <script>
+        function reader() {
+            document.documentElement.style.filter = "grayscale(100%)"
+            document.documentElement.style.backgroundColor = "#fffbf0"
+        }
+    </script>
+    <script>
+        document.onkeyup = function (e) {
+            if (e.ctrlKey && e.which == 66) {
+                history.back()
+            }
+            else if (e.ctrlKey && e.shiftKey && e.which == 86) {
+                reader()
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <div class="navbar">
+
+        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor"
+            class="bi bi-arrow-left-circle-fill back" viewBox="0 0 16 16" onclick="history.back()">
+            <path
+                d="M8 0a8 8 0 1 0 0 16A8 8 0 0 0 8 0zm3.5 7.5a.5.5 0 0 1 0 1H5.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L5.707 7.5H11.5z" />
+        </svg>
+        &MediumSpace;
+        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-book-fill book"
+            viewBox="0 0 16 16" onclick="reader()">
+            <path
+                d="M8 1.783C7.015.936 5.587.81 4.287.94c-1.514.153-3.042.672-3.994 1.105A.5.5 0 0 0 0 2.5v11a.5.5 0 0 0 .707.455c.882-.4 2.303-.881 3.68-1.02 1.409-.142 2.59.087 3.223.877a.5.5 0 0 0 .78 0c.633-.79 1.814-1.019 3.222-.877 1.378.139 2.8.62 3.681 1.02A.5.5 0 0 0 16 13.5v-11a.5.5 0 0 0-.293-.455c-.952-.433-2.48-.952-3.994-1.105C10.413.809 8.985.936 8 1.783z" />
+        </svg>
+    </div>
+    <h1 name="theapps">&MediumSpace;The apps</h1>
+    <h2>&MediumSpace;Index</h2>
+    <p>
+        1. No To Go - Private Messages<br>
+        2. Wervice Workspace - Free Webapps for every one<br>
+        3. Wervice WebDesk - desktop emulator
+    </p>
+    <br>
+    <div style="width: 50vw; max-width: 10cm; margin: 10px; padding: 0px; background-color: #1660aa; height: 2px;">
+    </div>
+    <br>
+    <h2>&MediumSpace;1. No To Go</h2>
+    <p>
+        <br>
+        <b>
+            What does "<i>No To Go</i>" do?
+        </b>
+        <br><br>
+        No To Go is an web app. With No To Go, you can encrypt and decrypt private and secret messages.
+        Your recipient has to encrypt the first, so no one can read your messages by having a short view on your
+        recupient's mobile.
+        <br><br>
+        <b>
+            Does No To Go store my messages?
+        </b>
+        <br><br>
+        <b>No!</b> Only you and your recipient know the message. After refreshing No To Go, your message is removed.
+        <br><br>
+        <b>
+            Ok! I'll check it out.
+        </b>
+        <br><br>
+        <a href="/projects/notogo/index.html"><button class="ui gard">No To Go</button>
+        </a>
+        <br><br>
+        <b>
+            Tipp...
+        </b>
+        <br><br>
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+            class="bi bi-lightbulb-fill bulb" viewBox="0 0 16 16">
+            <path
+                d="M2 6a6 6 0 1 1 10.174 4.31c-.203.196-.359.4-.453.619l-.762 1.769A.5.5 0 0 1 10.5 13h-5a.5.5 0 0 1-.46-.302l-.761-1.77a1.964 1.964 0 0 0-.453-.618A5.984 5.984 0 0 1 2 6zm3 8.5a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1l-.224.447a1 1 0 0 1-.894.553H6.618a1 1 0 0 1-.894-.553L5.5 15a.5.5 0 0 1-.5-.5z" />
+        </svg> No To Go is optimized for mobiles.
+    </p>
+    <br>
+    <h2>&MediumSpace;2. Wervice Worksapce</h2>
+    <p>
+        <br>
+        <b>
+            What is Wervice Workspace?
+        </b>
+        <br><br>
+        Wervice Workspace is a group of office applications and
+        developers applications for everyone for free. Just like
+        the other Wervice Apps, works Wervice Worksapce in a
+        browser.
+        <br><br>
+        <b>
+            About the apps
+        </b>
+        <br><br>
+        <b>Interline Word</b><br><br>
+        Interline Word is an free text editor. You can save your files in the Workspace Floor.
+        And use the free templates to create good looking files. You can <b>download a file</b> as <a
+            href="javascript:alert('.txt is a file format for just-text files. \nYou can open them using a simple text editor')">txt</a>.
+        The file will have a strange name. So rename it to something like letter.txt. But it has to end with .txt .
+        <br><br>
+        <a href="/projects/interlineword/index.html"><button class="ui gard">Start writing</button></a>
+    </p>
+    <br>
+    <h2>&MediumSpace;3. Wervice WebDesk</h2>
+    <p>
+        <br>
+        <b>
+            WebDesk? What's this?
+        </b>
+        <br><br>
+        Wervice WebDesk is an online-working app. With WebDesk you can emulate a desktop system in your browser or on
+        your tablet. Wervice WebDesk has different pre-installed free applications. It stores the data in
+        your browser, so you need no cloud. You can clear your data using WebDesk or by clearing the browser's
+        cache/cookies/history.
+        <br><br>
+        <b>
+            How to download files
+        </b>
+        <br><br>
+        Sometimes you can download a file to your computer. It's possible, that this file has a strange filename, like
+        "STiYQuzTh", then you've to rename the file.<br>
+        "STiYQuzTh" -> "STiYQuzTh.txt" or<br>
+        "STiYQuzTh" -> "STiYQuzTh.html"<br>
+        When you open the file and there are just strange letters in it, maybe your browser doesn't understand
+        file-uris, in this case, you have to copy your text into a file on your computer.
+        <br><br>
+        <b>
+            Check it out
+        </b>
+        <br><br>
+        <a href="/projects/WebDesk/index.html"><button class="ui gard">Open WebDesk</button></a>
+    </p>
+<footer><a href="/privacy policy/index.html">Privacy Policy</a> | <a href="/impress/index.html">Impress</a> | <a
+        href="/legal.html">Credits</a> | Made with ☕ and ❤ by Wervice | 3D illustrations made with <a
+        href="https://icons8.com/lunacy">Lunacy</a> by <a href="https://icons8.com/">Icons8</a> | Colored icons by
+    <a href="https://www.icons8.com">Icons8</a>
+</footer>
+
+</body>
+
+</html>
