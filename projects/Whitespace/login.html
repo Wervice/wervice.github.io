@@ -85,7 +85,7 @@
             0% {}
 
             50% {
-                color: red;
+                color: rgb(20, 86, 151);
             }
 
             100% {}
@@ -93,6 +93,64 @@
 
         input {
             font-family: 'Montserrat';
+        }
+
+        button.ui {
+            font-size: 15px;
+            background-color: rgb(255, 255, 255);
+            height: 30px;
+            border-color: rgba(0, 0, 0, 0);
+            margin: 5px;
+            color: rgb(0, 0, 0);
+            font-family: 'Montserrat', sans-serif;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        select.ui {
+            font-size: 15px;
+            background-color: rgb(255, 255, 255);
+            height: 30px;
+            border-color: rgba(0, 0, 0, 0);
+            margin: 5px;
+            color: rgb(0, 0, 0);
+            font-family: 'Montserrat', sans-serif;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .dropdown * {
+            border-radius: 10px;
+        }
+
+        button.ui:hover,
+        select.ui:hover {
+            animation-name: highlight;
+            animation-duration: 750ms;
+            animation-fill-mode: forwards;
+        }
+
+        button.ui:focus,
+        select.ui:focus {
+            animation-name: press;
+            animation-duration: 500ms;
+            animation-fill-mode: forwards;
+        }
+
+        @keyframes highlight {
+            0% {}
+
+            100% {
+                filter: brightness(90%);
+            }
+        }
+
+        @keyframes press {
+            0% {}
+
+            100% {
+                filter: brightness(80%);
+            }
         }
     </style>
     <script src="./popups.js"></script>
@@ -117,13 +175,13 @@
         </div>
         <br><br><br><br><br><br><br><br><br><br>
         <div align="center">
-            <a href="create-account.html" class="minilink" id="new-account">Create account</a>
+            <a href="create-account.html" class="minilink" id="new-account"><button class="ui">Create account</button></a>
         </div>
         <noscript>
             !! PLEASE ENABLE JAVASCRIPT IN YOUR BROWSER !!
         </noscript>
     </div>
-    <script>addPopup("Please create an account", "To use Whitespace, you've to setup an account. Please click the blinking link down and setup an account.<br><a href='/legal.html'>View credits</a>", false)</script>
+    <script>addPopup("Please create an account", "To use Whitespace, you've to setup an account. Please click the button down and setup an account.<br><a href='/legal.html'>View credits</a>", false)</script>
     <div style="height:calc(100vh - 477px);"></div>
     <div style="opacity:50%;">
     <a href="/privacy policy/index.html">Privacy Policy</a> | <a href="/impress/index.html">Impress</a> | <a

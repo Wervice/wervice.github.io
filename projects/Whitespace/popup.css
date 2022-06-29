@@ -6,9 +6,10 @@ div.popup {
     height: calc(1px * var(--factor));
     width: calc(2px * var(--factor) - 20px);
     border-radius: 10px;
-    background-color: white;    padding: 10px;
+    background-color: white;
+    padding: 10px;
     margin: 20px;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.459);
+    box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.1);
     position: absolute;
     top: 0px;
 }

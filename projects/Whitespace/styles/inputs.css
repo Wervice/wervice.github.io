@@ -124,14 +124,15 @@ div.assistant-popup {
 
 button.eyecatch {
     cursor: pointer;
+    background-color: #c9c9c9;
 }
 
 button.eyecatch:hover {
-    background-color: rgb(255, 94, 0);
+    background-color: #bbbbbb;
 }
 
 button.eyecatch:focus {
-    background-color: rgb(255, 187, 0);
+    background-color: #aaaaa9;
 }
 
 .assist:focus {
