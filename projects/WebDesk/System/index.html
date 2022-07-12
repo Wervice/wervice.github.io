@@ -13,9 +13,9 @@
     <script src="../bckend/encode.js"></script>
     <script>
         if (encodePass(sessionStorage.getItem("logged")) != localStorage.getItem("unlkepsw") && localStorage.getItem("unlkepsw") != null) {
-                document.documentElement.innerHTML = null
-                window.top.location.replace("../index.html")
-            }
+            document.documentElement.innerHTML = null
+            window.top.location.replace("../index.html")
+        }
 
         function cancelapp() {
             window.open(history.back(), 'window')
@@ -140,17 +140,19 @@
                 class="close" style="background-color: silver;"></button> <button class="close"
                 style="background-color: silver;"></button>&ThickSpace;System</div>
         <div id="live">
-            <h3 style="margin-left:5px;">Profile</h3>
+            <h3 style="margin-left:5px;">Account and profile</h3>
             <input type="text" placeholder="Username" id="username"> <!-- username input --><br>
-            <input type="password" placeholder="Password" id="password"> <!-- password input -->
-
-            <font title=""><img src="../favicons/icons/lock.png"
-                    class="icons"></font> <!-- lock icon -->
-                <!-- Checksum input -->
-
-            </font><br>
+            <input type="password" placeholder="Password" id="password" minlength="6"
+                onkeyup="if (this.value.length < 7) {this.title='<br>The pass has to be longer then 6 characters!<br>'; document.getElementById('infopass').innerHTML = '<br>The password has to belonger then 6 characters!'}else {this.title=''; document.getElementById('infopass').innerHTML = ''}">
+            <font title=""><img src="../favicons/icons/lock.png" class="icons"></font><!-- password input -->
+            </font>
+            <div style="padding-left:10px;">
+            <small id="infopass"></small> <!-- password label -->
+            </div>
+            <!-- Checksum input -->
+            <br>
             <button class="ui" style="margin-left: 5px; background-color:rgb(21, 184, 108); color: white;"
-                onclick="saveprof()">Update profile</button>
+                onclick="saveprof()">Finish</button>
             <br>
             <br>
             <h3 style="margin-left:5px;">Design</h3>

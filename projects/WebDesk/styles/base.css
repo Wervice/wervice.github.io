@@ -39,6 +39,10 @@
     --shadow: 0 0 5px rgba(153, 153, 153, 0.3);
 }
 
+::placeholder {
+    color: rgb(66, 66, 66);
+}
+
 body,
 html {
     padding: 0;
@@ -161,12 +165,12 @@ button {
 }
 
 input[type=password] {
-    background-color: rgb(209, 209, 209);
+    background-color: rgb(156, 156, 156);
     border-radius: 5px;
     padding: 5px;
     border-width: 0px;
     border-style: solid;
-    border-color: rgb(206, 206, 206);
+    border-color: rgb(255, 255, 255);
     background-color: rgba(0, 0, 0, 0.01);
     margin: 5px;
     min-width: 200px;
@@ -176,12 +180,12 @@ input[type=password] {
 }
 
 input[type=text] {
-    background-color: white;
+    background-color: rgb(156, 156, 156);
     border-radius: 5px;
     padding: 5px;
     border-width: 0px;
     border-style: solid;
-    border-color: rgb(206, 206, 206);
+    border-color: rgb(255, 255, 255);
     background-color: rgba(0, 0, 0, 0.01);
     margin: 5px;
     min-width: 200px;
