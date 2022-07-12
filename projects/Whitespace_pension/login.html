@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="password.png" type="image/png">
+    <link rel="stylesheet" href="styles/inputs.css">
+    <script src="SHA512.js"></script>
+    <script src="logical.js"></script>
+    <script src="./assistant.js"></script>
+    <script src="./database.js"></script>
+    <script>
+        const systemBase = new database();
+    </script>
+    <script>
+        window.oncontextmenu = function () {
+            return false;
+        }
+    </script>
+    <title>LogIn Redirection</title>
+    <script>
+        function login() {
+            if (systemBase.getItem("whsp://account") != null) {
+                stamp()
+                location.replace("index.html?password=" + btoa(document.getElementById("password").value))
+            }
+            else {
+                alert("Error:\rThere is no account in this system. Please click the link down and setup an account.\r\rHelp:\rI had an account \rMaybe your browser cleard the browsers data. In this case you've losed all your Whitespace data.\r----------------------------------------------------------\rError:NOACCOUNT")
+            }
+        }
+
+        function stamp() {
+            var stamp_clear = Date.now() + 5000
+            loginStampCheck()
+            sessionStorage.setItem("whsp://temp/stamp#desktop", stamp_clear)
+            sessionStorage.setItem("whsp://temp/stamp#index", stamp_clear)
+        }
+
+        function sWrongPass() {
+            window.onload = function () {
+                document.getElementById("wrong").hidden = false
+            }
+        }
+
+        function loginStampCheck() { // Stamp-Check for login
+
+        }
+
+        var url_string = location.href
+        var url = new URL(url_string)
+        var url_reset = url.searchParams.get("reset")
+        if (url_reset == "true") {
+            alert("Your reset is finished!")
+            location.replace("login.html")
+        }
+    </script>
+    <link rel="stylesheet" href="fonts/montserrat.css">
+    <style>
+        body {
+            font-family: Montserrat;
+            background-image: url(/images/login_webdesk_funny.png);
+            background-size: cover;
+            background-color: #ffffff;
+        }
+
+        div.prompt {
+            padding: 10px;
+            margin: 20px;
+            background-color: rgb(255, 255, 255);
+            filter: drop-shadow(0px 0px 5px rgba(0, 0, 0, 0.333));
+            height: 10cm;
+            width: 10cm;
+            border-radius: 10px;
+        }
+
+        a.minilink {
+            font-size: 10pt;
+            color: dodgerblue;
+            text-decoration: none;
+        }
+
+        @keyframes pulse {
+            0% {}
+
+            50% {
+                color: rgb(20, 86, 151);
+            }
+
+            100% {}
+        }
+
+        input {
+            font-family: 'Montserrat';
+        }
+
+        button.ui {
+            font-size: 15px;
+            background-color: rgb(255, 255, 255);
+            height: 30px;
+            border-color: rgba(0, 0, 0, 0);
+            margin: 5px;
+            color: rgb(0, 0, 0);
+            font-family: 'Montserrat', sans-serif;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        select.ui {
+            font-size: 15px;
+            background-color: rgb(255, 255, 255);
+            height: 30px;
+            border-color: rgba(0, 0, 0, 0);
+            margin: 5px;
+            color: rgb(0, 0, 0);
+            font-family: 'Montserrat', sans-serif;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .dropdown * {
+            border-radius: 10px;
+        }
+
+        button.ui:hover,
+        select.ui:hover {
+            animation-name: highlight;
+            animation-duration: 750ms;
+            animation-fill-mode: forwards;
+        }
+
+        button.ui:focus,
+        select.ui:focus {
+            animation-name: press;
+            animation-duration: 500ms;
+            animation-fill-mode: forwards;
+        }
+
+        @keyframes highlight {
+            0% {}
+
+            100% {
+                filter: brightness(90%);
+            }
+        }
+
+        @keyframes press {
+            0% {}
+
+            100% {
+                filter: brightness(80%);
+            }
+        }
+    </style>
+    <script src="./popups.js"></script>
+    <script src="./speech.js"></script>
+    <link rel="stylesheet" href="./popup.css">
+</head>
+
+<body>
+    <div class="prompt">
+        <div align="center">
+            <br>
+            <font style="font-size:larger" id="greating"> Whitespace is locked </font>
+
+            <br><br>
+            <input type="password" name="password" id="password" placeholder="password"><br>
+            <font id="wrong" style="font-size: 10pt; color: red;" hidden>
+                Wrong Password
+                <br><br>
+
+            </font>
+            <button onclick="login()">LogIn</button>
+        </div>
+        <br><br><br><br><br><br><br><br><br><br>
+        <div align="center">
+            <a href="create-account.html" class="minilink" id="new-account"><button class="ui">Create account</button></a>
+        </div>
+        <noscript>
+            !! PLEASE ENABLE JAVASCRIPT IN YOUR BROWSER !!
+        </noscript>
+    </div>
+    <script>addPopup("Please create an account", "To use Whitespace, you've to setup an account. Please click the button down and setup an account.<br><a href='/legal.html'>View credits</a>", false)</script>
+    <div style="height:calc(100vh - 477px);"></div>
+    <div style="opacity:50%;">
+    <a href="/privacy policy/index.html">Privacy Policy</a> | <a href="/impress/index.html">Impress</a> | <a
+        href="/legal.html">Credits</a> | Made with ☕ and ❤ by Wervice | I use icons from <a href="https://www.icons8.com">Icons8</a>
+| 3D illustrations made with <a
+        href="https://icons8.com/lunacy">Lunacy</a> by <a href="https://icons8.com/">Icons8</a>
+        </div>
+    <script>
+        if (systemBase.getItem("whsp://account") != null) {
+            document.getElementById("greating").innerHTML = "Hi, " + systemBase.getItem("whsp://username.config")
+        }
+
+        if (systemBase.getItem('whsp://account') == null) {
+            document.getElementById("new-account").style.animationName = "pulse"
+            document.getElementById("new-account").style.animationDuration = "1s"
+            document.getElementById("new-account").style.animationIterationCount = "infinite"
+            document.getElementById("new-account").style.color = "black"
+        }
+        else {
+            deletePopup(1)
+        }
+    </script>
+    <script>
+        var _0x3047c7 = _0x52d3; function _0x52d3(_0x4ee03a, _0x3fea95) { var _0x194a6c = _0x194a(); return _0x52d3 = function (_0x52d367, _0x2083ef) { _0x52d367 = _0x52d367 - 0xfe; var _0x4c68a = _0x194a6c[_0x52d367]; return _0x4c68a; }, _0x52d3(_0x4ee03a, _0x3fea95); } function _0x194a() { var _0x8af318 = ['570NRqSJC', '1148314wBLDES', '1951905GReZZm', '1061511BYFNjL', '7254utyHjs', 'NThGQ0U0Q0ZCQUZDN0FERDAxNDk5NkVDRjdGQTBDNTI4Mzc0NDlDQUUwNTdEMjVGQjhFRUUyQThDNkNFRkQ1RDQyQTBGQzFCRkE3NDg5NTUyMjNBRTU5ODVGQTdCNDFDNEIwODY5NzFFRjkzNDkyNTA4MDIzMEFGRTNBMkYzOEQ=', '2eyCzHu', 'needPass', '4CEpLUq', '1209090pbOjrK', 'whsp://password.config', '3055168gUgFnN', 'getItem', 'ZmFsc2U=', '472122HlzRVS', 'password', 'getElementById', 'hidden']; _0x194a = function () { return _0x8af318; }; return _0x194a(); } (function (_0x2d1930, _0x27a5b9) { var _0x922d4c = _0x52d3, _0x31630a = _0x2d1930(); while (!![]) { try { var _0x5a769a = -parseInt(_0x922d4c(0x107)) / 0x1 * (-parseInt(_0x922d4c('0x102')) / 0x2) + -parseInt(_0x922d4c(0x104)) / 0x3 + -parseInt(_0x922d4c(0x109)) / 0x4 * (-parseInt(_0x922d4c('0x103')) / 0x5) + -parseInt(_0x922d4c('0x10a')) / 0x6 + parseInt(_0x922d4c('0x10f')) / 0x7 + -parseInt(_0x922d4c(0x10c)) / 0x8 + parseInt(_0x922d4c(0x105)) / 0x9 * (-parseInt(_0x922d4c('0x101')) / 0xa); if (_0x5a769a === _0x27a5b9) break; else _0x31630a['push'](_0x31630a['shift']()); } catch (_0xa384b1) { _0x31630a['push'](_0x31630a['shift']()); } } }(_0x194a, 0x98167)); systemBase[_0x3047c7(0x10d)](_0x3047c7('0x10b')) == atob(_0x3047c7(0x106)) && (document[_0x3047c7(0xff)](_0x3047c7('0xfe'))[_0x3047c7('0x100')] = !![], window[_0x3047c7('0x108')] = atob(_0x3047c7('0x10e')));    </script>
+    <div id="recogwindow" class="recogwindow" hidden>
+        <div align="center">Speech recognition<br><br><br>
+            <img src="" alt="" id="recogmode" height="100" width="100">
+        </div>
+    </div>
+</body>
+
+</html>

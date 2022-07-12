@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./mboard.css">
+    <script src="./social.js"></script>
+    <title>new e-mail</title>
+    <script src="../bckend/encode.js"></script>
+
+    <script>
+        if (encodePass(sessionStorage.getItem("logged")) != localStorage.getItem("unlkepsw")) {
+                document.documentElement.innerHTML = null
+                window.top.location.replace("../index.html")
+            }
+    </script>
+    <style>
+                textarea {
+            resize: none;
+        }
+
+        * {
+            cursor: url(../cursor.png);
+        }
+    </style>
+</head>
+<body>
+<div style="padding:10px;">
+<button class="send" onclick="sendCryptEmail()">Send 🔒</button><input type="email" name="email" id="email" placeholder="Recipient" title="Enter the recipients's email adress.">
+<input type="text" name="subject" id="subject" placeholder="Subject" title="The subject for the email."><br>
+<textarea name="mail" id="mail" class="mail" placeholder="Dear..."></textarea>
+</div>
+</body>
+</html>

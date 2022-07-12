@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="../styles/base.css">
+    <link rel="stylesheet" href="../styles/math.css">
+    <link rel="icon" type="image/png" sizes="64x64" href="../favicons/tabnum.png" />
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no" />
+    <script src="../csjs/index.js"></script>
+    <script src="/projects/WebDesk/script/nocontext.js"></script>
+    <meta charset="uft-8">
+    <title>Formlary</title>
+    <script>
+        var formelf = document.getElementById('formel')
+
+        function PI() {
+            alert("Pi, called the circle number, is a number used to calculate the circumference of a circle.\n\nCOPY: π")
+        }
+
+        function SIGMA() {
+            alert("Sigma is the 18th letter in the Greek alphabet and has the number value 200 according to the Milesian system. Sigma is the symbol of sum.\n\nCOPY: Σ")
+        }
+
+        function ALPHA() {
+            alert("The alpha is the first letter in the Greek alphabet. Alpha is a common variable.\n\nCOPY: α")
+        }
+
+        function OMEGAK() {
+            alert("The Omega is the last letter in the Greek alphabet.\n\nCOPY: ω")
+        }
+
+        function OMEGAG() {
+            alert("The Omega is the last letter in the Greek alphabet.\n\nCOPY: Ω")
+        }
+
+        function ELEMENT() {
+            alert("It shows that a number is a part of a big number amount.")
+        }
+
+        function NAE() {
+            alert("It shows that a number isn't a part of a big number amount.")
+        }
+
+        function MORE() {
+            alert("| ≠ | ∞ | ≙ | √ | ⋅ | ⁓ | ≈ | ± | ⌀ | × | ℕ | ƒ | ÷ | / | [ | ] | | | ( | ) | < | > | € | # | * | % | & | ? | { | } | € | $ | ' | ² |")
+        }
+
+        function betrag() {
+            x = document.getElementById('numbers').value
+            document.getElementById('numberr').value = Math.abs(x)
+        }
+
+        function acoscosinus() {
+            x = document.getElementById('numbers').value
+            document.getElementById('numberr').value = Math.acos(x)
+        }
+
+        function acosh() {
+            x = document.getElementById('numbers').value
+            document.getElementById('numberr').value = Math.acosh(x)
+        }
+
+        function asin() {
+            x = document.getElementById('numbers').value
+            document.getElementById('numberr').value = Math.asin(x)
+        }
+
+        function asinh() {
+            x = document.getElementById('numbers').value
+            document.getElementById('numberr').value = Math.asinh(x)
+        }
+
+        function floor() {
+            x = document.getElementById('numbers').value
+            document.getElementById('numberr').value = Math.round(x)
+        }
+
+        function power() {
+            x = document.getElementById('numbers').value
+            y = document.getElementById('numbersy').value
+            document.getElementById('numberr').value = Math.pow(x, y)
+        }
+
+        function froundf() {
+            x = document.getElementById('numbers').value
+            document.getElementById('numberr').value = Math.fround(x)
+        }
+
+        function trunc() {
+            x = document.getElementById('numbers').value
+            document.getElementById('numberr').value = Math.trunc(x)
+        }
+
+        function cbrt() {
+            x = document.getElementById('numbers').value
+            document.getElementById('numberr').value = Math.cbrt(x)
+        }
+
+        function pi() {
+            x = document.getElementById('numbers').value
+            document.getElementById('numberr').value = Math.PI / x
+        }
+
+        function radius() {
+            x = document.getElementById('numbers').value
+            document.getElementById('numberr').value = Math.PI * x
+        }
+
+        function showpi() {
+            x = document.getElementById('numbers').value
+            document.getElementById('numberr').value = Math.PI
+        }
+
+        function xmy() {
+            x = document.getElementById('numbers').value
+            y = document.getElementById('numbersy').value
+            document.getElementById('numberr').value = x * y
+        }
+
+        function xdy() {
+            x = document.getElementById('numbers').value
+            y = document.getElementById('numbersy').value
+            document.getElementById('numberr').value = x / y
+        }
+
+        function xsy() {
+            x = document.getElementById('numbers').value
+            y = document.getElementById('numbersy').value
+            document.getElementById('numberr').value = x - y
+        }
+
+        function xpy() {
+            x = document.getElementById('numbers').value
+            y = document.getElementById('numbersy').value
+            document.getElementById('numberr').value = parseInt(x) + parseInt(y)
+        }
+
+        function finish() {
+            var formel = document.getElementById('formel')
+            makeFile(formel.value, "utf-8")
+            if (confirm("Note: This is a binnary file. Use the ending .txt or open it with the text editor. If you are not getting a file, copy the url an click cancel.")) {
+
+            }
+
+            else {
+                alert(formel.value + "\n Maybe your browser doesn't understand CSjs,")
+            }
+        }
+        function cancelapp() {
+            window.top.document.getElementById('calc').hidden = true
+        }
+    </script>
+</head>
+
+<body>
+    <div class="title"><button class="close" onclick="cancelapp(); history.back()" id="close" disabled> </button>
+        <button class="close" style="background-color: rgb(255, 196, 0);" onclick="cancelapp()" id="minimize"></button> <button
+            class="close" style="background-color: rgb(17, 189, 69);"
+            onclick="window.top.document.getElementById('window').src = './Formlary/index.html?b=true'; cancelapp()"></button>&ThickSpace;Calculator
+    </div>
+    <script>
+        if (location.href.includes('?b=true')) {
+            document.getElementById('close').disabled = false
+            document.getElementById('minimize').disabled = true
+        }
+    </script>
+    <div align="left">
+        <div class="calc" style="margin-left: 15px;">
+            <input type="text" class="math calc" placeholder="x = "
+                style="width:202px; max-width: 90vw; height:24px; font-size: 15px; font-family: monospace; margin-bottom: 5px; margin-left: 0px; border-width: 0px;"
+                id="numbers" ondblclick="clip()"><br>
+            <input type="text" class="math calc" placeholder="y = "
+                style="width:202px; max-width: 90vw; height:25px; font-size: 15px; font-family: monospace; margin-bottom: 5px; margin-left: 0px; border-width: 0px;"
+                id="numbersy"><br>
+            <input type="text" class="math calc" placeholder="Result"
+                style="width:202px; max-width: 90vw; height:25px; font-size: 15px; font-family: monospace; margin-bottom: 5px; margin-left: 0px; border-width: 0px;"
+                id="numberr" readonly><br>
+            <button class="calc" onclick="betrag()">|x|</button>
+            <button class="calc" onclick="acoscosinus()">Acos(x)</button>
+            <button class="calc" onclick="acosh()">Acosh(x)</button><br>
+            <button class="calc" onclick="asin()">Asin(x)</button>
+            <button class="calc" onclick="asinh()">Asinh(x)</button>
+            <button class="calc" onclick="floor()">Round(x)</button><br>
+            <button class="calc" onclick="power()">X<sup>y</sup></button>
+            <button class="calc" onclick="froundf()">Fround(x)</button>
+            <button class="calc" onclick="trunc()">Trunc(x)</button><br>
+            <button class="calc" onclick="cbrt()">Cbrt(x)</button>
+            <button class="calc" onclick="pi()">pi/x</button>
+            <button class="calc" onclick="radius()">pi*x</button><br>
+            <button class="calc" onclick="showpi()">pi</button>
+            <button class="calc" onclick="xmy()" style="background-color: orange; font-size: 15pt;">&times;</button>
+            <button class="calc" onclick="xdy()" style="background-color: orange; font-size: 15pt;">∕</button><br>
+            <button class="calc" onclick="xsy()" style="background-color: orange; font-size: 15pt;">-</button>
+            <button class="calc" onclick="xpy()" style="background-color: orange; font-size: 15pt;">+</button>
+            <button class="calc" onclick="" style="background-color: orange; font-size: 15pt;">=</button>
+        </div>
+        <br>
+</body>
+
+</html>

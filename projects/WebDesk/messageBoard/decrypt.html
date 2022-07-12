@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Decrypt e-mail</title>
+    <link rel="stylesheet" href="../styles/base.css">
+    <link rel="stylesheet" href="./mboard.css">
+        <script src="../bckend/encode.js"></script>
+
+    <script>
+        if (encodePass(sessionStorage.getItem("logged")) != localStorage.getItem("unlkepsw")) {
+                document.documentElement.innerHTML = null
+                window.top.location.replace("../index.html")
+            }
+
+        function decode() {
+            if (atob(atob(atob(atob(document.getElementById('msg').value)))).includes(document.getElementById('password').value+"/") && (document.getElementById('password').value != "" || document.getElementById('password') != null)) {
+                document.getElementById('msgbox').innerHTML = atob(atob(atob(atob(document.getElementById('msg').value)))).replaceAll(document.getElementById('password').value + "/", "")
+            }
+            else {
+                alert("Wrong password.")
+            }
+        }
+    </script>
+    <style>
+        textarea.decmsg {
+            border-width: 0px;
+            padding: 10px;
+            border-radius: 5px;
+            background-color: #efefef;
+        }
+    </style>
+</head>
+<body>
+<div style="padding:10px;">
+<input type="password" name="password" id="password" placeholder="password"><br>
+<textarea name="msg" id="msg" cols="30" rows="10" class="decmsg" placeholder="Copy encoded mail here."></textarea><br>
+<button class="focus" onclick="decode()">Decode</button><br>
+<br>
+<div id="msgbox"></div>
+</div>
+</body>
+</html>

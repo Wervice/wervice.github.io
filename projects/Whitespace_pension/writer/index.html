@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Writy</title>
+    <script src="../stamp.js"></script>
+    <script src="../csjs/index.js"></script>
+    <script src="../script/ordner.js"></script>
+    <script src="../notify.js"></script>
+    <link rel="stylesheet" href="../styles/inputs.css">
+    <link rel="stylesheet" href="../fonts/montserrat.css">
+    <style>
+        * {
+            tab-size: 10vw;
+        }
+    </style>
+    <script>
+        function hand() {
+            document.getElementById('text').style.fontFamily = "GrapeNuts"
+        }
+        function sans() {
+            document.getElementById('text').style.fontFamily = "Montserrat"
+        }
+        function sanssystem() {
+            document.getElementById('text').style.fontFamily = 'sans-serif'
+        }
+        function mono() {
+            document.getElementById('text').style.fontFamily = "monospace"
+        }
+        function insertLine() {
+            document.getElementById('text').value += '—————————————————————————————————————————————————'
+        }
+    </script>
+    <script>
+        function cfont() {
+            if (document.getElementById('font').value == 'modern') {
+                sans()
+            }
+            else if (document.getElementById('font').value == 'sansserif') {
+                sanssystem()
+            }
+            else if (document.getElementById('font').value == 'monospace') {
+                mono()
+            }
+            else if (document.getElementById('font').value == 'serif') {
+                document.getElementById('text').style.fontFamily = 'serif'
+            }
+            else if (document.getElementById('font').value == 'fantasy') {
+                document.getElementById('text').style.fontFamily = 'fantasy'
+            }
+        }
+        function csize() {
+            document.getElementById('text').style.fontSize = document.getElementById('size').value + "pt"
+        }
+        function cpage() {
+            document.getElementById('text').style.height = (parseInt(document.getElementById('page').value) * 30) + "cm"
+        }
+    </script>
+    <script>
+        function hidep() {
+            document.getElementById('menu').hidden = true;
+            document.getElementById('text').style.borderWidth = '0px'
+            if (document.getElementById('font').value == 'modern') {
+                document.getElementById('text').style.fontFamily = 'sans-serif'
+            }
+            print()
+            document.getElementById('menu').hidden = false;
+            document.getElementById('text').style.borderWidth = '1px'
+        }
+    </script>
+    <script>
+        function ashtml() {
+            makeFile(document.getElementById('text').value, 'utf-8', 'YourFile.txt')
+        }
+    </script>
+    <style>
+        *:focus {
+            outline: none;
+        }
+
+        button.ui {
+            font-size: 15px;
+            background-color: rgb(255, 255, 255);
+            height: 30px;
+            border-color: rgba(0, 0, 0, 0);
+            margin: 5px;
+            color: rgb(0, 0, 0);
+            font-family: 'Montserrat', sans-serif;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        select.ui {
+            font-size: 15px;
+            background-color: rgb(255, 255, 255);
+            height: 30px;
+            border-color: rgba(0, 0, 0, 0);
+            margin: 5px;
+            color: rgb(0, 0, 0);
+            font-family: 'Montserrat', sans-serif;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .dropdown * {
+            border-radius: 10px;
+        }
+
+        button.ui:hover,
+        select.ui:hover {
+            animation-name: highlight;
+            animation-duration: 750ms;
+            animation-fill-mode: forwards;
+        }
+
+        button.ui:focus,
+        select.ui:focus {
+            animation-name: press;
+            animation-duration: 500ms;
+            animation-fill-mode: forwards;
+        }
+
+        @keyframes highlight {
+            0% {}
+
+            100% {
+                filter: brightness(90%);
+            }
+        }
+
+        @keyframes press {
+            0% {}
+
+            100% {
+                filter: brightness(80%);
+            }
+        }
+
+        textarea {
+            border-radius: 5px;
+            padding: 10px;
+            font-size: 12pt;
+            font-family: 'Montserrat';
+        }
+    </style>
+    <script src="../stamp.js"></script>
+    <script>
+        const encoder = new TextEncoder
+        function exportFile() {
+            var file = document.getElementById('text').value;
+            var coded = encoder.encode(file)
+            document.getElementById('forclick').download = prompt("Enter new filename.", document.getElementById('forclick').download) + ".txt"
+            document.getElementById('forclick').href = "data:txt/plain;utf-8," + coded
+            document.getElementById('forclick').click()
+            document.getElementById('forclick').href = ""
+        }
+
+        const db = new database
+
+        function saveFile() {
+            db.setItem("whsp://writer/"+prompt("Filename: "), document.getElementById('text').value)
+            db.setItem("whstp://writer/i.n")
+        }
+    </script>
+</head>
+
+<body>
+    <div id="writer">
+        <div id="menu">
+            <div class="windowname">
+                <button class="close" onclick="callDesktop()"></button> <button class="close"
+                    style="left:40px;background-color: rgba(255, 255, 255, 0.507);"></button> <button class="close"
+                    style="left:70px;background-color: rgba(255, 255, 255, 0.507);"></button>
+                <font style="position:absolute;left:100px;color:white;">Writy</font>
+            </div>
+            <div style="background-color: rgb(255, 255, 255); box-shadow: 0px 0px 5px #d1d1d1;">
+                <button class="ui" onclick="hidep()"><img src="./print.png" height="12">&ThickSpace;Print</button>
+                <a href="" id="forclick"><button class="ui" onclick="saveFile()"><img src="./store.png"
+                            height="12">&ThickSpace;Save</button></a>
+                <button class="ui" onclick="openFile()"><img src="./folder.png" height="12">&ThickSpace;Open</button>
+                |
+                <button class="ui" onclick="nls()"><img src="./list.png" height="12">&ThickSpace;New
+                    List</button>
+                <button class="ui" onclick="insertLine()"><img src="./line.png" height="12">&ThickSpace;New
+                    Line</button>
+                <button class="ui" onclick="table()"><img src="./table.png" height="12">&ThickSpace;New
+                    Table</button>
+                |
+                <select name="" id="font" onchange="cfont()" class="ui" title="Font family">
+                    <option value="modern">Modern</option>
+                    <option value="sansserif">Sans Serif (System)</option>
+                    <option value="serif">Serif (System)</option>
+                    <option value="monospace">Monospace (System)</option>
+                    <option value="fantasy">Fantasy (System)</option>
+                </select>
+                <select name="" id="size" onchange="csize()" class="ui dropdown" title="Font size">
+                    <option value='1'>1pt</option>
+                    <option value='2'>2pt</option>
+                    <option value='3'>3pt</option>
+                    <option value='4'>4pt</option>
+                    <option value='5'>5pt</option>
+                    <option value='6'>6pt</option>
+                    <option value='7'>7pt</option>
+                    <option value='8'>8pt</option>
+                    <option value='9'>9pt</option>
+                    <option value='10'>10pt</option>
+                    <option value='11'>11pt</option>
+                    <option value='12' selected>12pt</option>
+                    <option value='13'>13pt</option>
+                    <option value='14'>14pt</option>
+                    <option value='15'>15pt</option>
+                    <option value='16'>16pt</option>
+                    <option value='17'>17pt</option>
+                    <option value='18'>18pt</option>
+                    <option value='19'>19pt</option>
+                    <option value='20'>20pt</option>
+                    <option value='21'>21pt</option>
+                    <option value='22'>22pt</option>
+                    <option value='23'>23pt</option>
+                    <option value='24'>24pt</option>
+                    <option value='25'>25pt</option>
+                    <option value='26'>26pt</option>
+                    <option value='27'>27pt</option>
+                    <option value='28'>28pt</option>
+                    <option value='29'>29pt</option>
+                    <option value='30'>30pt</option>
+                    <option value='31'>31pt</option>
+                    <option value='32'>32pt</option>
+                    <option value='33'>33pt</option>
+                    <option value='34'>34pt</option>
+                    <option value='35'>35pt</option>
+                    <option value='36'>36pt</option>
+                    <option value='37'>37pt</option>
+                    <option value='38'>38pt</option>
+                    <option value='39'>39pt</option>
+                    <option value='40'>40pt</option>
+                    <option value='41'>41pt</option>
+                    <option value='42'>42pt</option>
+                    <option value='43'>43pt</option>
+                    <option value='44'>44pt</option>
+                    <option value='45'>45pt</option>
+                    <option value='46'>46pt</option>
+                    <option value='47'>47pt</option>
+                    <option value='48'>48pt</option>
+                    <option value='49'>49pt</option>
+                    <option value='50'>50pt</option>
+                    <option value='51'>51pt</option>
+                    <option value='52'>52pt</option>
+                    <option value='53'>53pt</option>
+                    <option value='54'>54pt</option>
+                    <option value='55'>55pt</option>
+                    <option value='56'>56pt</option>
+                    <option value='57'>57pt</option>
+                    <option value='58'>58pt</option>
+                    <option value='59'>59pt</option>
+                    <option value='60'>60pt</option>
+                    <option value='61'>61pt</option>
+                    <option value='62'>62pt</option>
+                    <option value='63'>63pt</option>
+                    <option value='64'>64pt</option>
+                    <option value='65'>65pt</option>
+                    <option value='66'>66pt</option>
+                    <option value='67'>67pt</option>
+                    <option value='68'>68pt</option>
+                    <option value='69'>69pt</option>
+                    <option value='70'>70pt</option>
+                    <option value='71'>71pt</option>
+                    <option value='72'>72pt</option>
+                    <option value='73'>73pt</option>
+                    <option value='74'>74pt</option>
+                    <option value='75'>75pt</option>
+                    <option value='76'>76pt</option>
+                    <option value='77'>77pt</option>
+                    <option value='78'>78pt</option>
+                    <option value='79'>79pt</option>
+                    <option value='80'>80pt</option>
+                    <option value='81'>81pt</option>
+                    <option value='82'>82pt</option>
+                    <option value='83'>83pt</option>
+                    <option value='84'>84pt</option>
+                    <option value='85'>85pt</option>
+                    <option value='86'>86pt</option>
+                    <option value='87'>87pt</option>
+                    <option value='88'>88pt</option>
+                    <option value='89'>89pt</option>
+                    <option value='90'>90pt</option>
+                    <option value='91'>91pt</option>
+                    <option value='92'>92pt</option>
+                    <option value='93'>93pt</option>
+                    <option value='94'>94pt</option>
+                    <option value='95'>95pt</option>
+                    <option value='96'>96pt</option>
+                    <option value='97'>97pt</option>
+                    <option value='98'>98pt</option>
+                    <option value='99'>99pt</option>
+                    <option value='100'>100pt</option>
+                    <option value='101'>101pt</option>
+                    <option value='102'>102pt</option>
+                    <option value='103'>103pt</option>
+                    <option value='104'>104pt</option>
+                    <option value='105'>105pt</option>
+                    <option value='106'>106pt</option>
+                    <option value='107'>107pt</option>
+                    <option value='108'>108pt</option>
+                    <option value='109'>109pt</option>
+                    <option value='110'>110pt</option>
+                    <option value='111'>111pt</option>
+                    <option value='112'>112pt</option>
+                    <option value='113'>113pt</option>
+                    <option value='114'>114pt</option>
+                    <option value='115'>115pt</option>
+                    <option value='116'>116pt</option>
+                    <option value='117'>117pt</option>
+                    <option value='118'>118pt</option>
+                    <option value='119'>119pt</option>
+                    <option value='120'>120pt</option>
+                    <option value='121'>121pt</option>
+                    <option value='122'>122pt</option>
+                    <option value='123'>123pt</option>
+                    <option value='124'>124pt</option>
+                    <option value='125'>125pt</option>
+                    <option value='126'>126pt</option>
+                    <option value='127'>127pt</option>
+                    <option value='128'>128pt</option>
+                    <option value='129'>129pt</option>
+                    <option value='130'>130pt</option>
+                    <option value='131'>131pt</option>
+                    <option value='132'>132pt</option>
+                    <option value='133'>133pt</option>
+                    <option value='134'>134pt</option>
+                    <option value='135'>135pt</option>
+                    <option value='136'>136pt</option>
+                    <option value='137'>137pt</option>
+                    <option value='138'>138pt</option>
+                    <option value='139'>139pt</option>
+                    <option value='140'>140pt</option>
+                    <option value='141'>141pt</option>
+                    <option value='142'>142pt</option>
+                    <option value='143'>143pt</option>
+                    <option value='144'>144pt</option>
+                    <option value='145'>145pt</option>
+                    <option value='146'>146pt</option>
+                    <option value='147'>147pt</option>
+                    <option value='148'>148pt</option>
+                    <option value='149'>149pt</option>
+                    <option value='150'>150pt</option>
+                    <option value='151'>151pt</option>
+                </select>
+                <select name="" id="page" onchange="cpage()" class="ui" title="Page count">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    <option value="10">10</option>
+                    <option value="11">11</option>
+                    <option value="12">12</option>
+                    <option value="13">13</option>
+                    <option value="14">14</option>
+                    <option value="15">15</option>
+                    <option value="16">16</option>
+                </select>
+            </div>
+        </div>
+        <div class="playground">
+
+
+            <br><br>
+            <div align="center">
+                <textarea id="text" class="ui" style="height: 30cm; width: 21cm; resize: none;"></textarea>
+            </div>
+        </div>
+        <script>
+            unstampWriter()
+        </script>
+</body>
+
+</html>

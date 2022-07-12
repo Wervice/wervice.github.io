@@ -1,0 +1,61 @@
+iframe.iframe {
+    width: calc(100vw - 0px);
+    height: calc(100vh - 80px);
+}
+
+input[type="email"] {
+    border-radius: 2px;
+    border-width: 0px;
+    background-color: #efefef;
+    padding: 5px;
+    font-family: 'Poppins', 'Poppins medium', 'Montserrat', 'monospace';
+    width: calc(90vw - 200px);
+    margin-bottom: 5px;
+}
+
+input[type="text"] {
+    border-radius: 2px;
+    border-width: 0px;
+    background-color: #efefef;
+    padding: 5px;
+    font-family: 'Poppins', 'Poppins medium', 'Montserrat', 'monospace';
+    width: 90vw;
+    margin-bottom: 5px;
+}
+
+button.send {
+    width: 195px;
+    margin-right: 5px;
+    height: calc(14pt + 10px);
+    border-width: 0px;
+    border-radius: 2px;
+    background-color: #efefef;
+    font-family: 'Poppins', 'Poppins medium', 'Montserrat', 'monospace';
+    cursor: pointer;
+}
+
+button.send:focus {
+    background-color: dodgerblue;
+    color: black;
+}
+
+textarea.mail {
+    width: 90vw;
+    height: 720px;
+    max-height: 80vh;
+    padding: 5px;
+    font-family: 'Poppins', 'Poppins medium', 'Montserrat', 'monospace';
+    color:black;
+    letter-spacing: 1.5px;
+    font-size: 12pt;
+    border-width: 0px;
+    background-color: #efefef;
+}
+
+input[type="password"] {
+    padding: 5px;
+    border-radius: 2.5px;
+    background-color: #efefef;
+    color: black;
+    border-width: 0px;
+}

@@ -33,7 +33,7 @@
         caret-color: black;
         border-width: 2px;
         border-style: solid;
-        border-color: black;
+        border-color: rgba(0, 0, 0, 0.336);
     }
 
     button.whatsapp {
@@ -60,12 +60,19 @@
         width: calc(100vw - 40px);
     }
 
-    button.blue {
-        background-color: deepskyblue;
+    button.grey {
+        background-color: rgb(224, 224, 224);
         color: rgb(32, 32, 32);
         border-width: 0px;
         margin: 10px;
         width: calc(100vw - 40px);
+        border-radius: 10px;
+        padding: 10px;
+        width: 150px;
+    }
+
+    button.grey:hover {
+        filter: brightness(90%);
     }
 
     button.cp {
@@ -99,12 +106,12 @@ Just copy the decoded message in the encryptoion window and press encode or copy
 <br>
 <h3>Encode</h3>
 <textarea placeholder="Encode message" id="encode" style="width:100vw; max-width:10cm;background-image: url('../../images/encode.webp');background-size: cover;"></textarea><br>
-<button style="width:150px;border-width: 0px;background-color: dodgerblue; color: white;margin: 10px;padding: 10px;" onclick="document.getElementById('encode').value = btoa(document.getElementById('encode').value)">Encode</button>
+<button class="grey" onclick="document.getElementById('encode').value = btoa(document.getElementById('encode').value)">Encode</button>
 
 <h3>Decode</h3>
-<textarea placeholder="Encode message" id="decode"
+<textarea placeholder="Decode message" id="decode"
     style="width:100vw; max-width:10cm;background-image: url('../../images/decode.png');background-size: cover;"></textarea><br>
-<button style="width:150px;border-width: 0px;background-color: dodgerblue; color: white;margin: 10px;padding: 10px;"
+<button class="grey"
     onclick="document.getElementById('decode').value = atob(document.getElementById('decode').value)">Decode</button>
 
 </div>
