@@ -160,6 +160,10 @@
             width: calc(5 * 55px - 18px);
             height: calc(9.75 * 55px);
         }
+
+        figcaption {
+            color: white;
+        }
     </style>
     <!-- Script -->
     <script>
@@ -241,7 +245,7 @@
                 document.getElementById('t').hidden = false;
                 document.getElementById('window').hidden = false;
                 document.getElementById('passwordprompt').hidden = true;
-                const tencode=  function(string, key) {
+                const tencode = function (string, key) {
                     tecca = ""
                     ti = 0
                     while (ti != string.length) {
@@ -253,7 +257,7 @@
                     return tecca
                 }
 
-                const tencodePass = function(pass) {
+                const tencodePass = function (pass) {
                     if (pass.length < 6) {
                         tencerr = false
                     }
@@ -494,9 +498,9 @@
             <!-- AddOns -->
             <script>
                 if (localStorage.getItem("wdesk://apps/add") != null) {
-                document.write(
-                    localStorage.getItem("wdesk://apps/add").replaceAll("null", "")
-                )
+                    document.write(
+                        localStorage.getItem("wdesk://apps/add").replaceAll("null", "")
+                    )
                 }
                 else {
                     localStorage.setItem("wdesk://apps/add", "")
