@@ -2,3 +2,6 @@
 styled.css/
 images/Thumbs.db
 *.db
+.vscode/launch.json
+.vscode/palweb.code-workspace
+.vscode/settings.json
