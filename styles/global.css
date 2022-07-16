@@ -170,7 +170,7 @@ button:disabled {
 footer {
     background: #022030;
     color: #ffffff;
-    height: 15vh;
+    height: auto;
     font-family: Poppins, sans-serif;
     font-size: 12pt;
     padding: 5pt;
