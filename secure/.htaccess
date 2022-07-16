@@ -1,4 +1,0 @@
-AuthType Basic
-AuthName "System Only Position"
-AuthUserFile "/secure/.htpasswd"
-Require valid-user
