@@ -1,0 +1,16 @@
+div.wdhero {
+    padding: 20px;
+    color: white;
+    font-size: 40pt;
+    height: 50vh;
+    min-height: 10cm;
+    background-image: url(/images/wdhero.png);
+    background-position: center;
+    background-size: cover;
+    backdrop-filter: brightness(25%);
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    position: relative;
+    text-shadow: 0px 0px 5px rgba(0, 0, 0, 0.333);
+}
