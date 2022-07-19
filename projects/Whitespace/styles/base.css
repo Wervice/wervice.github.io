@@ -116,6 +116,11 @@ button.close:hover {
     filter: brightness(90%);
 }
 
+button.close:focus {
+    box-shadow: -2px -2px 4px 0px #ffffffb9 inset,
+            2px 2px 4px 0px #0000007a inset;
+}
+
 ::-moz-selection {
     color: white;
     background: dodgerblue;

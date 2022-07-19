@@ -1,7 +1,5 @@
 textarea.text {
-    border-width: 1px;
-    border-color: rgb(110, 110, 110);
-    border-style: solid;
+    border-width: 0px;
     border-radius: 5px;
     padding: 10px;
     resize: none;
@@ -13,6 +11,10 @@ textarea.text {
     letter-spacing: 0.1cm;
     line-break: loose;
     word-wrap: break-word;
+    background-color: #252525;
+    color: white;
+    box-shadow: 2px 2px 10px black, -2px -2px 7px rgba(255, 255, 255, 0.5);
+    margin: 10px;
 }
 
 textarea.small {
@@ -32,16 +34,13 @@ textarea.small {
     word-wrap: break-word;
 }
 
-
-div.page {
-    background-color: #ececec;
-}
-
 div.name {
     height: 14pt;
     padding: 10px;
-    background-color: #08e79d;
-    font-size: 12pt;
-    color: #0b4128;
+    background-color: #00ff6a6e;
+    color: #ffffff;
+    letter-spacing: 2px;
     font-weight: 500;
+    margin-bottom: 10px;
+    font-size: 14pt;
 }

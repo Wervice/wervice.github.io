@@ -5,10 +5,10 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/styles/global.css">
-    <link rel="stylesheet" href="interline.css">
+    <link rel="stylesheet" href="./interline.css">
     <title>Interline Word</title>
-    <link rel="stylesheet" href="/styles/global.css">
+    <link rel="stylesheet" href="/projects/Whitespace/styles/base.css">
+    <link rel="stylesheet" href="/styles/footer.css">
     <meta name="theme-color" content="#08e79d">
     <meta name="msapplication-navbutton-color" content="#08e79d">
     <link rel="shortcut icon" href="favicon.png" type="image/png">
@@ -35,23 +35,7 @@
         }
 
         div.tools {
-            background-color: #ececec;
-        }
-
-        button.tools {
-            background-color: #ffffff;
-            border-width: 0px;
-        }
-
-        button.tools:hover {
-            background-color: #d6d6d6;
-            border-width: 0px;
-            animation: none;
-        }
-
-        button.tools:focus {
-            background-color: #c2c2c2;
-            border-width: 0px;
+            background-color: #00000000;
         }
 
         div.files {
@@ -62,23 +46,26 @@
             height: 10cm;
             padding: 10px;
             border-radius: 10px;
-            background-color: white;
+            background-color: rgb(0, 0, 0);
             box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5);
             overflow-y: scroll;
+            color: #08e79d;
         }
 
         button.filebutton {
             border-width: 0px;
             border-radius: 5px;
             padding: 5px;
-            width: 3cm;
-            background-color: rgb(255, 255, 255);
+            min-width: 4cm;
+            background-color: #08e79d5e;
             color: black;
             margin-bottom: 5px;
         }
 
-        button.filebutton:hover {
-            background-color: rgb(241, 252, 255);
+
+        button.ui {
+            border-radius: 12pt;
+            margin-left: 10px;
         }
     </style>
     <script>
@@ -139,7 +126,7 @@
                 document.getElementById('flist').innerHTML = localStorage.getItem('wsf://interlineword/index.sys')
             }
             else {
-                document.getElementById('flist').innerHTML = '<br>No Files'
+                document.getElementById('flist').innerHTML = 'No Files'
             }
         }
 
@@ -163,20 +150,21 @@
 <body>
     <div class="files" id="files" hidden>
         <font onclick="document.getElementById('files').hidden = true;" style="font-size: large; color: #11a373;">
-                    <img src="/images/close.png" alt="" height="16">
-            Open File
+                    <button class="close"></button>
         </font>
         <br><br>
         <div id="flist">
         </div>
     </div>
-    <div class="name" id="title">Interline Word</div>
-    <div class="tools" id="tools"><button class='ui tools' onclick="wsf()">Save</button><button class="ui tools"
+    <div class="name" id="title" align="center">Interline Word</div>
+    <button class='ui' onclick="wsf()">Save</button><button class="ui"
             onclick="openwsf()">Open
-            File</button><button class="ui tools" onclick="window.open('index.html', '_blank')">New</button><button class="ui tools" onclick="downloadtxt()">Download</button></div>
+            File</button><button class="ui" onclick="window.open('index.html', '_blank')">New</button><button class="ui" onclick="downloadtxt()">Download</button>
+            <br><br>
     <div align=center class="page" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false">
         <textarea name="text" id="text" class="text" onkeyup="scuts()"></textarea>
     </div>
+<br>
 <footer style="height:auto;"><a href="/privacy policy/index.html">Privacy Policy</a> | <a href="/impress/index.html">Impress</a> | <a
         href="/legal.html">Credits</a> | Made with ☕ and ❤ by Wervice | 3D illustrations made with <a
         href="https://icons8.com/lunacy">Lunacy</a> by <a href="https://icons8.com/">Icons8</a> | Colored icons by
