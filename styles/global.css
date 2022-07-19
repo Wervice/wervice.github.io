@@ -266,8 +266,7 @@ footer a:hover {
 }
 
 div.cover {
-    height: 100vh;
-    width: 100%;
+    height: calc(auto + 10vh);
     background-color: rgb(255, 255, 255);
     background-size: cover;
     background-position: center;
@@ -518,15 +517,6 @@ hr {
     border-color: rgb(0, 77, 128);
     width: 200px;
     margin: 20px;
-}
-
-video.cover {
-    height: 36vh;
-    width: 64vh;
-    max-width: 100vw;
-    background-size: cover;
-    border-radius: 10px;
-    box-shadow: 0px 0px 5px rgb(211, 211, 211);
 }
 
 .tld {
