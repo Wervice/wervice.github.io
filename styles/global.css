@@ -275,7 +275,7 @@ div.cover {
 
 a {
     color: black;
-    text-decoration: none;
+    text-decoration: underline;
 }
 
 a:hover {

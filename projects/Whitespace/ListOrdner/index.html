@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ListOrdner</title>
+    <link rel="stylesheet" href="../styles/base.css">
+    <link rel="stylesheet" href="../styles/ListOrdner.css">
+    <link rel="shortcut icon" href="../favicons/ListOrdner.png" type="image/png">
+    <script src="../script/nocontext.js"></script>
+    <script src="../csjs/index.js"></script>
+    <script src="../script/ordner.js"></script>
+    <script src="../bckend/encode.js"></script>
+
+    <script>
+        if (encodePass(sessionStorage.getItem("logged")) != localStorage.getItem("unlkepsw")) {
+            document.documentElement.innerHTML = null
+            window.top.location.replace("../index.html")
+        }
+
+        function cancelapp() {
+            window.open(history.back(), 'window')
+        }
+    </script>
+    <script>
+        if (localStorage.getItem('wsf://interlineword/index.sys') == null || localStorage.getItem('wsf://interlineword/index.sys') == 'null') {
+            localStorage.setItem('wsf://interlineword/index.sys', '')
+        }
+    </script>
+    <style>
+        ::selection {
+            background: #08e79d;
+            color: black;
+        }
+
+        ::-moz-selection {
+            background: #08e79d;
+            color: black;
+        }
+
+        ::-webkit-selection {
+            background: #08e79d;
+            color: black;
+        }
+
+        div.tools {
+            background-color: #00000000;
+        }
+
+        div.files {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            width: 10cm;
+            height: 10cm;
+            padding: 10px;
+            border-radius: 10px;
+            background-color: #282828;
+            box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5);
+            overflow-y: scroll;
+            color: white;
+        }
+
+        button.filebutton:hover {
+            background-color: rgb(241, 252, 255);
+        }
+
+        div.text {
+            border-width: 0px;
+            border-radius: 5px;
+            background-color: rgba(0, 0, 0, 0);
+            color: white;
+            padding: 10px;
+            resize: none;
+            margin: 5px;
+            height: 29.7cm;
+            width: 21.0cm;
+            font-family: Poppins, 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-size: 14pt;
+            letter-spacing: 0.1cm;
+            line-break: loose;
+            word-wrap: break-word;
+            box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.651), -2px -2px 5px rgba(255, 255, 255, 0.432);
+        }
+
+        textarea.small {
+            border-width: 1px;
+            border-color: rgb(110, 110, 110);
+            border-style: solid;
+            border-radius: 5px;
+            padding: 10px;
+            resize: none;
+            margin: 5px;
+            height: 90vh;
+            width: 90vw;
+            font-family: Poppins, 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-size: 14pt;
+            letter-spacing: 0.1cm;
+            line-break: loose;
+            word-wrap: break-word;
+        }
+    </style>
+    <script>
+
+    function wsfdelilw(fname) {
+            localStorage.removeItem('wsf://interlineword/' + fname + '.itw')
+            localStorage.setItem('wsf://interlineword/index.sys', localStorage.getItem('wsf://interlineword/index.sys').replace('<button onclick=openlistilt("' + fname + '") class=filebutton>' + fname + '.itw</button>', ''))
+            document.getElementById('files').hidden = true;
+        }
+
+        function hfp() {
+            document.getElementById('title').hidden = true;
+            document.getElementById('tools').hidden = true;
+            document.getElementById('credits').hidden = true;
+        }
+
+        function sfp() {
+            document.getElementById('title').hidden = false;
+            document.getElementById('tools').hidden = false;
+            document.getElementById('credits').hidden = false;
+        }
+
+        function wsf() {
+            if (setfurl() != null) {
+                var filename = setfurl()
+            }
+            else {
+                var filename = prompt('File Name');
+                var act = filename
+            }
+            document.getElementById('appname').innerHTML = "Writer - " + filename
+            if (filename == '') {
+                var filename = 'unamed'
+            }
+            if (localStorage.getItem('wsf://interlineword/' + filename + '.itw') != null) {
+                if (confirm('Replace?') == true) {
+                    wsfdelilw(filename)
+                    localStorage.setItem('wsf://interlineword/index.sys', localStorage.getItem('wsf://interlineword/index.sys') + '<button onclick=openlistilt("' + filename + '") class=ui>' + filename + '.itw</button><img src=delete.png height=12 onclick="wsfdelilw(\'' + filename + '\')"><br>')
+                    localStorage.setItem('wsf://interlineword/' + filename + '.itw', escape(document.getElementById('text').innerHTML))
+                }
+                else {
+
+                }
+            }
+            else {
+                wsfdelilw(filename)
+                localStorage.setItem('wsf://interlineword/index.sys', localStorage.getItem('wsf://interlineword/index.sys') + '<button onclick=openlistilt("' + filename + '") class=ui>' + filename + '.itw</button><br>')
+                localStorage.setItem('wsf://interlineword/' + filename + '.itw', escape(document.getElementById('text').innerHTML))
+            }
+
+        }
+
+        function openwsf() {
+            document.getElementById('files').hidden = false;
+            if (localStorage.getItem('wsf://interlineword/index.sys') != '') {
+                document.getElementById('flist').innerHTML = localStorage.getItem('wsf://interlineword/index.sys')
+            }
+            else {
+                document.getElementById('flist').innerHTML = 'No Files'
+            }
+        }
+
+        function openlistilt(fname) {
+            document.getElementById('text').innerHTML = unescape(localStorage.getItem('wsf://interlineword/' + fname + '.itw'))
+            document.getElementById('files').hidden = true;
+        }
+
+        function setfurl() {
+            var url_string = location.href
+            var url = new URL(url_string);
+            var c = url.searchParams.get("innerHTML");
+            return c;
+        }
+        function downloadtxt() {
+            newWindow = window.open("data:application/octet-stream," + encodeURIComponent(document.getElementById('text').innerHTML), 'file.txt');
+        }
+    </script>
+</head>
+
+<body>
+    <div id="menu">
+        <div class="title" style="margin-bottom: 0px;"><a href="javascript:cancelapp()" target="window"><button
+                    class="close"></button></a> <button class="close" style="background: darkgrey;"></button>
+            <button class="close" style="background: darkgrey;"></button>&ThickSpace;<font id="appname">Writer - New
+                document</font>
+        </div>
+
+        <div class="files" id="files" hidden>
+            <font onclick="document.getElementById('files').hidden = true;" style="font-size: 10pt; color: #ffffff;">
+                <button class="close"></button>
+                &ThickSpace;
+                File manager
+            </font>
+            <br><br>
+            <div id="flist">
+            </div>
+        </div>
+        <div class="tools" id="tools"><button class='ui tools' onclick="wsf()">Save</button><button class="ui tools"
+                onclick="openwsf()">Open
+                File</button><button class="ui tools" onclick="downloadtxt()">Download</button>
+            <button class="ui tools"
+                onclick="document.getElementById('text').innerHTML = document.getElementById('text').innerHTML+'∘ <br>∘ <br>'">New
+                list</button>
+            <button class="ui tools"
+                onclick="document.getElementById('text').innerHTML = document.getElementById('text').innerHTML+'<b align=left style=\'font-size:xx-large;\'>[TITLE]</b><br><hr>'">New
+                title</button>
+
+        </div>
+        <br>
+        <div align=center class="page" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false">
+            <div name="text" id="text" class="text" onkeyup="scuts()" contenteditable="true" align="left"></div>
+        </div>
+
+        <script>
+            document.getElementById('text').innerHTML = ''
+        </script>
+        <script>
+            if (setfurl() != null) {
+                document.getElementById('text').innerHTML = unescape(localStorage.getItem('wsf://interlineword/' + setfurl() + '.itw'))
+            }
+        </script>
+</body>
+
+</html>

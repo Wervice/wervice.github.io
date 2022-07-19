@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg width="120px" height="120px" viewBox="0 0 120 120" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <filter filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB" id="filter_1">
+      <feFlood flood-opacity="0" result="BackgroundImageFix" />
+      <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape" />
+      <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha" />
+      <feOffset dx="2" dy="2" />
+      <feGaussianBlur stdDeviation="2" />
+      <feComposite in2="hardAlpha" operator="arithmetic" k2="-1" k3="1" />
+      <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.2509804 0" />
+      <feBlend mode="normal" in2="shape" result="effect0_innerShadow" />
+      <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha" />
+      <feOffset dx="-2" dy="-2" />
+      <feGaussianBlur stdDeviation="2" />
+      <feComposite in2="hardAlpha" operator="arithmetic" k2="-1" k3="1" />
+      <feColorMatrix type="matrix" values="0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0.49803922 0" />
+      <feBlend mode="normal" in2="effect0_innerShadow" result="effect1_innerShadow" />
+    </filter>
+    <path d="M88.673 64.4474C88.8525 63.1914 89.0319 61.9354 89.0319 60.5C89.0319 59.0646 88.8525 57.8086 88.673 56.5526L96.7472 50.811C97.4649 50.2727 97.8238 49.1962 97.2855 48.299L89.3907 35.0215C88.8525 34.1244 87.9553 33.7655 87.0582 34.3038L78.0869 38.4306C75.9338 36.8158 73.7807 35.5598 71.2687 34.4833L70.3716 24.6148C70.1922 23.7177 69.4745 23 68.5774 23L53.1467 23C52.2496 23 51.3525 23.7177 51.3525 24.6148L50.4553 34.4833C47.9434 35.5598 45.6108 36.8158 43.6372 38.4306L34.6659 34.3038C33.7687 33.945 32.6922 34.3038 32.3333 35.0215L24.618 48.299C24.0797 49.1962 24.4386 50.2727 25.1563 50.811L33.2305 56.5526C33.051 57.8086 32.8716 59.0646 32.8716 60.5C32.8716 61.9354 33.051 63.1914 33.2305 64.4474L24.7974 70.189C24.0797 70.7273 23.7209 71.8038 24.2592 72.7009L31.9745 85.9785C32.5128 86.8756 33.4099 87.2344 34.307 86.6962L43.2783 82.5694C45.4314 84.1842 47.5845 85.4402 50.0965 86.5167L50.9936 96.3852C51.173 97.2823 51.8908 98 52.7879 98L68.2185 98C69.1156 98 70.0128 97.2823 70.0128 96.3852L70.9099 86.5167C73.4219 85.4402 75.7544 84.1842 77.7281 82.5694L86.6994 86.6962C87.5965 87.055 88.673 86.6962 89.0319 85.9785L96.7472 72.7009C97.2855 71.8038 96.9266 70.7273 96.2089 70.189L88.673 64.4474L88.673 64.4474ZM60.6826 78.4426C50.8142 78.4426 42.74 70.3684 42.74 60.5C42.74 50.6316 50.8142 42.5574 60.6826 42.5574C70.551 42.5574 78.6252 50.6316 78.6252 60.5C78.6252 70.3684 70.551 78.4426 60.6826 78.4426L60.6826 78.4426Z" id="path_1" />
+    <rect width="120" height="120" id="artboard_1" />
+    <clipPath id="clip_1">
+      <use xlink:href="#artboard_1" clip-rule="evenodd" />
+    </clipPath>
+  </defs>
+  <g id="Whitespace-Launcher" clip-path="url(#clip_1)">
+    <use xlink:href="#artboard_1" stroke="none" fill="#FFFFFF" fill-opacity="0" />
+    <g id="Shape">
+      <use stroke="none" fill="#00ACFF" xlink:href="#path_1" fill-rule="evenodd" filter="url(#filter_1)" />
+      <use xlink:href="#path_1" fill="none" stroke="#77D3FF" stroke-width="2" />
+    </g>
+  </g>
+</svg>

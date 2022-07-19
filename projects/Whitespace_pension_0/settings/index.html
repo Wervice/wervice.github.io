@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>/settings</title>
+    <script src="../database.js"></script>
+    <script src="../localStorageBackup.js"></script>
+    <script src="../stamp.js"></script>
+    <link rel="stylesheet" href="../fonts/montserrat.css">
+    <link rel="stylesheet" href="../styles/inputs.css">
+    <script>
+        const systemBase = new database();
+    </script>
+    <script>
+        function changeUserdata() {
+            var hashClear = document.getElementById('password').value // Get password
+            function sha512(str) { // Encode password
+                return crypto.subtle.digest("SHA-512", new TextEncoder("utf-8").encode(str)).then(buf => {
+                    return Array.prototype.map.call(new Uint8Array(buf), x => (('00' + x.toString(16)).slice(-2))).join('');
+                });
+            }
+
+            sha512(hashClear).then(x => systemBase.setItem("whsp://password.config", x)) // Set password
+            if (systemBase.getItem("whsp://password.config") == '58FCE4CFBAFC7ADD014996ECF7FA0C52837449CAE057D25FB8EEE2A8C6CEFD5D42A0FC1BFA748955223AE5985FA7B41C4B086971EF934925080230AFE3A2F38D') {
+                alert('This password is not allowed')
+                window.top.location.reload()
+            }
+            systemBase.setItem("whsp://account", "installed")
+            systemBase.setItem("whsp://username.config", document.getElementById('username').value)
+            alert("Please restart system.")
+            window.top.location.reload()
+        }
+    </script>
+    <script>
+        function resetAccount() {
+            if (systemBase.getItem('whsp://quick/backedUp') != 'null') {
+                if (confirm('Do you really want to reset your account?') == true) {
+                    if (confirm('DANGER!\rRESET YOUR ACCOUNT?') == true) {
+                        systemBase.clear(); sessionStorage.clear(); window.top.location.replace('../login.html?reset=true')
+                    }
+                }
+            }
+            else {
+                var nobackup = confirm('Do you want to reset your data without any backup?')
+                if (nobackup == true) {
+                    if (confirm('Do you really want to reset your account?') == true) {
+                        if (confirm('DANGER!\rRESET YOUR ACCOUNT?') == true) {
+                            systemBase.clear(); sessionStorage.clear(); window.top.location.replace('../login.html?reset=true')
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <div class="windowname">
+        <button class="close" onclick="callDesktop()"></button> <button class="close"
+            style="left:40px;background-color: rgba(255, 255, 255, 0.507);"></button> <button class="close"
+            style="left:70px;background-color: rgba(255, 255, 255, 0.507);"></button>
+        <font style="position:absolute;left:100px;color:white;">Settings</font>
+    </div>
+    <div id="settings" hidden>
+        <h3>My account</h3>
+        <input type="text" name="username" id="username" style="margin-left:20px" placeholder="username"><br>
+        <input type="password" name="password" id="password" style="margin-left:20px" placeholder="password"><br>
+        <script>
+            document.getElementById('username').value = systemBase.getItem('whsp://username.config')
+        </script>
+        <br>
+        <button style="margin-left:20px;" onclick="changeUserdata()">Change data</button>
+        <br><br>
+        <button style="border-color:darkred;background-color:red; margin-left:20px;" onclick="resetAccount()">Reset my
+            account</button>
+        <font style="margin-left:20px; color:grey;">Download a backup, then you can erase your Whitespace data.</font>
+        <br><br>
+        <h3>Backup</h3>
+        <a download="backup.html" href="" id="buttonNamer"><button style="margin-left:20px;"
+                onclick="systemBase.setItem('whsp://quick/backedUp', 'made')">Build backup</button></a><br><br>
+        <script>
+            nameButton()
+        </script>
+        <div style="margin-left:20px; color:grey;">By clicking the button your browser builds a HTML-Backup-Page. Store
+            it on your computer. <br>
+            Please make backups all 10-20 days. You can open backups just like downloaded webpages or html-files.
+            <br>
+            <br>
+            Help:<br>
+            Problem 1:
+            My browser cleared my whole Whitespace data.
+            <ol>
+                <li>Resetore your data from the newset backup you have.</li>
+                <li>Change privacy:</li>
+                CAREFUL: THIS CHANGES PRIVACY OPTIONS
+                <ul>
+                    <li>Firefox</li>
+                    <ol>
+                        <li>
+                            Open this url in the url-bar: about:preferences#privacy
+                        </li>
+
+                        <li>
+                            Choose 'Personalized'
+                        </li>
+
+                        <li>
+                            Disable: Cookies, Tracker and Fingerprinter (Careful: Other pages can track you now)
+                        </li>
+                    </ol>
+                    <li>Chrome</li>
+                    <ol>
+                        <li>
+                            Search in your browser's settings: "Clear cookies by closing"
+                        </li>
+
+                        <li>
+                            Then the function.
+                        </li>
+                    </ol>
+                    <li>Edge</li>
+                    <ol>
+                        <li>
+                            Search in your browser's settings: "Clear cookies by closing"
+                        </li>
+
+                        <li>
+                            Then the function.
+                        </li>
+                    </ol>
+                </ul>
+            </ol>
+            Problem 2: My browser opens a strange url. What's that?
+            <br>
+            This happens if your browser doesn't understand data uris. Maybe you can dowload an DataUri-extensoion for
+            your browser. Any your browser should be newer than version 85.
+            <hr style="border-style: solid;border-color: grey;">
+            How does a backup work?<br>
+            <ol>
+                <li>Click on the button</li>
+                <li>Store the backup file as HTML</li>
+                <li>Open the file and check it. It should contain an ID, your username, your hash and some more data. If
+                    one is missing create a new backup.</li>
+            </ol>
+        </div>
+    </div>
+    <h3>About Whitespace</h3>
+    <div style="margin-left:20px;">
+        Version: 1.10<br>
+        Language: Englisch (en-EN)<br>
+        Basing: HTML-CSS-JS<br>
+
+    </div>
+    <hr>
+    Credits:<br>
+    Montserrat: Copyright 2011 The Montserrat Project Authors (https://github.com/JulietaUla/Montserrat); <a
+        href='legal/OFL - Montserrat.txt'>OFL - License</a><br>
+    Poppins: Copyright 2020 The Poppins Project Authors (https://github.com/itfoundry/Poppins); <a
+        href="../../fonts/Grape_Nuts/OFL.txt">OFL - License</a><br>
+    Playfair Display: Copyright 2005–2022 The Playfair Project Authors (https://github.com/clauseggers/Playfair, with
+    Reserved Font Name "Playfair".; <a href="legal/OFL - PFD.txt">OFL - License</a><br>
+    Grape Nuts: Copyright 2003 The Grape Nuts Project Authors (https://github.com/googlefonts/grapenuts); <a
+        href="legal/OFL - GN.txt">OFL - License</a><br>
+    3D illustrations: I use <a href="https://icons8.com/lunacy">Lunacy</a> by <a href="https://icons8.com/">Icons8</a>
+
+    <h3>Icons</h3>
+    I use icons from <a href="https://www.icons8.com">Icons8</a>
+    <script>
+        unstampSettings()
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,19 @@
+img.blogo {
+    height: 60px;
+}
+img.blogo:hover {
+    animation-name: resize;
+    animation-duration: 0.75s;
+}
+@keyframes resize {
+    0% {}
+    50% {
+        height: 80px;
+        margin-bottom: 20px;
+    }
+    100% {}
+}
+
+p {
+    font-size: 13pt;
+}

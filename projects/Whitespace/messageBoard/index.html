@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Message Board</title>
+    <link rel="stylesheet" href="../styles/base.css">
+    <link rel="stylesheet" href="./mboard.css">
+        <script src="../bckend/encode.js"></script>
+
+    <script src="./social.js"></script>
+        <script>
+            if (encodePass(sessionStorage.getItem("logged")) != localStorage.getItem("unlkepsw")) {
+                    document.documentElement.innerHTML = null
+                    window.top.location.replace("../index.html")
+                }
+
+            function cancelapp() {
+                window.open(history.back(), 'window')
+            }
+        </script>
+</head>
+
+<body>
+    <div class="title" style="margin-bottom: 0px;"><a href="javascript:cancelapp()" target="window"><button
+                class="close"></button></a> <button class="close" style="background: darkgrey;"></button>
+        <button class="close" style="background: darkgrey;"></button>&ThickSpace;New email
+    </div>
+    <iframe src="mail.html" frameborder="0" id="iframe" class="iframe"></iframe>
+    <a href="" id="calllink" hidden>call</a>
+</body>
+
+</html>

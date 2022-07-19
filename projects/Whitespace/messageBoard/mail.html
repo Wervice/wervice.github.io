@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./mboard.css">
+    <link rel="stylesheet" href="../styles/base.css">
+    <script src="./social.js"></script>
+    <style>
+        body {
+            cursor: url(../cursor.png);
+        }
+
+        button.l:hover {
+            color: blue;
+        }
+
+        *:focus {
+            outline: none;
+        }
+
+        textarea {
+            resize: none;
+        }
+
+        * {
+            cursor: url(../cursor.png);
+        }
+    </style>
+    <script>
+        function cancelapp() {
+            window.open(history.back(), 'window')
+        }
+    </script>
+    <title>new e-mail</title>
+    <script src="../bckend/encode.js"></script>
+
+    <script>
+        if (encodePass(sessionStorage.getItem("logged")) != localStorage.getItem("unlkepsw")) {
+            document.documentElement.innerHTML = null
+            window.top.location.replace("../index.html")
+        }
+
+        function checkMail() {
+            var mailaddr = document.getElementById('email').value;
+            if (!mailaddr.includes("@") && mailaddr != "") {
+                document.getElementById('autocomplete').innerHTML = "<button onclick='mAppend(\"@outlook.com\")' class=ui>@outlook.com</button><button onclick='mAppend(\"@gmail.com\")' class=ui>@gmail.com</button><button onclick='mAppend(\"@yahoo.com\")' class=ui>@yahoo.com</button><button onclick='mAppend(\"@icloud.com\")' class=ui>@icloud.com</button>"
+            }
+            else {
+                document.getElementById('autocomplete').innerHTML = ""
+            }
+        }
+
+        function mAppend(prefix) {
+            document.getElementById('email').value = document.getElementById('email').value + prefix
+            checkMail()
+        }
+    </script>
+</head>
+
+<body>
+    <div style="padding:10px;">
+        <button class="send ui" style="background-color:rgb(84, 91, 99);" onclick="sendEmail()">Send</button><input type="text" name="email" id="email"
+            placeholder="Recipient" title="Enter the recipients's email adress." onkeyup="checkMail()"
+            onload="this.click()" list="mails">
+        <script>
+            document.writeln("<datalist id=mails name=mails>" + localStorage.getItem("wdesk://mAl/") + "</datalist>")
+        </script>
+        <br>
+        <div id="autocomplete" style="background-color: #00000000;"></div>
+        <input type="text" name="subject" id="subject" placeholder="Subject" title="The subject for the email.">
+        <div style="height:10px;"></div>
+        <textarea name="mail" id="mail" class="mail" placeholder="Dear..." style="border-radius: 5px; margin-left: 5px; box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5), -2px -2px 5px rgba(255, 255, 255, 0.175); background-color: #00000000;"></textarea>
+    </div>
+</body>
+
+</html>

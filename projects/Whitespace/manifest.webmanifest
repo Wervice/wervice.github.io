@@ -1,0 +1,19 @@
+{
+  "name": "WerviceWhitespace",
+  "short_name": "Whitespace",
+  "lang": "en-EN",
+  "start_url": "index.html",
+  "display": "standalone",
+  "theme_color": "#efefef",
+  "icons": [
+    {
+      "src": "favicon.ico",
+      "type": "image/ico"
+    },
+
+    {
+      "src": "favicon.png",
+      "type": "image/png"
+    }
+  ]
+}

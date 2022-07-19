@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>/desktop</title>
+    <script src="SHA512.js"></script>
+    <script src="stamp.js"></script>
+    <script src="./database.js"></script>
+    <script>
+        // for iOS Safari
+        eruda.init()
+    </script>
+    <script>
+        const systemBase = new database();
+    </script>
+    <link rel="shortcut icon" href="logo.png" type="image/png">
+    <link rel="stylesheet" href="fonts/montserrat.css">
+    <title>Whitespace</title>
+    <style>
+        body {
+            font-family: Montserrat;
+            color: black;
+            background-color: white;
+            padding: 0px;
+            margin: 0px;
+        }
+
+        div.desktop {
+            height: calc(100vh - 70px);
+        }
+
+        div.taskbar {
+            height: 50px;
+            padding: 10px;
+            background-color: rgb(247, 247, 247);
+        }
+
+        img.launcher {
+            border-radius: 20%;
+            height: 60px;
+            width: 60px;
+            margin-top: 20px;
+            margin-left: 20px;
+        }
+
+        img.launcher-taskbar {
+            border-radius: 50%;
+            height: 50px;
+            width: 50px;
+        }
+    </style>
+    <script src="./stamp.js"></script>
+    <script src="./message.js"></script>
+    <script>
+        window.oncontextmenu = function () {
+            return false;
+        }
+    </script>
+</head>
+
+<body>
+    <div id="desktop"
+        onload="if (navigator.userAgent.includes('Win') || navigator.userAgent.includes('Linu')) {this.hidden = true}">
+
+        <img src="info-launcher.png" alt="" class="launcher" id="settings" onclick="callSettings()"> <img
+            src="terminal-launcher.png" alt="" class="launcher" title="Terminal"> <img src="text-launcher.png" alt=""
+            class="launcher" title="Writer" onclick="callWriter()">
+
+        <img src="lock-launcher.png" alt="" class="launcher"
+            onclick="if (confirm('Do you want to log out?') == true) {sessionStorage.clear(); window.top.location.replace('login.html')}"
+            title="Log Out">
+
+    </div>
+    <script>
+        if (systemBase.getItem("whsp://quick/backedUp") == "null") {
+            document.getElementById("settings").src = "info-launcher-warning.png"
+            document.getElementById("settings").title = "Settings: \r⚠ Please make a first backup of your data."
+        }
+    </script>
+    <script>
+        function auth() {
+            var url_string = location.href
+            var url = new URL(url_string)
+            var url_password_64 = url.searchParams.get("password")
+            var url_password = atob(url_password_64)
+            sha512(url_password).then(x => resha(x))
+        }
+
+        function resha(code) {
+            if (systemBase.getItem("whsp://password.config") == code) {
+                var _0x21127c = _0x3796; function _0x3796(_0x296e52, _0x46cf57) { var _0x245bca = _0x245b(); return _0x3796 = function (_0x37968e, _0x371818) { _0x37968e = _0x37968e - 0x1be; var _0x38cd1d = _0x245bca[_0x37968e]; return _0x38cd1d; }, _0x3796(_0x296e52, _0x46cf57); } (function (_0x2ad7d3, _0x50d2bd) { var _0x3c3ae4 = _0x3796, _0x40eb67 = _0x2ad7d3(); while (!![]) { try { var _0x47ef9a = parseInt(_0x3c3ae4(0x1be)) / 0x1 * (-parseInt(_0x3c3ae4('0x1c9')) / 0x2) + -parseInt(_0x3c3ae4('0x1c1')) / 0x3 + parseInt(_0x3c3ae4(0x1bf)) / 0x4 + parseInt(_0x3c3ae4(0x1c5)) / 0x5 * (parseInt(_0x3c3ae4(0x1c2)) / 0x6) + parseInt(_0x3c3ae4(0x1c0)) / 0x7 + -parseInt(_0x3c3ae4(0x1c7)) / 0x8 + parseInt(_0x3c3ae4('0x1ca')) / 0x9 * (parseInt(_0x3c3ae4(0x1c4)) / 0xa); if (_0x47ef9a === _0x50d2bd) break; else _0x40eb67['push'](_0x40eb67['shift']()); } catch (_0x390b81) { _0x40eb67['push'](_0x40eb67['shift']()); } } }(_0x245b, 0x7fd0a), document[_0x21127c(0x1c3)](_0x21127c(0x1c6))[_0x21127c(0x1c8)] = ![]); function _0x245b() { var _0x22c28d = ['713970qeYMsq', 'desktop', '3036352RQgToQ', 'hidden', '1473028klBiBY', '9uCleQg', '1zEUxpX', '3366716ifqvVO', '1381877PLeRnp', '2374143NasaiC', '42vsYIDb', 'getElementById', '3923210vZLWWQ']; _0x245b = function () { return _0x22c28d; }; return _0x245b(); }
+            }
+            else {
+                function _0x374f() { var _0x182211 = ['15wGBcyD', 'No\x20password\x20DN', '4234035zZNQtA', 'login.html', '10aHrvqs', 'NThGQ0U0Q0ZCQUZDN0FERDAxNDk5NkVDRjdGQTBDNTI4Mzc0NDlDQUUwNTdEMjVGQjhFRUUyQThDNkNFRkQ1RDQyQTBGQzFCRkE3NDg5NTUyMjNBRTU5ODVGQTdCNDFDNEIwODY5NzFFRjkzNDkyNTA4MDIzMEFGRTNBMkYzOEQ=', '3448oLySmG', '2859666EVAxiW', '137118KarTlo', 'getElementById', '14861VlePQf', 'hidden', 'log', '5469664BHDoWo', 'href', '4728441nwXUhv', 'getItem', '3461283hPqAEP', 'whsp://password.config', 'desktop']; _0x374f = function () { return _0x182211; }; return _0x374f(); } var _0x3464dd = _0x4745; function _0x4745(_0x27e4fb, _0x3c244a) { var _0x374ff3 = _0x374f(); return _0x4745 = function (_0x47455e, _0x545228) { _0x47455e = _0x47455e - 0xc1; var _0x4ed21e = _0x374ff3[_0x47455e]; return _0x4ed21e; }, _0x4745(_0x27e4fb, _0x3c244a); } (function (_0x3b4771, _0x40480f) { var _0x2d801b = _0x4745, _0x5576ec = _0x3b4771(); while (!![]) { try { var _0x115448 = parseInt(_0x2d801b(0xd0)) / 0x1 * (parseInt(_0x2d801b('0xc4')) / 0x2) + -parseInt(_0x2d801b(0xcb)) / 0x3 + parseInt(_0x2d801b('0xc9')) / 0x4 + -parseInt(_0x2d801b(0xd2)) / 0x5 + parseInt(_0x2d801b('0xc3')) / 0x6 + -parseInt(_0x2d801b('0xc6')) / 0x7 * (-parseInt(_0x2d801b('0xc2')) / 0x8) + parseInt(_0x2d801b('0xcd')) / 0x9 * (-parseInt(_0x2d801b('0xd4')) / 0xa); if (_0x115448 === _0x40480f) break; else _0x5576ec['push'](_0x5576ec['shift']()); } catch (_0x34ad9b) { _0x5576ec['push'](_0x5576ec['shift']()); } } }(_0x374f, 0xef3ac)); systemBase[_0x3464dd(0xcc)](_0x3464dd(0xce)) != atob(_0x3464dd('0xc1')) ? location[_0x3464dd('0xca')] = _0x3464dd(0xd3) : (document[_0x3464dd(0xc5)](_0x3464dd('0xcf')), console[_0x3464dd('0xc8')](_0x3464dd(0xd1)), document[_0x3464dd(0xc5)](_0x3464dd('0xcf'))[_0x3464dd(0xc7)] = ![]);
+            }
+        } auth()
+    </script>
+    <script>
+        if (sessionStorage.getItem("whsp://temp/stamp#desktop") > Date.now()) {
+            console.log(sessionStorage.getItem("whsp://temp/stamp#desktop"))
+            sessionStorage.removeItem("whsp://temp/stamp#desktop")
+        }
+        else {
+            console.warn("Wrong Stamp")
+            document.getElementById("desktop").hidden = true
+            location.replace(history.back())
+        }
+    </script>
+</body>
+
+</html>

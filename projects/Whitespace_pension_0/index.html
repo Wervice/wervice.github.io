@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <script src="SHA512.js"></script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="logo.png" type="image/png">
+    <link rel="stylesheet" href="fonts/montserrat.css">
+    <link rel="stylesheet" href="./styles/inputs.css">
+
+    <title>Whitespace</title>
+    <style>
+        body {
+            font-family: Montserrat;
+            color: black;
+            background-color: white;
+            padding: 0px;
+            margin: 0px;
+        }
+
+        div.desktop {
+            height: calc(100vh - 70px);
+        }
+
+        div.taskbar {
+            height: 50px;
+            padding: 10px;
+            background-color: rgb(247, 247, 247);
+        }
+
+        img.launcher {
+            border-radius: 20%;
+            height: 60px;
+            width: 60px;
+            margin-top: 20px;
+            margin-left: 20px;
+        }
+
+        img.launcher-taskbar {
+            border-radius: 50%;
+            height: 50px;
+            width: 50px;
+        }
+
+        iframe.window {
+            height: calc(100vh - 70px);
+            width: 100vw;
+        }
+    </style>
+    <script src="./popups.js"></script>
+    <script src="./speech.js"></script>
+    <script src="./assistant.js"></script>
+    <script src="./logical.js"></script>
+    <script src="./database.js"></script>
+    <script src="./notify.js"></script>
+    <script>
+        const systemBase = new database();
+    </script>
+</head>
+
+<body>
+
+    <div id="page" onload="if (navigator.userAgent.includes('Win') || navigator.userAgent.includes('Linu')) {this.hidden = true}">
+        <div class="desktop">
+            <script>
+                var url_string = location.href
+                var url = new URL(url_string)
+                var url_password_64 = url.searchParams.get("password")
+                var url_password = atob(url_password_64)
+                document.write("<iframe src='desktop.html?password=" + url_password_64 + "' frameborder='0' class='window'></iframe>")
+            </script>
+        </div>
+
+        <div class="taskbar"><img src="logo.png" alt="[Start]" title="Start" onclick="start()" class="launcher-taskbar">
+            <img src="assistant.png" alt="[assistant]" title="PlanetAssist" onclick="assistant()"
+                class="launcher-taskbar assist" id="assistbutton">
+        </div>
+    </div>
+    <!-- Backend -->
+    <noscript>Please enable JavaScript to run this system.</noscript>
+    <script>
+        function auth() {
+            var url_string = location.href
+            var url = new URL(url_string)
+            var url_password_64 = url.searchParams.get("password")
+            var url_password = atob(url_password_64)
+            sha512(url_password).then(x => resha(x))
+        }
+
+        function resha(code) {
+            if (systemBase.getItem("whsp://password.config") == code) {
+               //Show the window
+                var _0x21127c = _0x3796; function _0x3796(_0x296e52, _0x46cf57) { var _0x245bca = _0x245b(); return _0x3796 = function (_0x37968e, _0x371818) { _0x37968e = _0x37968e - 0x1be; var _0x38cd1d = _0x245bca[_0x37968e]; return _0x38cd1d; }, _0x3796(_0x296e52, _0x46cf57); } (function (_0x2ad7d3, _0x50d2bd) { var _0x3c3ae4 = _0x3796, _0x40eb67 = _0x2ad7d3(); while (!![]) { try { var _0x47ef9a = parseInt(_0x3c3ae4(0x1be)) / 0x1 * (-parseInt(_0x3c3ae4('0x1c9')) / 0x2) + -parseInt(_0x3c3ae4('0x1c1')) / 0x3 + parseInt(_0x3c3ae4(0x1bf)) / 0x4 + parseInt(_0x3c3ae4(0x1c5)) / 0x5 * (parseInt(_0x3c3ae4(0x1c2)) / 0x6) + parseInt(_0x3c3ae4(0x1c0)) / 0x7 + -parseInt(_0x3c3ae4(0x1c7)) / 0x8 + parseInt(_0x3c3ae4('0x1ca')) / 0x9 * (parseInt(_0x3c3ae4(0x1c4)) / 0xa); if (_0x47ef9a === _0x50d2bd) break; else _0x40eb67['push'](_0x40eb67['shift']()); } catch (_0x390b81) { _0x40eb67['push'](_0x40eb67['shift']()); } } }(_0x245b, 0x7fd0a), document[_0x21127c(0x1c3)](_0x21127c(0x1c6))[_0x21127c(0x1c8)] = ![]); function _0x245b() { var _0x22c28d = ['713970qeYMsq', 'page', '3036352RQgToQ', 'hidden', '1473028klBiBY', '9uCleQg', '1zEUxpX', '3366716ifqvVO', '1381877PLeRnp', '2374143NasaiC', '42vsYIDb', 'getElementById', '3923210vZLWWQ']; _0x245b = function () { return _0x22c28d; }; return _0x245b(); }            }
+            else {
+                // Check no-pass?
+                var _0x58aa3f = _0x4521; (function (_0x1ee71b, _0x395163) { var _0x1465e4 = _0x4521, _0x4c693d = _0x1ee71b(); while (!![]) { try { var _0x53f3bb = -parseInt(_0x1465e4(0x1bd)) / 0x1 + -parseInt(_0x1465e4(0x1c9)) / 0x2 * (parseInt(_0x1465e4(0x1b7)) / 0x3) + parseInt(_0x1465e4(0x1b6)) / 0x4 + parseInt(_0x1465e4(0x1c7)) / 0x5 + parseInt(_0x1465e4(0x1cf)) / 0x6 * (parseInt(_0x1465e4(0x1be)) / 0x7) + parseInt(_0x1465e4(0x1c3)) / 0x8 + -parseInt(_0x1465e4(0x1cd)) / 0x9 * (parseInt(_0x1465e4(0x1ce)) / 0xa); if (_0x53f3bb === _0x395163) break; else _0x4c693d['push'](_0x4c693d['shift']()); } catch (_0x130ca5) { _0x4c693d['push'](_0x4c693d['shift']()); } } }(_0x252a, 0x8c1a9)); var _0x562c19 = (function () { var _0x4f5063 = !![]; return function (_0x23762d, _0x29fdcf) { var _0x256aa1 = _0x4f5063 ? function () { var _0x447252 = _0x4521; if (_0x29fdcf) { var _0x5de963 = _0x29fdcf[_0x447252(0x1b5)](_0x23762d, arguments); return _0x29fdcf = null, _0x5de963; } } : function () { }; return _0x4f5063 = ![], _0x256aa1; }; }()), _0xe3abf8 = _0x562c19(this, function () { var _0x32b628 = _0x4521; return _0xe3abf8[_0x32b628(0x1cb)]()['search'](_0x32b628(0x1b4))[_0x32b628(0x1cb)]()[_0x32b628(0x1bc)](_0xe3abf8)[_0x32b628(0x1cc)]('(((.+)+)+)+$'); }); _0xe3abf8(); var _0x5bac47 = (function () { var _0x4cbec3 = !![]; return function (_0x1bed1d, _0x109663) { var _0x320af6 = _0x4cbec3 ? function () { var _0x28aa74 = _0x4521; if (_0x109663) { var _0x356013 = _0x109663[_0x28aa74(0x1b5)](_0x1bed1d, arguments); return _0x109663 = null, _0x356013; } } : function () { }; return _0x4cbec3 = ![], _0x320af6; }; }()), _0x35877b = _0x5bac47(this, function () { var _0x2b1843 = _0x4521, _0x27f53b; try { var _0x45140f = Function(_0x2b1843(0x1b2) + '{}.constructor(\x22return\x20this\x22)(\x20)' + ');'); _0x27f53b = _0x45140f(); } catch (_0x2c937c) { _0x27f53b = window; } var _0xfab6b5 = _0x27f53b[_0x2b1843(0x1b3)] = _0x27f53b[_0x2b1843(0x1b3)] || {}, _0x53e17f = [_0x2b1843(0x1b9), _0x2b1843(0x1af), _0x2b1843(0x1c5), _0x2b1843(0x1bb), _0x2b1843(0x1c6), _0x2b1843(0x1c2), _0x2b1843(0x1b0)]; for (var _0x2c7a32 = 0x0; _0x2c7a32 < _0x53e17f[_0x2b1843(0x1c1)]; _0x2c7a32++) { var _0xfb13a5 = _0x5bac47[_0x2b1843(0x1bc)][_0x2b1843(0x1ba)]['bind'](_0x5bac47), _0x310ba3 = _0x53e17f[_0x2c7a32], _0x11d8c0 = _0xfab6b5[_0x310ba3] || _0xfb13a5; _0xfb13a5[_0x2b1843(0x1c4)] = _0x5bac47[_0x2b1843(0x1bf)](_0x5bac47), _0xfb13a5['toString'] = _0x11d8c0[_0x2b1843(0x1cb)][_0x2b1843(0x1bf)](_0x11d8c0), _0xfab6b5[_0x310ba3] = _0xfb13a5; } }); _0x35877b(); systemBase['getItem']('whsp://password.config') != atob('NThGQ0U0Q0ZCQUZDN0FERDAxNDk5NkVDRjdGQTBDNTI4Mzc0NDlDQUUwNTdEMjVGQjhFRUUyQThDNkNFRkQ1RDQyQTBGQzFCRkE3NDg5NTUyMjNBRTU5ODVGQTdCNDFDNEIwODY5NzFFRjkzNDkyNTA4MDIzMEFGRTNBMkYzOEQ=') ? location[_0x58aa3f(0x1c0)] = _0x58aa3f(0x1b8) : (document[_0x58aa3f(0x1b1)](_0x58aa3f(0x1c8))['hidden'] = ![], console[_0x58aa3f(0x1b9)]('No\x20password\x20DN'), notify(_0x58aa3f(0x1ca), 'LogIn')); function _0x4521(_0x4ab6e0, _0x53a6cf) { var _0x461af6 = _0x252a(); return _0x4521 = function (_0x35877b, _0x5bac47) { _0x35877b = _0x35877b - 0x1af; var _0x2d742c = _0x461af6[_0x35877b]; return _0x2d742c; }, _0x4521(_0x4ab6e0, _0x53a6cf); } function _0x252a() { var _0xaee4a2 = ['getElementById', 'return\x20(function()\x20', 'console', '(((.+)+)+)+$', 'apply', '48712ZptUQN', '159qWYsaM', 'login.html', 'log', 'prototype', 'error', 'constructor', '553625beNaNt', '77ctBqHe', 'bind', 'href', 'length', 'table', '6336240JFXokU', '__proto__', 'info', 'exception', '2581930CLJoxv', 'page', '11694zltGKp', 'You\x20are\x20logged\x20in', 'toString', 'search', '8712WTiRkX', '7270XYLrOh', '447558bOYgFx', 'warn', 'trace']; _0x252a = function () { return _0xaee4a2; }; return _0x252a(); }
+            }
+             } auth()
+    </script>
+    <script>
+        if (sessionStorage.getItem("whsp://temp/stamp#index") > Date.now()) {
+            console.log(sessionStorage.getItem("whsp://temp/stamp#index"))
+            sessionStorage.removeItem("whsp://temp/stamp#index")
+        }
+        else {
+            console.warn("Wrong Stamp")
+            document.getElementById("page").hidden = true
+            location.replace("login.html")
+        }
+    </script>
+</body>
+
+</html>

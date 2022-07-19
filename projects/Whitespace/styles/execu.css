@@ -1,0 +1,57 @@
+@keyframes title {
+    0% {
+
+    }
+
+    50% {
+        letter-spacing: 10px;
+    }
+
+    100% {
+
+    }
+}
+
+.icon:hover {
+    filter: drop-shadow(0 0 0.25rem rgba(0, 0, 0, 0.5));
+}
+
+.info {
+    height: 85px;
+    width: 90px;
+    border-radius: 10px;
+    padding-top: 20px;
+    padding-left: 15px;
+    box-shadow: 0px 0px 0px rgb(80, 110, 139);
+}
+
+td {
+    padding: 10px;
+}
+
+.sales {
+    background-color: #5beca6;
+    color: black;
+}
+
+.expen {
+    background-color: #ec605b;
+    color: black;
+}
+
+.account {
+    background-color: #ecd15b;
+    color: black;
+}
+
+.grey {
+    background-color: #c0d7d8;
+    color: black;
+}
+
+.new {
+    font-size: 35px;
+    cursor: default;
+    color: rgba(255, 255, 255, 0.8);
+    visibility: hidden;
+}

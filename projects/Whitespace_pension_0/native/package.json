@@ -1,0 +1,10 @@
+{
+    "name": "whitespace",
+    "main": "index.html",
+    "version": "2.0.0 Native",
+    "displayName": "Whitespace",
+    "homepage": "https://Wervice.dev/projects/Whitespace",
+    "icon": "../icon.ico",
+    "private": "true",
+    "os": ["Windows", "Linux"]
+}
