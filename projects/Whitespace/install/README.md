@@ -34,8 +34,8 @@ When you want to reboot you laptop, you allways have to restart start.bat or sta
 
 ### How to access
 While start.bat or start.sh is running, you can access your local Whitespace on this IPs:
-Windows: http:\\127.0.0.1:8000/wervice.github.io/projects/Whitespace
-Linux: http:\\0.0.0.0:8000/wervice.github.io/projects/Whitespace
+Windows: http://127.0.0.1:8000/wervice.github.io/projects/Whitespace
+Linux: http://0.0.0.0:8000/wervice.github.io/projects/Whitespace
 
 This runs with and without internet connection, because your laptop is the server. Everyone else, with your laptop's IP adress can access it, but she/he won't see any of your Whitespace data.
 
