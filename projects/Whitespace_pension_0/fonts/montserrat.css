@@ -1,9 +1,0 @@
-@font-face {
-    font-family: 'Montserrat'; /* Gewünschter Name */
-    src: url('../../../fonts/Montserrat-Medium.eot');
-    /* für IE9 */
-    src: url('../../../fonts/Montserrat-Medium.eot') format('embedded-opentype'), /* für IE6-IE8 */
-    url('../../../fonts/Montserrat-Medium.woff') format('woff'), /* für moderne Browser */
-    url('../../../fonts/Montserrat-Medium.ttf') format('truetype');
-    /* für Safari, Android, iOS */
-}
