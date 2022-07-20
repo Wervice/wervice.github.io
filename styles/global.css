@@ -102,27 +102,18 @@ button.ui {
     cursor: pointer;
     border-radius: 5px;
     border-color: rgba(0, 0, 0, 0);
-    background-color: #ffffff;
+    background-color: #d6d6d6;
     border-width: 1px;
     border-style: solid;
     font-family: Poppins, Verdana, Geneva, Tahoma, sans-serif;
     min-width: 120px;
     margin: 5px;
-    height: 30px;
+    height: auto;
+    min-height: 30px;
 }
 
 button.ui:hover {
-    animation-name: changecolor;
-    animation-duration: 1s;
-    animation-fill-mode: forwards;
-}
-
-@keyframes changecolor {
-    0% {}
-    50% {
-        background-color: hsl(0, 0%, 89%);
-    }
-    100% {}
+    background-color: rgb(168, 168, 168);
 }
 
 button:disabled {

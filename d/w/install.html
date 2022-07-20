@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/styles/global.css">
     <title>Install Whitespace</title>
 
     <style>
@@ -13,7 +14,10 @@
     </style>
 </head>
 <body>
-    Select OS: <br>
-    <a href="./install/linux/install.sh" download="install.sh"><button>Linux</button></a>
+    <div style="padding: 10px;">
+    Which OS are you using? <br><br>
+    <a href="./install/linux/install.sh" download="install.sh"><button class="ui">Linux<br><small>.sh</small></button></a><br>
+    <a href="./install/win/install.bat" download="install.bat"><button class="ui">Windows<br><small>.bat</small></button></a>
+    </div>
 </body>
 </html>
