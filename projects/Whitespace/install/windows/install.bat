@@ -15,7 +15,7 @@ del .gitignore
 del 404.md
 del .htaccess
 del hero.png
-del sitema.pxml
+del sitemap.xml
 del page_blocked.html
 rmdir /s /Q d
 rmdir /s /Q docs
