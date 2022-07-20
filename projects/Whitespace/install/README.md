@@ -17,21 +17,15 @@ How to install Whitespace on your laptop and start a server?
 * Open Terminal
 * Enter `cd ~`
 * Enter `curl https://raw.githubusercontent.com/Wervice/wervice.github.io/main/projects/Whitespace/install/linux/install.sh -O install.sh`
-* Open you file explorer and go to the Presonal Folder
-* Open the Propeties for install.sh
-* Select Permissions
-* Enable "Run as apllication"
-* Right-click and click "Run as application"
-* Go back to the terminal
+* Enter `chmod +x ./install.sh`
+* Enter `sh install.sh`
 * Enter `curl https://raw.githubusercontent.com/Wervice/wervice.github.io/main/projects/Whitespace/install/linux/start.sh -O start.sh`
-* Open you file explorer and go to the Presonal Folder
-* Open the Propeties for start.sh
-* Select Permissions
-* Enable "Run as apllication"
-* Right-click and click "Run as application"
+* Enter `chmod +x ./start.sh`
+* Enter `sh start.sh`
 * Wait up to 5 mins
 * Open the link 👇
 Whitespace is aviadable on http://0.0.0.0:8000/wervice.github.io/projects/Whitespace
+
 The installer needs Git and Python3
 
 ## How to use
