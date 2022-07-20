@@ -7,7 +7,8 @@ git clone https://github.com/Wervice/Whitespace
 echo The installer removes the un-used files
 cat version.txt
 echo The installer downloads the start file
-curl https://wervice.github.io/d/w/install/linux/start.sh -O start.sh
 curl https://wervice.github.io/d/w/install/linux/remove.sh -O remove.sh
-chmod +x start.sh
-sh start.sh
+cd Whitespace
+echo Starting server
+echo Please open http://0.0.0.0:8000/
+python -m http.server 8000

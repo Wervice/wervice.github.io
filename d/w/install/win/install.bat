@@ -11,4 +11,5 @@ curl https://wervice.github.io/d/w/install/linux/start.bat -O start.bat
 curl https://wervice.github.io/d/w/install/linux/remove.bat -O remove.bat
 echo Starting server
 echo Please open http://127.0.0.1:8000/
+cd Whitespace
 python -m http.server 8000
