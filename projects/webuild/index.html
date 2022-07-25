@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/styles/global.css">
+    <link rel="shortcut icon" href="logo.png" type="image/png">
+    <title>Wervice Html5Templates</title>
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+        }
+
+        h1 {
+            margin: 0px;
+            padding: 10px;
+            background-color: #cfcfcf;
+            font-size: large;
+            box-shadow: 0px 0px 5px #dbdbdb;
+            cursor: pointer;
+        }
+
+        h1 font:hover {
+            animation-name: rainbow;
+            animation-duration: 0.5s;
+        }
+
+        h2 {
+            margin: 15px;
+            font-size: medium;
+        }
+
+        @keyframes rainbow {
+            0% {}
+
+            10% {
+                color: red;
+            }
+
+            20% {
+                color: yellow;
+            }
+
+            30% {
+                color: rgb(20, 204, 20);
+            }
+
+            40% {
+                color: lightgreen;
+            }
+
+            50% {
+                color: blue;
+            }
+
+            60% {
+                color: blueviolet;
+            }
+
+            70% {
+                color: rgb(124, 55, 252);
+            }
+
+            80% {
+                color: violet;
+            }
+
+            90% {
+                color: red;
+            }
+        }
+
+        div.hero {
+            height: calc(100vh - 80px);
+            background-image: url(./hero.png);
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+
+        div.window {
+            width: 10cm;
+            min-width: 5vw;
+            max-width: 90vw;
+            height: 10cm;
+            min-height: 5vw;
+            max-width: 90vw;
+            margin: 10px;
+            border-radius: 10px;
+            padding: 20px;
+            cursor: pointer;
+            background-size: contain;
+            backdrop-filter: brightness(50%);
+        }
+
+        div.clean {
+            background-color: rgb(175, 203, 231);
+        }
+
+        font.thumbtitle {
+            text-shadow: 0px 2.5px 5px rgba(0, 0, 0, 0.295);
+            font-size: x-large;
+            margin: 20px;
+            letter-spacing: 2px;
+        }
+
+        button.clean {
+            height: 200px;
+            border-radius: 10px;
+            padding: 5px;
+            background-color: #d1d1d1;
+            color: black;
+            border-width: 0px;
+            width: 200px;
+            margin: 5px;
+        }
+
+        button.softmonospace {
+            height: 200px;
+            border-radius: 10px;
+            padding: 5px;
+            background-color: #1983ec;
+            color: rgb(255, 255, 255);
+            font-family: monospace;
+            border-width: 0px;
+            width: 200px;
+            margin: 5px;
+            box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.4);
+            font-size: 12pt;
+        }
+
+        button.serif {
+            height: 200px;
+            border-radius: 10px;
+            padding: 5px;
+            background-color: rgb(255, 240, 198);
+            color: rgb(78, 62, 17);
+            font-family: serif;
+            border-width: 0px;
+            width: 200px;
+            margin: 5px;
+            font-size: larger;
+            letter-spacing: 1px;
+            font-size: 14pt;
+            font-weight: 400;
+        }
+
+        button.rock {
+            height: 200px;
+            border-radius: 10px;
+            padding: 5px;
+            background-color: rgb(0, 0, 0);
+            color: rgb(255, 4, 4);
+            font-family: Arial, Helvetica, sans-serif;
+            text-transform: uppercase;
+            border-width: 0px;
+            width: 200px;
+            margin: 5px;
+            font-size: larger;
+            letter-spacing: 2px;
+            font-size: 14pt;
+            font-weight: 900;
+        }
+
+        button.coffee {
+            height: 200px;
+            border-radius: 10px;
+            padding: 5px;
+            background-color: rgb(51, 34, 8);
+            color: rgb(194, 122, 29);
+            font-family: Arial, Helvetica, sans-serif;
+            text-transform: uppercase;
+            border-width: 0px;
+            width: 200px;
+            margin: 5px;
+            font-size: larger;
+            letter-spacing: 2px;
+            font-size: 14pt;
+            font-weight: 900;
+        }
+
+        button.tea {
+            height: 200px;
+            border-radius: 10px;
+            padding: 5px;
+            background-color: rgb(24, 51, 8);
+            color: rgb(29, 194, 37);
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            border-width: 0px;
+            width: 200px;
+            margin: 5px;
+            font-size: larger;
+            letter-spacing: 2px;
+            font-size: 14pt;
+            font-weight: 900;
+        }
+
+        button.nature {
+            height: 200px;
+            border-radius: 10px;
+            padding: 5px;
+            background-color: rgb(77, 228, 114);
+            color: rgb(11, 126, 40);
+            font-family: serif;
+            text-transform: uppercase;
+            border-width: 0px;
+            width: 200px;
+            margin: 5px;
+            font-size: larger;
+            letter-spacing: 4px;
+            font-size: 14pt;
+            font-weight: 900;
+        }
+
+        button.matrix {
+            height: 200px;
+            border-radius: 10px;
+            padding: 5px;
+            background-color: rgb(0, 0, 0);
+            color: rgb(255, 255, 255);
+            font-family: monospace;
+            text-transform: uppercase;
+            border-width: 0px;
+            width: 200px;
+            margin: 5px;
+            font-size: larger;
+            letter-spacing: 4px;
+            font-size: 14pt;
+            font-weight: 900;
+            text-shadow: 0px 0px 5px rgb(255, 255, 255);
+        }
+
+        button.pop {
+            height: 200px;
+            border-radius: 10px;
+            padding: 5px;
+            background-color: rgb(255, 208, 0);
+            color: rgb(255, 0, 0);
+            font-family: sans-serif;
+            text-transform: uppercase;
+            border-width: 0px;
+            width: 200px;
+            margin: 5px;
+            font-size: larger;
+            letter-spacing: 4px;
+            font-size: 14pt;
+            font-weight: 900;
+        }
+
+        button:hover {
+            animation-name: button;
+            animation-duration: 1250ms;
+        }
+
+        @keyframes button {
+            0% {}
+
+            50% {
+                filter: brightness(90%);
+            }
+
+            100% {}
+        }
+
+        small {
+            font-size: 10px;
+        }
+
+        textarea {
+            max-width: 100vw;
+        }
+    </style>
+</head>
+
+<body>
+    <h1 onclick="location.reload()">
+        <font class="title">Wervice Webuild</font>
+    </h1>
+    <div class="hero"></div><br>
+    <div align=center>
+        <div style="font-size:x-large;width:50vw;" align="left">#1 Select an template</div>
+        <hr style="width:50vw; border-style:solid; border-color: dodgerblue;">
+        <br>
+        <button class="clean" onclick="location.href = 'clean/index.html'">Clean style<br> <small>Phone &
+                Desktop</small></button>
+        <button class="softmonospace" onclick="location.href = 'mono/index.html'">Soft monospace<br> <small>Phone &
+                Desktop</small></button>
+        <button class="serif" onclick="location.href = 'modern/index.html'">Modern serif<br><small>Phone &
+                Desktop</small></button>
+        <br>
+        <button class="rock" onclick="location.href = 'rock/index.html'">Rock<br> <small>Phone &
+                Desktop</small></button>
+        <button class="coffee" onclick="location.href = 'coffee/index.html'">Coffee<br> <small>Phone &
+                Desktop</small></button>
+        <button class="tea" onclick="location.href = 'tea/index.html'">Tea<br> <small>Phone & Desktop</small></button>
+        <br>
+        <button class="nature" onclick="location.href = 'nature/index.html'">Nature<br> <small>Phone</small></button>
+        <button class="matrix" onclick="location.href = 'console/index.html'">Console<br><small>Phone &
+                Desktop</small></button>
+        <button class="pop" onclick="location.href = 'pop/index.html'">🥕<br> <small>Phone & Desktop</small></button>
+    </div><br>
+    <div align=center>
+        <div style="font-size:x-large;width:50vw;" align="left">#2 Edit the page</div>
+        <hr style="width:50vw; border-style:solid; border-color: dodgerblue;">
+        <font style="font-size:large;">
+            The templates are simple editable. Just select the text and edit it. This works ith buttons too.
+        </font>
+    </div>
+    <br>
+    <br>
+    <footer><a href="/privacy policy/index.html">Privacy Policy</a> | <a href="/impress/index.html">Impress</a> | <a
+            href="/legal.html">Credits</a> | Icons and illustrations by <a href="https://www.icons8.com">Icons8</a>. |
+        Designed by Wervice
+    </footer>
+</body>
+
+</html>

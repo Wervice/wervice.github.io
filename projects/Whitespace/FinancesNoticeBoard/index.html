@@ -14,7 +14,7 @@
     <script src="/projects/Whitespace/bckend/encode.js"></script>
     <script>
 
-        if (encodePass(sessionStorage.getItem("logged")) != localStorage.getItem("unlkepsw")) {
+        if (encodePass(sessionStorage.getItem("logged")) != localStorage.getItem("/pswd")) {
             document.documentElement.innerHTML = null
             window.top.location.replace("../index.html")
         }
@@ -29,7 +29,7 @@
 
         function auth() {
             if (
-                localStorage.getItem("unlkepsw") ==
+                localStorage.getItem("/pswd") ==
                 encodePass(document.getElementById('password').value)
             ) {
                 setData()

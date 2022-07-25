@@ -163,6 +163,20 @@
         figcaption {
             color: white;
         }
+
+        div.start {
+            position: absolute;
+            top: calc(100vh - 200px - 110px);
+            height: 200px;
+            width: 400px;
+            background-color: rgb(46, 46, 46);
+            color: white;
+            margin: 10px;
+            border-radius: 10px;
+            padding: 10px;
+            box-shadow: -2px -2px 5px #ffffff80, 4px 4px 5px #000000a6;
+        }
+
     </style>
     <!-- Script -->
     <script>
@@ -196,10 +210,10 @@
             }
 
             var epw = document.getElementById('password').value;
-            if (encodePass(epw) == localStorage.getItem("unlkepsw")) {
+            if (encodePass(epw) == localStorage.getItem("/pswd")) {
                 document.getElementById('secure').hidden = false;
                 document.getElementById('passwordprompt').hidden = true;
-                if (localStorage.getItem('unlkepsw') == null || localStorage.getItem('unlkepsw') == "") {
+                if (localStorage.getItem('/pswd') == null || localStorage.getItem('/pswd') == "") {
                     localStorage.clear()
                     sessionStorage.clear()
                 }
@@ -214,7 +228,7 @@
 
         }
 
-        if (localStorage.getItem('unlkepsw') == null || localStorage.getItem('unlkepsw') == "") {
+        if (localStorage.getItem('/pswd') == null || localStorage.getItem('/pswd') == "") {
             localStorage.clear()
             sessionStorage.clear()
         }
@@ -237,7 +251,7 @@
                 return btoa(encoded)
             }
             var epw = document.getElementById('password').value;
-            if (localStorage.getItem("unlkepsw") == encodePass(epw)) {
+            if (localStorage.getItem("/pswd") == encodePass(epw)) {
                 document.getElementById('secure').innerHTML = decodeURIComponent(atob(document.getElementById('secure').innerHTML))
                 document.getElementById('password').blur()
                 document.getElementById('secure').hidden = false;
@@ -267,7 +281,7 @@
                     return btoa(tencoded)
                 }
                 sessionStorage.setItem('logged', epw)
-                if (localStorage.getItem('unlkepsw') == null || localStorage.getItem('unlkepsw') == "") {
+                if (localStorage.getItem('/pswd') == null || localStorage.getItem('/pswd') == "") {
                     localStorage.clear()
                     sessionStorage.clear()
                 }
@@ -290,12 +304,12 @@
 
             }
 
-            if (localStorage.getItem("unlkepsw") == "" || localStorage.getItem("unlkepsw") == null) {
+            if (localStorage.getItem("/pswd") == "" || localStorage.getItem("/pswd") == null) {
                 var lsess = true
                 document.getElementById('secure').hidden = false;
             }
 
-            if (localStorage.getItem('unlkepsw') != null) {
+            if (localStorage.getItem('/pswd') != null) {
                 if (sessionStorage.getItem('logged') == null) {
                     showpwprompt()
                 }
@@ -315,7 +329,7 @@
             document.getElementById('load').hidden = true;
 
             // Hide behind secure
-            if (localStorage.getItem("unlkepsw") != null) {
+            if (localStorage.getItem("/pswd") != null) {
                 document.getElementById('t').hidden = true;
                 document.getElementById('secure').hidden = true;
                 document.getElementById('window').hidden = true;
@@ -398,6 +412,10 @@
                 'beep.mp3');
             audio.play();
         }
+
+        function ShowStart() {
+            document.getElementById('start').hidden = !document.getElementById('start').hidden
+        }
     </script>
 </head>
 
@@ -457,9 +475,22 @@
             window.document.getElementById('window').src = "desktop.html"
         </script>
         <!-- Taskbar -->
+        <!-- Start -->
+        <div class="start" id="start" hidden>
+            <br>
+            <div align="center">
+            <div style="width:380px; background-color: #282828; box-shadow: -2px -2px 4px 0px #6363634a, 2px 2px 4px 0px #0000005c; padding-top: 5px; padding-bottom: 5px; border-radius: 5px;"><script>document.writeln(atob(localStorage.getItem('unlkeuse')))</script></div>
+            <br>
+            <button class="ui" onclick="logout();">Lock</button>
+            <a href="./System/index.html" target="window">
+            <button class="ui">Settings</button>
+            <button class="ui" onclick="location.replace('screensaver.html')">Screen saver</button>
+            </a>
+            </div>
+        </div>
         <div class="taskbar" align="left" id="t">
             <img src="./favicon.png" alt="" class="launcher"
-                style="margin-right:10px; margin-left: -2.5px; background-color: #262626;">
+                style="margin-right:10px; margin-left: -2.5px; background-color: #262626;" onclick="ShowStart()">
 
             <img src="favicons/desktop.svg" class="launcher" title="Close everything" tabindex="3"
                 onclick="history.back()">

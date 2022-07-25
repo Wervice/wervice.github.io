@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="/styles/footer.css">
     <script src="../bckend/encode.js"></script>
     <script>
-        if (encodePass(sessionStorage.getItem("logged")) != localStorage.getItem("unlkepsw") && localStorage.getItem("unlkepsw") != null) {
+        if (encodePass(sessionStorage.getItem("logged")) != localStorage.getItem("/pswd") && localStorage.getItem("/pswd") != null) {
             document.documentElement.innerHTML = null
             window.top.location.replace("../index.html")
         }
@@ -23,11 +23,11 @@
 
         function saveprof() {
             localStorage.setItem('unlkeuse', btoa(document.querySelector("#username").value))
-            if ((document.querySelector("#password").value == "") && (localStorage.getItem('unlkepsw') == null)) {
+            if ((document.querySelector("#password").value == "") && (localStorage.getItem('/pswd') == null)) {
                 alert('Set password')
             }
             else if (document.querySelector("#password").value != "") {
-                localStorage.setItem('unlkepsw', encodePass((document.querySelector("#password").value)))
+                localStorage.setItem('/pswd', encodePass((document.querySelector("#password").value)))
             }
 
             window.top.location.reload()
@@ -45,14 +45,14 @@
         }
 
         function auth() {
-            if (encodePass(document.getElementById('unl').value) == localStorage.getItem("unlkepsw")) {
+            if (encodePass(document.getElementById('unl').value) == localStorage.getItem("/pswd")) {
                 document.getElementById('info').hidden = true
                 document.getElementById('system').hidden = false
             }
         }
 
         window.onload = function () {
-            if (localStorage.getItem('unlkepsw') == null) {
+            if (localStorage.getItem('/pswd') == null) {
                 document.getElementById('info').hidden = true;
                 document.getElementById('system').hidden = false;
             }
@@ -65,7 +65,7 @@
             if (localStorage.getItem('unlkeuse') != null) {
                 document.getElementById('username').value = atob(localStorage.getItem('unlkeuse'))
             }
-            if (localStorage.getItem('unlkepsw') != null) {
+            if (localStorage.getItem('/pswd') != null) {
                 document.getElementById('password').placeholder = "•••••••••••••••"
             }
 

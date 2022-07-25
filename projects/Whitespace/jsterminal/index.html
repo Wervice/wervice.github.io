@@ -12,7 +12,7 @@
     <script src="../script/nocontext.js"></script>
 
     <script>
-        if (encodePass(sessionStorage.getItem("logged")) != localStorage.getItem("unlkepsw")) {
+        if (encodePass(sessionStorage.getItem("logged")) != localStorage.getItem("/pswd")) {
             document.documentElement.innerHTML = null
             window.top.location.replace("../index.html")
         }
@@ -74,7 +74,7 @@
 
         function passChange(pass) {
             newpass = pass
-            localStorage.setItem("unlkepsw", encodePass(newpass))
+            localStorage.setItem("/pswd", encodePass(newpass))
         }
     </script>
 </head>
@@ -93,7 +93,7 @@
                     }
                 }
                 if (code == "system.preg()") {
-                    document.getElementById('response').innerHTML = document.getElementById('response').innerHTML + localStorage.getItem("unlkepsw") + "<br><br>"
+                    document.getElementById('response').innerHTML = document.getElementById('response').innerHTML + localStorage.getItem("/pswd") + "<br><br>"
                 }
                 res = eval(code)
                 document.getElementById('response').innerHTML = document.getElementById('response').innerHTML + "> <font style=color:cyan>" + code + "</font><br>" + res + "<br><br>"
