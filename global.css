@@ -254,7 +254,7 @@ footer a:hover {
 }
 
 div.cover {
-    height: calc(auto + 50vh);
+    height: calc(auto + 10vh);
     background-color: rgb(255, 255, 255);
     background-size: cover;
     background-position: center;
@@ -437,7 +437,7 @@ hr {
     }
 }
 
-.bigger {
+./pswd {
     font-size: 30px;
     font-weight: bolder;
 }
