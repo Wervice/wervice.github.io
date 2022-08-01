@@ -37,4 +37,5 @@ Disallow: /.vscode
 Disallow: /styles
 Disallow: /impress
 Disallow: /d
+Disallow /cookies
 Sitemap: /sitemap.xml

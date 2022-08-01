@@ -5,8 +5,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="./styles/base.css">
     <script src="./script/nocontext.js"></script>
+    <link rel="shortcut icon" href="/images/cookie.ico" type="image/x-icon">
     <title>Privacy inforamtion</title>
     <script> // Priac()
         function priac() {
@@ -55,9 +56,12 @@
 </head>
 
 <body style="padding: 10px;">
+    <script>
+        if (window.top.location.pathname != "/projects/Whitespace/privacy.html") {
+        window.top.location.replace("privacy.html")
+        }
+    </script>
     <div class="modal">
-
-
         <h1 style="margin: 0px;">Welcome</h1>
         <h2>Legal Notice</h2>
         This application uses technically necessary technologies to back up or store data. These technologies are not

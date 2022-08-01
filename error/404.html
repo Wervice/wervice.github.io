@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,23 +9,14 @@
     <link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon">
     <title>Error 404</title>
     <style>
-    h1 {
-        margin: 10px;
-    }
-
-    div.top {
-        margin: 0px;
-        padding: 10px;
-        background-color: rgb(240, 240, 240);
-        font-size: large;
-    }
+        img.error-image {
+            width: 15vw;
+            min-width: 5cm;
+            border-radius: 5px;
+        }
     </style>
-<script>
-if (location.pathname == 'undefined') {
-location.replace('index.html')
-}
-</script>
 </head>
+
 <body>
     <table class="nav" style="width: 100%; height: 50px;" cellpadding="0" cellspacing="0" id="nav">
         <tr>
@@ -43,13 +35,32 @@ location.replace('index.html')
             </td>
         </tr>
     </table>
-<div class="top">Error 404</div>
-<div style="height: 80vh;"></div>
-<footer><a href="/privacy policy/index.html">Privacy Policy</a> | <a href="/impress/index.html">Impress</a> | <a
-        href="/legal.html">Credits</a> | Made with ☕ and ❤ by Wervice | 3D illustrations made with <a
-        href="https://icons8.com/lunacy">Lunacy</a> by <a href="https://icons8.com/">Icons8</a> | Colored icons by
-    <a href="https://www.icons8.com">Icons8</a>
-</footer>
+    <div style="min-height: calc(100vh - 73px);">
+    <div style="height: 70px"></div>
+    <div align="center">
+    <img src="/error/404.png" alt="Error 404 - Page not found" class="error-image">
+    </div>
+    <div align="center">
+        <h2>Error 404</h2>
+        <div align="justify" style="width: 15vw; min-width: 5cm; font-size: large;">
+            The requested file, website or media does not exist.
+            Maybe the URL is wrong spelled, or you clicked a broken link.
+            <br><br>
+            <a href="/">Go home</a><br><br>
+            <script>
+                if (location.pathname.includes('Whitespace')) {
+                    document.writeln("<a href='javascript:window.top.location.reload'>Whitespace crashed</a>")
+                }
+            </script>
+        </div>
+    </div>
+    </div>
+    <footer><a href="/privacy policy/index.html">Privacy Policy</a> | <a href="/impress/index.html">Impress</a> | <a
+            href="/legal.html">Credits</a> | Made with ☕ and ❤ by Wervice | 3D illustrations made with <a
+            href="https://icons8.com/lunacy">Lunacy</a> by <a href="https://icons8.com/">Icons8</a> | Colored icons by
+        <a href="https://www.icons8.com">Icons8</a>
+    </footer>
 
 </body>
+
 </html>

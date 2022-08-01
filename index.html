@@ -7,11 +7,10 @@
     <link rel="stylesheet" href="/styles/global.css" type="text/css">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="keywords" content="Wervice, Whitespace, Wervice Webapps, Wervice, IT, solutions">
-    <meta name="description" content="Wervice has lot's of helpful and interresting tools, programs or it soulutions for buisness and home. They are all free, without ads or trackers and they value your privacy.">
+    <meta name="description" content="The wervice project has different programs, it soulutions and tools for work, home and hobbies.">
     <link rel="shortcut icon" href="./images/favicon.ico" type="image/x-icon">
     <link rel="apple-touch-icon" href="./images/favicon.png" type="image/png">
     <meta name="google-site-verification" content="bf-sP6XkNob1vFJBsQMhV5tGgmNzP_x7DFRaXOMkX3Y" />
-    <meta name="msvalidate.01" content="E9BC43F776E9C8867ECB68574B3D29FA" />
     <style>
         div.tip {
             background-color: rgb(255, 153, 0);
@@ -129,7 +128,7 @@
             min-width: 8cm;
             border-radius: 10px;
             background-color: rgb(245, 245, 245);
-            max-height: 550px;
+            max-height: 580px;
             padding-bottom: 30px;
             padding-top: 5px;
         }
@@ -164,6 +163,48 @@
             border-radius: 5px;
             padding: 5px 15px;
             border-width: 0px;
+        }
+
+        div.cookies {
+            position: fixed;
+            top: calc(100vh - 324px);
+            left: 10px;
+            padding: 10px;
+            padding-top: 15px;
+            padding-bottom: 15px;
+            background-color: #006feea9;
+            width: 280px;
+            border-radius: 5px;
+            backdrop-filter: blur(20px);
+        }
+
+        button.cookie-focus {
+            border-width: 0px;
+            border-radius: 5px;
+            padding: 5px;
+            margin: 5px;
+            width: 200px;
+            background-color: #ffffffd2;
+        }
+
+        button.cookie-borderless {
+            border-width: 0px;
+            border-radius: 5px;
+            padding: 5px;
+            margin: 5px;
+            width: 200px;
+            background-color: #ffffff31;
+            color: white;
+        }
+
+        button.cookie-text {
+            border-width: 0px;
+            border-radius: 5px;
+            padding: 5px;
+            margin: 5px;
+            width: 200px;
+            background-color: #ffffff00;
+            color: white;
         }
     </style>
     <script>
@@ -228,13 +269,11 @@
                 common
                 platforms.
                 The applications will be continuously developed. And in cases you do not have to install any special
-                apps or
-                programs on your
+                apps or programs on your
                 laptop, tablet or computer, because the apps work fine with most browsers. My software values your
                 privacy. Share your data with third-party or sell your data to third-party?
-                ─ No way! In most cases I
-                don't use
-                trackers, ads, embed third-party files or anything like this. As good as always your files are stored
+                ─ No way!
+                Your files are stored
                 on your device, and
                 not on mine or third-party. <a href="http://localhost/#pwas" class="h">Let's go!</a>
                 <br>
@@ -355,6 +394,48 @@
                 we'll tell it you.
             </p>
         </div>
+    </div>
+
+    <div class="cookies" align="center" id="cookies">
+        <script>
+            function nocookies() {
+                ac_t = false
+                document.getElementById("cookies").hidden = true
+            }
+
+            function allcookies() {
+                ac_t = true
+                localStorage.setItem("cookies-allowed", true)
+                document.getElementById("cookies").hidden = true
+            }
+
+            function socookies() {
+                location.href = "/cookies/"
+            }
+
+            function socookies() {
+                window.open("/cookies/")
+            }
+        </script>
+        <script>
+            if (localStorage.getItem("cookies-allowed")) {
+                document.getElementById("cookies").hidden = true
+                ac_t = true
+            }
+        </script>
+        <font style="font-size: 12.5pt;">This website needs cookies</font>
+        <br><br>
+        <div align="justify" style="width: 80%;">This website needs cookies and
+            other cookie-like
+            technologies (like the Storage API). You can always change your selection in the <a href="/cookies/"
+                style="color: black; text-decoration: underline;">cookie settings</a>. By using this page you agree.
+        </div>
+        <br>
+        <button class="cookie-focus" onclick="nocookies()">Reject all</button><br>
+        <button class="cookie-focus" onclick="allcookies()">Accept all</button><br>
+        <a href="/pages/privacy-policy/">
+            <button class="cookie-text">Privacy policy</button><br>
+        </a>
     </div>
     <footer><a href="/privacy policy/index.html">Privacy Policy</a> | <a href="/impress/index.html">Impress</a> | <a
             href="/legal.html">Credits</a> | Icons by <a href="https://www.icons8.com">Icons8</a>. Illustrations
