@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <title>Wervice - Software everywhere and free</title>
-    <link rel="stylesheet" href="styles/global.css" type="text/css">
+    <link rel="stylesheet" href="/styles/global.css" type="text/css">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="keywords" content="Wervice, Whitespace, Wervice Webapps, Wervice, IT, solutions">
     <meta name="description" content="Wervice has lot's of helpful and interresting tools, programs or it soulutions for buisness and home. They are all free, without ads or trackers and they value your privacy.">
@@ -122,7 +122,55 @@
         a.h:focus {
             color: red;
         }
+
+        div.software-box {
+            margin: 20px;
+            width: 40vw;
+            min-width: 8cm;
+            border-radius: 10px;
+            background-color: rgb(245, 245, 245);
+            max-height: 550px;
+            padding-bottom: 30px;
+            padding-top: 5px;
+        }
+
+        h3 {
+            font-size: calc(large + 5px);
+            padding-bottom: 5px;
+            letter-spacing: 1px;
+        }
+
+        img.blog {
+            width: 15vw;
+            min-width: 7cm;
+            max-width: 8cm;
+            border-radius: 5px;
+        }
+
+        div.caption {
+            width: 30vw;
+            padding-top: 30px;
+            min-width: 7cm;
+        }
+
+        a.blbtn {
+            color: #006fee;
+            text-decoration: none;
+            font-size: 12pt;
+        }
+
+        button.coming-soon {
+            background-color: gold;
+            border-radius: 5px;
+            padding: 5px 15px;
+            border-width: 0px;
+        }
     </style>
+    <script>
+        if (window.innerWidth > 1000) {
+            document.writeln("<style>div.software-box")
+        }
+    </script>
     <script>
         console.log("____________________\r\n< Welcome to Wervice >\r\n --------------------\r\n        \\   ^__^\r\n         \\  (oo)\\_______\r\n            (__)\\       )\\/\\\r\n                ||----w |\r\n                ||     ||")
         console.log('Wervice | Visit: https://github.com/Wervice/Wervice')
@@ -149,14 +197,14 @@
         <tr>
             <td style="font-size: 14pt;">
                 <a href="/index.html"><img src="/images/logo-tagline.png" height="45"
-                        alt="Wervice Software solutions for business and home"></a>
+                        alt="Wervice Software solutions everywhere for business and home"></a>
             </td>
             <td style="font-size: small;">
                 <div align="right">
                     <a href="https:\\www.github.com\Wervice">
                         <button class="BarButton">Fork code</button>
-                    </a>&nbsp;|&nbsp;<a href="\docs\explain\index.html">
-                        <button class="BarButton">Docs</button>
+                    </a>&nbsp;|&nbsp;<a href="/index.html#pwas">
+                        <button class="BarButton">Software</button>
                     </a>
                 </div>
             </td>
@@ -167,22 +215,28 @@
         <div style="margin:10px;" align="center">
             <br>
             <h1 style="font-size: 35pt;">Wervice - Software everywhere</h1>
-            <img src="hero.png" alt="An illustration for software and IT solutions" style="height:250px;max-height: 30vh;">
+            <img src="hero.png" alt="An illustration for software and IT solutions"
+                style="height:250px;max-height: 30vh;">
             <div style="width: 70vw; min-width: 1cm; font-size: calc(2.0vh + 5px);" align="justify"><br>
                 We need software every day and everywhere. Here are
-                free <a href="#opensource" class="h">open source</a> <a href="#apps" class="h">applications and solutions</a> for
-                business and home. The programs use modern <a href="#techs" class=h>web technologies</a> and common
+                free <a href="http://localhost/index.html#opensource" class="h">open source</a> <a
+                    href="http://localhost/index.html#pwas" class="h">applications and
+                    solutions</a> for
+                business and home. The programs use modern <a href="http://localhost/index.html#techs" class="h">web
+                    technologies</a>
+                and
+                common
                 platforms.
-                The applications will continue to be developed. And most times you do not have to install any special
+                The applications will be continuously developed. And in cases you do not have to install any special
                 apps or
                 programs on your
-                laptop, tablet or computer, because the apps work fine with most browsers. An other important thing is,
-                that
-                my software values your privacy. Share or sell your data with third-party? &HorizontalLine; No way! I
+                laptop, tablet or computer, because the apps work fine with most browsers. My software values your
+                privacy. Share your data with third-party or sell your data to third-party?
+                ─ No way! In most cases I
                 don't use
-                trackers, ads, embed third-party files or anything like this. In most cases, your files are also stored
+                trackers, ads, embed third-party files or anything like this. As good as always your files are stored
                 on your device, and
-                not at me. <a href="#pwas" class="h">Let's go!</a>
+                not on mine or third-party. <a href="http://localhost/#pwas" class="h">Let's go!</a>
                 <br>
                 <br>
                 <div align="right">
@@ -199,100 +253,115 @@
     <div style="height: 100px;" id="pwas">
     </div>
     <h2 style="color: rgb(0, 0, 0); font-size: 35px;" align="center">
-            The software and solutions
-        </h2>
-    <div class="gray" algin="center"
-        style="text-align: center; height: 80vh; min-height: 600px; max-width: 700; padding:20px;"><br><br>
-
-        <div>
-                <font style="font-size: 14pt;font-family:Poppins-Medium;">Wervice Whitespace - Online Desktop Emulator
-                </font><br><br>
-                <img src="./images/whitespace.png" alt="Whitespace, wervice, emulator"
-                    style="width: 20vw; min-width: 5cm; border-radius: 5px;">
-                <br><br>
-                <div style="padding-left: 5vw; padding-right: 5vw;font-family:Poppins;" align="center">
-                    Wervice Whitespace is an online free modern desktop emulator.<br>
-                    The interface works to 100% in the browser. It uses common APIs<br>
-                    to manage files in the local storage in a simple, fast & safe way.<br><br>
-                    <a href="./pages/whitespace/index.html"
-                        style="color:rgb(7, 106, 204); font-weight: bold; letter-spacing: 1px; text-decoration: underline;"
-                        title="Find out more about Wervice Whitespace.">Learn more about Whitespace</a>
-                </div>
-                <br><a href="/projects/Whitespace/index.html"><button class="ui">Launch
-                        Whitespace</button></a>
+        Software and solutions
+    </h2>
+    <div align="center">
+        <div class="software-box" id="whitespace">
+            <h3>Whitespace</h3>
+            <img src="/images/whitespace.png"
+                alt="Wervice Whitespace is a modern desktop system emulator for buisness and home." class="blog">
+            <div class="caption" align="justify">
+                Wervice Whitespace is an online emulator for a modern, clean, and fast desktop environment. It has
+                helpful and free
+                pre-installed applications for business and home. Thanks to common web APIs and web technologies, it
+                works secure in the
+                browser, and you can store your own files and information on your device and not in a third-party cloud.
+                <br>
+                <br>
+                <a href="/pages/whitespace/index.html" class="blbtn">Learn more</a>
+                <br>
+                <br>
+                <a href="/projects/Whitespace/" class="blbtn">Open Whitespace</a>
+                <br>
+                <br>
             </div>
         </div>
-        <br>
-        <br>
-        <br>
-
-        <div class="gray" algin="center"
-            style="text-align: center; height: 65vh; min-height: 600px; max-width: 650; padding:20px;">
-            <font style="font-size: 14pt;font-family:Poppins-Medium;">Interline Word - Text Editor</font><br><br>
-            <img src="./images/iword.png" alt="Writer programm, text editorm Workspace"
-                style="width: 20vw; min-width: 5cm; border-radius: 5px;"><br><br>
-            <font style="font-family: Poppins;">Write, print and share text everywhere on a tablet, laptop, or
-                desktop.<br>Use Interline Word to write your text easily.<br>Thanks to a build in storing function,
-                you can save your notes on your device.</font> <br>
-            <br>
-            <a href="/projects/interlineword/index.html"><button class="ui">Open InterlineWord</button></a>
+        <div class="software-box" id="interlineword">
+            <h3>Interline Word</h3>
+            <img src="/images/iword.png" alt="Interline is a free text-only editor for mails and notes." class="blog">
+            <div class="caption" align="justify">
+                Interline Word is a free text editor in the web for simple text-only files. The interface is of modern
+                and clean design.
+                It has a
+                built in storage to save files on your device. You can edit, open and download your files. It
+                is helpful when writing long mails, shopping lists or a fast note.
+                <br>
+                <br>
+                <a href="/projects/interlineword/" class="blbtn">Open Interline Word</a>
+            </div>
+        </div>
+        <div class="software-box" id="lockscreencrypter">
+            <h3>LockScreenCrypter</h3>
+            <img src="/images/lockscreencrypter.png" alt="LockScreenCrypter helps you by messaging private."
+                class="blog">
+            <div class="caption" align="justify">
+                Wervice LockScreenCrypter is a web app to encrypt your private or sensible messages on your device. For
+                example, you
+                want to write somebody secret information, but you are worried, somebody else could also read it, for
+                example on your
+                recipient's lock screen, you can encrypt the message, and your recipient has to decrypt it first. But
+                don't forget, that
+                your recipient also needs to know this tool, and that's not a replacement for other important measures.
+                <br>
+                <br>
+                <a href="/projects/lockscreencrypter/" class="blbtn">Open the app</a>
+            </div>
+        </div>
+        <div class="software-box" id="webuild">
+            <h3>Webuild</h3>
+            <img src="/images/themes.png" alt="Webuild has nice themes for your own website." class="blog">
+            <div class="caption" align="justify">
+                Use Webuild to build your own website from a good theme. You don't have to know much about web design or
+                programming. Just open a theme and edit the content.
+                Of course, you can download a theme to edit the source code, because editing the page on Webuild has not
+                as much as options like building your own website in HTML and CSS.
+                <br>
+                <br>
+                <a href="/projects/webuild/index.html" class="blbtn">Let's go</a>
+            </div>
+        </div>
+        <div class="software-box" id="opensource">
+            <h3>Open source</h3>
+            <img src="/images/osource.png" alt="Wervice's code is open source and on github." class="blog">
+            <div class="caption" align="justify">
+                Wervice's code is open source and on GitHub. Everyone can edit, read or copy my code for the own
+                projects. I don't license the code, so you can use it however you want. Of cource, I'm happy when you
+                add a small disclaimer to your new projects, if you use my code.
+                <br>
+                <br>
+                <a href="https://github.com/Wervice" class="blbtn">Open my GitHub profile</a>
+                |
+                <a href="https://dribbble.com/Wervice" class="blbtn">Open my Dribble profile</a>
+            </div>
+        </div>
+        <div class="software-box" id="techs">
+            <h3>Web techs</h3>
+            <img src="/images/webtechs.png" alt="Wervice's code is open source and on github." class="blog">
+            <div class="caption" align="justify">
+                In most cases, my apps run in the browser. Thanks to web APIs and web techs, that's possible. By using
+                the Storage API, you can save the data. Or using CSS, HTML and JS, you can create a nice an simple web
+                interface and lot's of fancy tools.
+                <br>
+                <br>
+            </div>
+        </div>
+        <h2 style="color: rgb(0, 0, 0); font-size: 35px;" align="center">
+            Why Wervice?
+        </h2>
+        <div align="center">
+            <p align="justify" style="width: 50vw; min-width: 8cm; font-size: 13pt;">
+                All wervice apps work in any browser, so, it works cross-platform and with less device-resources.
+                Wervice values your privacy. If something changes,
+                we'll tell it you.
+            </p>
         </div>
     </div>
-    <br><br><br>
-    <div class="gray" algin="center"
-        style="text-align: center; height: 65vh; min-height: 600px; max-width: 650; padding:20px;">
-        <font style="font-size: 14pt;font-family:Poppins-Medium;">LockScreenCrypter - Private messages</font><br><br>
-        <img src="./images/lockscreencrypter.png" alt="LockScreenCrypter, Message encryption"
-            style="width: 20vw; min-width: 5cm; border-radius: 5px;"><br><br>
-        <font style="font-family: Poppins;">Simply encrypt your private chat messages.<br> When the messages appear on
-            the recipient's lock screen<br> or similar, only
-            strange letters are visible. With LockScreenCrypter, the recipient<br> can easily decrypt the messages.
-        </font> <br>
-        <br>
-        <a href="/projects/lockscreencrypter/index.html"><button class="ui">Start the app</button></a>
-    </div>
-    <br><br><br>
-    <div class="gray" algin="center"
-        style="text-align: center; height: 65vh; min-height: 600px; max-width: 650; padding:20px;">
-        <font style="font-size: 14pt;font-family:Poppins-Medium;">Wervice Webuild</font><br><br>
-        <img src="./images/themes.png" alt="Website templates, for your new website"
-            style="width: 20vw; min-width: 5cm; border-radius: 5px;"><br><br>
-        <font style="font-family: Poppins;">Wervice Webuild<br>
-            Design and create simple websites in HTML and CSS.<br>
-            You don't need to know anything about HTML and CSS, but you<br>
-            can edit the code or add JavaScript.
-        </font> <br>
-        <br>
-        <a href="/projects/webuild/index.html"><button class="ui">Let's go</button></a>
-    </div>
-
-
-    <div class="gray" algin="center"
-        style="text-align: center; height: calc(65vh - 4cm); min-height: 400px; padding:20px;" id="opensource">
-        <font style="font-size: 14pt;font-family:Poppins-Medium;">Wervice Open Source - Reuse & Fork the code</font>
-        <br><br>
-        <img src="./images/osource.png" alt="Open source"
-            style="width: 20vw; min-width: 5cm; border-radius: 5px;"><br><br>
-        <font style="font-family: Poppins;">Are you interested in the source code of the apps and tools?<br> You can
-            read, copy and edit the code on GitHub.<br>
-            <button class="ui" onclick="location.replace('https:\/\/github.com/Wervice')">Visit the page</button>
-    </div>
-    <div class="gray" algin="center"
-        style="text-align: center; height: calc(65vh - 4cm); min-height: 400px; padding:20px;" id="techs">
-        <font style="font-size: 14pt;font-family:Poppins-Medium;">Web-technologies and languages</font>
-        <br><br>
-        <img src="./images/webtechs.png" alt="Modern web technologies"
-            style="width: 20vw; min-width: 5cm; border-radius: 5px;"><br><br>
-        <font style="font-family: Poppins;">The apps use common web technologies like HTML, CSS and JavaScript.<br> The
-            hosting of the apps works using GitHub Pages.<br>
-            From time to time, other third-party elements such as Icons8 are also installed in the applications.<br>
-    </div>
     <footer><a href="/privacy policy/index.html">Privacy Policy</a> | <a href="/impress/index.html">Impress</a> | <a
-            href="/legal.html">Credits</a> | Icons by <a href="https://www.icons8.com">Icons8</a>. Illustrations made
+            href="/legal.html">Credits</a> | Icons by <a href="https://www.icons8.com">Icons8</a>. Illustrations
+        made
         with <a href="https://www.icons8.com/lunacy">Lunacy by Icons8</a>. |
         Designed by Wervice
     </footer>
-
 </body>
 
 </html>
