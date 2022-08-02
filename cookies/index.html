@@ -44,6 +44,9 @@
                 document.getElementById('non-important').disabled = true
                 document.getElementById('technical').checked = false
                 document.getElementById('non-important').checked = false
+                localStorage.removeItem("cookies")
+                localStorage.removeItem("nimp-cookies")
+                localStorage.removeItem("technical-cookies")
             }
         }
 
@@ -81,7 +84,7 @@
 
 <body>
     <script>
-        if (screen.width < 1000) {
+        if (screen.width < 800) {
             document.writeln("<div align=center>")
         }
     </script>
@@ -103,7 +106,7 @@
         <input type="checkbox" name="non-important" id="non-important" disabled onchange="cookies_nimp()"> <label
             for="non-important">Not requiered cookies</label><br>
         <br>
-        <button class="ui" onclick="history.back()">Cancel</button>
+        <button class="ui" onclick="history.back()">Finish</button>
         <button class="ui" onclick="document.getElementById('cookie-remove').hidden = false">Delete cookies</button>
     </div>
     <script>
@@ -111,6 +114,9 @@
             document.writeln("</div>")
         }
     </script>
+    <script>
+        if (localStorage.getItem('cookies') == "true") { document.getElementById("cookies").checked = true } else { }
+        </script>
 </body>
 
 </html>
