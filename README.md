@@ -7,7 +7,7 @@ Wervice is an open source softare project. I create web apps for home and the of
 ### Content
 This respository is Wervice's the main respository. Using this respositoy (and GitHub Pages), I host my [website 🌐](https://wervice.github.io), the whitespace live version and my web apps.
 
-* [Whitespace](projects/Whitespace/index.html)
+* [Whitespace](projects/whitespace/index.html)
 * [My homepage](https://wervice.github.io)
 * [Clearicons](projects/ClearIcons/)
 * [Interline Word](projects/interlineword/)

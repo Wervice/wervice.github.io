@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="/styles/global.css">
+    <style>
+        *:focus {
+            outline: none;
+        }
+
+        * {
+            cursor: default;
+        }
+
+        body {
+            background-color: #ffe3bb;
+        }
+
+        button.note {
+            border-radius: 10px;
+            min-width: 5cm;
+            border-width: 0px;
+            padding: 10px;
+            margin: 10px;
+            background-color: rgb(255, 166, 0);
+            box-shadow: 2px 2px 5px rgba(56, 32, 4, 0.26), -2px -2px 5px white;
+        }
+
+        button.note hr {
+            border-color: rgba(0, 0, 0, 0.349);
+        }
+
+        div.capt {
+            font-size: 20px;
+            color: black;
+            font-weight: 800;
+            margin-bottom: 10px;
+        }
+
+        button.u {
+            border-width: 1px;
+            border-color: #00000000;
+            background-color: #00000000;
+            font-size: large;
+            margin: 5px;
+        }
+
+        button.u:hover {
+            background-color: #ffc87c;
+            border-radius: 2.5px;
+            border-width: 1px;
+        }
+
+        button.yellow {
+            background-color: rgb(255, 166, 0);
+        }
+
+        button.green {
+            background-color: rgb(22, 236, 104);
+            box-shadow: 2px 2px 5px rgba(4, 56, 4, 0.26), -2px -2px 5px white;
+        }
+
+        button.blue {
+            background-color: rgb(38, 150, 255);
+            box-shadow: 2px 2px 5px rgba(4, 40, 56, 0.26), -2px -2px 5px white;
+        }
+
+        button.red {
+            background-color: rgb(238, 47, 13);
+            box-shadow: 2px 2px 5px rgba(56, 16, 4, 0.26), -2px -2px 5px white;
+        }
+
+        button.white {
+            background-color: rgb(218, 218, 218);
+            box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.178), -2px -2px 5px white;
+        }
+
+        div.file_popup {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            background-color: rgb(255, 214, 139);
+            border-radius: 10px;
+            padding: 10px;
+            box-shadow: 2px 2px 5px rgba(44, 25, 2, 0.25), -2px -2px 5px rgba(255, 255, 255, 0.589);
+        }
+
+        div.file_popup button {
+            border-width: 0px;
+            padding: 5px;
+            border-radius: 5px;
+            background-color: rgb(255, 166, 0);
+            min-width: 3cm;
+            margin: 5px;
+            box-shadow: 2px 2px 5px rgba(56, 32, 4, 0.103), -2px -2px 5px rgba(255, 255, 255, 0.397);
+        }
+
+        div.file_show {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            background-color: rgb(255, 214, 139);
+            border-radius: 10px;
+            padding: 10px;
+            box-shadow: 2px 2px 5px rgba(44, 25, 2, 0.25), -2px -2px 5px rgba(255, 255, 255, 0.589);
+        }
+
+        div.file_show button {
+            border-width: 0px;
+            padding: 5px;
+            border-radius: 5px;
+            background-color: rgb(255, 166, 0);
+            min-width: 3cm;
+            margin: 5px;
+            box-shadow: 2px 2px 5px rgba(56, 32, 4, 0.103), -2px -2px 5px rgba(255, 255, 255, 0.397);
+        }
+    </style>
+    <script>
+        if (localStorage.getItem("notedash.notes") == null) {
+            localStorage.setItem("notedash.notes", "")
+        }
+
+        function remove_file(obj) {
+                obj.remove()
+                localStorage.setItem("notedash.notes", document.getElementById('notes').innerHTML)
+        }
+
+        function open_file(obj) {
+            document.getElementById('file_show').hidden = false
+            document.getElementById('file_container').innerHTML = obj.innerHTML
+            document.getElementById("save_button").addEventListener("click", function () { edit_done(obj) })
+        }
+
+        function edit_done(obj) {
+            document.getElementById('file_show').hidden = true
+            obj.innerHTML = document.getElementById('file_container').innerHTML
+            localStorage.setItem("notedash.notes", document.getElementById('notes').innerHTML)
+        }
+
+        function hide_fp() {
+            document.getElementById('file_about').hidden = true
+        }
+
+        function about_file(obj) {
+            document.getElementById('file_about').hidden = false
+            document.getElementById("delete_button").addEventListener("click", function () { remove_file(obj); hide_fp() })
+            document.getElementById("read_button").addEventListener("click", function () { open_file(obj); hide_fp() })
+            document.getElementById("cancel_button").addEventListener("click", function () { document.getElementById('file_about').hidden = true })
+        }
+    </script>
+</head>
+
+<body>
+    <div id="file_about" class="file_popup" hidden>
+        <big>Note</big><br>
+        <small>Do you want to open or to delete the selected file?</small>
+        <br>
+        <br>
+        <button id="delete_button">Delete</button>
+        <button id="read_button">Edit</button>
+        <button id="cancel_button" style="background-color: rgb(255, 247, 232);">Cancel</button>
+    </div>
+
+    <div class="file_show" id="file_show" hidden>
+        <div id="file_container" contenteditable="true"></div>
+        <br>
+        <button id="save_button">Save</button>
+    </div>
+
+    <script>
+        if (screen.width < 600) {
+            document.writeln("<div align=center>")
+        }
+    </script>
+    <div id="notes">
+
+    </div>
+    <script>
+        if (screen.width < 600) {
+            document.writeln("</div>")
+        }
+    </script>
+    <script>
+        document.getElementById('notes').innerHTML = localStorage.getItem("notedash.notes")
+
+        if (localStorage.getItem("notedash.notes") == "") {
+            document.getElementById('notes').innerHTML = "<div style=padding:10px;font-size:large;> Nothing in here. Let's write a new note. 👆</div>"
+        }
+    </script>
+</body>
+
+</html>

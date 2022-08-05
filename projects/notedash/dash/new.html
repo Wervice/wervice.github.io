@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="/styles/global.css">
+    <style>
+        *:focus {
+            outline: none;
+        }
+
+        body {
+            background-color: #ffe3bb;
+        }
+
+        input.styled {
+            border-width: 0px;
+            padding: 5px;
+            border-radius: 5px;
+            color: rgba(0, 0, 0, 0.85);
+            font-family: Poppins, sans-serif;
+            letter-spacing: 1px;
+            background-color: rgba(255, 255, 255, 0.582);
+            box-shadow: -2px -2px 5px rgba(255, 208, 163, 0.61), 2px 2px 5px rgba(255, 189, 65, 0.493);
+            margin-left: 10px;
+            margin-top: 10px;
+            width: 80vw;
+            max-width: 10cm;
+        }
+
+        button.styled {
+            border-width: 0px;
+            padding: 5px;
+            border-radius: 5px;
+            color: rgba(0, 0, 0, 0.85);
+            font-family: Poppins, sans-serif;
+            letter-spacing: 1px;
+            background-color: rgba(255, 255, 255, 0.582);
+            box-shadow: -2px -2px 5px rgba(255, 208, 163, 0.61), 2px 2px 5px rgba(255, 189, 65, 0.493);
+            margin-left: 10px;
+            margin-top: 10px;
+            max-width: 3cm;
+            width: 50vw;
+        }
+
+        select.styled {
+            border-width: 0px;
+            padding: 5px;
+            border-radius: 5px;
+            color: rgba(0, 0, 0, 0.85);
+            font-family: Poppins, sans-serif;
+            letter-spacing: 1px;
+            background-color: rgba(255, 255, 255, 0.582);
+            box-shadow: -2px -2px 5px rgba(255, 208, 163, 0.61), 2px 2px 5px rgba(255, 189, 65, 0.493);
+            margin-left: 10px;
+            margin-top: 10px;
+            max-width: 6cm;
+            width: 50vw;
+        }
+
+        button.styled:hover {
+            background-color: #ffb048;
+        }
+
+        div.styled {
+            border-width: 0px;
+            padding: 5px;
+            border-radius: 5px;
+            color: rgba(0, 0, 0, 0.85);
+            font-family: Poppins, sans-serif;
+            font-weight: 700;
+            letter-spacing: 1px;
+            background-color: rgba(255, 255, 255, 0.582);
+            box-shadow: -2px -2px 5px rgba(255, 208, 163, 0.61), 2px 2px 5px rgba(255, 189, 65, 0.493);
+            margin-left: 10px;
+            margin-top: 10px;
+            width: 80vw;
+            max-width: 10cm;
+            resize: none;
+            height: 80vh;
+            max-height: 8cm;
+        }
+    </style>
+    <script>
+        const date = new Date
+        if (localStorage.getItem("notedash.notes") == null) {
+            localStorage.setItem("notedash.notes", "")
+        }
+
+        function append_to_localStorage(key, value) {
+            localStorage.setItem(key, localStorage.getItem(key) + value)
+        }
+
+        function write_note() {
+            append_to_localStorage("notedash.notes", "<button class='note "+document.getElementById('color').value+"' onclick=about_file(this)><div><div class=capt align=left>"+ document.getElementById("title").value+"</div><div align=justify>"+document.getElementById("note").innerHTML+"<br><br><small>"+date.getFullYear()+"-"+date.getMonth()+"-"+date.getDay()+" | "+date.getHours()+"h</small></div></button>")
+            history.back()
+        }
+    </script>
+</head>
+
+<body>
+    <script>
+        if (screen.width < 600) {
+            document.writeln("<div align=center>")
+        }
+    </script>
+<input type="text" placeholder="Note name" class="styled" id="title">
+<br>
+<select name="color" id="color" class="styled">
+    <option value="yellow">Select note color</option>
+    <option value="yellow">Yellow</option>
+    <option value="green">Green</option>
+    <option value="blue">Blue</option>
+    <option value="red">Red</option>
+    <option value="white">White</option>
+</select>
+<br>
+<div name="styled" id="note" class="styled" contenteditable="true" align="left"></div>
+<br>
+<button class="styled" onclick="history.back()">Cancel</button>
+<button class="styled" onclick="write_note()">Done</button>
+<script>
+    if (screen.width < 600) {
+        document.writeln("</div>")
+    }
+</script>
+</body>
+
+</html>

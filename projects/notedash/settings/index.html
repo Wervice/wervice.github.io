@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Settings</title>
+    <link rel="stylesheet" href="/styles/global.css">
+    <style>
+        * {
+            cursor: default;
+        }
+
+        body {
+            background-color: #ffe3bb;
+        }
+
+        button {
+            border-width: 1px;
+            border-color: #00000000;
+            background-color: #00000000;
+            font-size: large;
+            margin: 5px;
+        }
+
+        button:hover {
+            background-color: #ffc87c;
+            border-radius: 2.5px;
+            border-width: 1px;
+        }
+
+        h2 {
+            margin: 0px;
+            margin-bottom: 5px;
+            padding: 11px;
+            background-color: #ffc87c;
+        }
+
+        a {
+            color: brown;
+        }
+    </style>
+
+    <script>
+        function switch_desing() {
+            if (localStorage.getItem("notedash.darkmode") == "true") {
+                localStorage.removeItem("notedash.darkmode")
+            }
+            else {
+                localStorage.setItem("notedash.darkmode", "true")
+            }
+
+            if (confirm("Reload to apply?")) {
+                window.top.location.reload()
+            }
+        }
+
+        function delete_all() {
+            if (confirm("Do you want to delete all your notes?")) {
+                localStorage.removeItem("notedash.notes")
+            }
+        }
+    </script>
+</head>
+<body>
+<h2>Settings</h2>
+<button onclick="switch_desing()">Switch design</button>
+<br>
+<button onclick="delete_all()">Delete all notes</button>
+<br>
+<br>
+<div style="padding:10px; margin: 10px; background-color: #ffb44a; border-radius: 10px; max-width: 5cm;">
+Designed and made by <a href="/" target="_blank">Wervice</a><br>
+<br>
+<a href="https://github.com/Wervice/wervice.github.io/" target="_blank">My GitHub respository</a>
+</div>
+</body>
+</html>

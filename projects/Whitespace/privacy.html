@@ -16,7 +16,7 @@
         }
 
         function ptry() {
-            var trys = confirm("Try means, that you agree and check out Whitespace without creating an account. After reloading the website/Whitespace the entered data will get removed. \rWarning: As long as you don't reload Whitespace your data is stored!\rDo you want to start a try-session? Press Ok for Yes. Press cancel for No.")
+            var trys = confirm("Try means, that you agree and check out Whitespace without creating an account. After reloading the website/whitespace the entered data will get removed. \rWarning: As long as you don't reload Whitespace your data is stored!\rDo you want to start a try-session? Press Ok for Yes. Press cancel for No.")
             if (trys) {
                 sessionStorage.setItem("try", "1")
                 alert("Session is started.\r So remove your data from Whitespace/this website\r reload it or open settings > click [reset everything]")
@@ -57,7 +57,7 @@
 
 <body style="padding: 10px;">
     <script>
-        if (window.top.location.pathname != "/projects/Whitespace/privacy.html") {
+        if (window.top.location.pathname != "/projects/whitespace/privacy.html") {
         window.top.location.replace("privacy.html")
         }
     </script>

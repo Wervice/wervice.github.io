@@ -16,7 +16,7 @@ function sendEmail() {
 function sendCryptEmail() {
     if (confirm("Do you want to send a mail to " + document.getElementById('email').value + "?")) {
         pass = prompt("Enter pass / key for the email.")
-        window.open("mailto:" + document.getElementById('email').value + "&subject=" + "Encrypted:" + btoa(document.getElementById('subject').value) + "&body=" + encodeURIComponent("Copy and decrypt this mail under https://wervice.github.io/projects/Whitespace/messageBoard/decrypt.html : " + btoa(btoa(btoa(btoa(pass + "/" + "Subject: " + document.getElementById('subject').value + "<br>" + document.getElementById('mail').value))))))
+        window.open("mailto:" + document.getElementById('email').value + "&subject=" + "Encrypted:" + btoa(document.getElementById('subject').value) + "&body=" + encodeURIComponent("Copy and decrypt this mail under https://wervice.github.io/projects/whitespace/messageBoard/decrypt.html : " + btoa(btoa(btoa(btoa(pass + "/" + "Subject: " + document.getElementById('subject').value + "<br>" + document.getElementById('mail').value))))))
     }
 }
 

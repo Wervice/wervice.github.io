@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="/styles/global.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NoteDash</title>
+    <link rel="shortcut icon" href="./images/favicon.png" type="image/png">
+    <link rel="apple-touch-icon" href="./images/favicon.png" type="image/png">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="application-name" content="NoteDash">
+    <meta name="apple-mobile-web-app-title" content="NoteDash">
+    <meta name="theme-color" content="#f7a52f">
+    <script>
+        if (localStorage.getItem("notedash.darkmode") == "true") {
+            var metaThemeColor = document.querySelector("meta[name=theme-color]");
+            metaThemeColor.setAttribute("content", "#085ad0");
+        }
+    </script>
+    <style>
+        * {
+            cursor: default;
+        }
+
+        body {
+            padding: 0px;
+            margin: 0px;
+            max-width: 100vw;
+            overflow: hidden;
+        }
+
+        div.top-bar {
+            background-color: #f7a52f;
+            padding: 10px;
+        }
+
+        div.top-bar button {
+            border-width: 1px;
+            border-color: #00000000;
+            background-color: #00000000;
+            font-size: large;
+        }
+
+        div.top-bar button:hover {
+            background-color: #ffffff2a;
+            border-radius: 2.5px;
+            border-width: 1px;
+        }
+
+        div.top-bar button.app-name {
+            color: white;
+        }
+
+        iframe.window-frame {
+            height: calc(100vh - 49px);
+            width: 100vw;
+        }
+    </style>
+    <script>
+        function new_note() {
+            document.getElementById("window").src = "./dash/new.html"
+        }
+
+        function delete_notes() {
+            if (confirm("Do you want to delete all your notes?")) {
+                localStorage.removeItem("notedash.notes")
+                location.reload()
+            }
+        }
+
+        function settings() {
+            document.getElementById("window").src = "./settings/"
+        }
+    </script>
+</head>
+
+<body>
+    <div class="top-bar">
+        <button class="app-name" onclick="location.reload()">
+            NoteDash
+        </button>
+        <button onclick="new_note()">New</button>
+        <button onclick="settings()">Settings</button>
+    </div>
+    <iframe src="./dash/" frameborder="0" class="window-frame" id="window"></iframe>
+    <script>
+        if (localStorage.getItem('notedash.darkmode') == "true") {
+            document.documentElement.style.filter = 'invert(1)'
+        }
+    </script>
+</body>
+
+</html>

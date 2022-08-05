@@ -3,110 +3,33 @@
 
 <head>
     <meta charset="utf-8">
-    <title>Wervice - Software everywhere and free</title>
+    <title>Wervice - An open source project for software</title>
     <link rel="stylesheet" href="/styles/global.css" type="text/css">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="keywords" content="Wervice, Whitespace, Wervice Webapps, Wervice, IT, solutions">
-    <meta name="description"
-        content="The wervice project has different programs, it soulutions and tools for work, home and hobbies.">
+    <meta name="keywords" content="Wervice, IT, Software, Free, Online, Tools, Whitespace, LockScreenCrypter, Website Builder">
+    <meta name="description" content="The wervice project has different programs, IT solutions and tools for work, home, and developement.">
     <link rel="shortcut icon" href="./images/favicon.ico" type="image/x-icon">
     <link rel="apple-touch-icon" href="./images/favicon.png" type="image/png">
     <meta name="google-site-verification" content="bf-sP6XkNob1vFJBsQMhV5tGgmNzP_x7DFRaXOMkX3Y" />
+    <script type="application/ld+json">
+            {
+    	        "@context": "http://schema.org",
+                "@type": "WebApplication",
+                "name": "Wervice",
+                "image": "https://wervice.github.io/images/logo-tagline.png",
+                "author": {
+                    "@type": "Person",
+                    "name": "Wervice"
+                },
+                "applicationCategory": "BusinessApplication",
+                "operatingSystem": "BROWSER"
+                "offers": {
+                    "@type": "Offer",
+                    "price": "0",
+                 }
+            }
+    </script>
     <style>
-        div.tip {
-            background-color: rgb(255, 153, 0);
-            color: rgb(0, 0, 0);
-            padding: 10px;
-            font-size: 14pt;
-        }
-
-        button.docs {
-            border-width: 0px;
-            border-radius: 0.2cm;
-            padding: 0.2cm;
-            width: calc(90vw - 3cm);
-            max-width: 10cm;
-            background: linear-gradient(90deg, rgba(255, 0, 202, 1) 0%, rgba(0, 159, 255, 1) 100%);
-            margin: 1cm;
-            font-size: large;
-            color: white;
-            box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.25);
-        }
-
-        button.docs:focus {
-            animation-name: glamour;
-            animation-duration: 0.5s;
-            animation-fill-mode: forwards;
-        }
-
-        @keyframes glamour {
-            0% {}
-
-            50% {
-                margin-right: -25px;
-            }
-
-            100% {}
-        }
-
-        button.herofocus {
-            border-radius: 5px;
-            border-width: 0px;
-            border-color: rgb(0, 0, 0);
-            background-color: dodgerblue;
-            padding: 7px;
-            color: white;
-            font-size: larger;
-            min-width: 200px;
-            margin: 5px;
-        }
-
-        button.herofocus:hover {
-            animation-name: focus;
-            animation-duration: 0.7s;
-        }
-
-        button.herofocus:focus {
-            background-color: rgb(24, 108, 192);
-        }
-
-        button.herodocs {
-            border-radius: 5px;
-            border-width: 2px;
-            border-color: dodgerblue;
-            background-color: #00000000;
-            padding: 5px;
-            color: dodgerblue;
-            font-size: larger;
-            min-width: 200px;
-            margin: 5px;
-        }
-
-        button.herodocs:hover {
-            animation-name: hdocs;
-            animation-duration: 0.7s;
-        }
-
-        @keyframes focus {
-            0% {}
-
-            50% {
-                background-color: rgb(12, 113, 214);
-            }
-
-            100% {}
-        }
-
-        @keyframes hdocs {
-            0% {}
-
-            50% {
-                background-color: rgb(210, 232, 255)
-            }
-
-            100% {}
-        }
-
         a.h {
             color: #0077ff;
             text-decoration-color: black;
@@ -120,7 +43,7 @@
         }
 
         a.h:focus {
-            color: red;
+            color: rgb(7, 5, 128);
         }
 
         div.software-box {
@@ -134,8 +57,9 @@
             padding-top: 5px;
         }
 
-        h3 {
-            font-size: calc(large + 5px);
+        div.software-box h4 {
+            font-size: larger;
+            font-weight: normal;
             padding-bottom: 5px;
             letter-spacing: 1px;
         }
@@ -151,12 +75,6 @@
             width: 30vw;
             padding-top: 30px;
             min-width: 7cm;
-        }
-
-        a.blbtn {
-            color: #006fee;
-            text-decoration: none;
-            font-size: 12pt;
         }
 
         button.coming-soon {
@@ -188,7 +106,7 @@
             background-color: #ffffffd2;
         }
 
-        button.cookie-borderless {
+        button.cookie-borderfew {
             border-width: 0px;
             border-radius: 5px;
             padding: 5px;
@@ -228,29 +146,9 @@
             font-weight: 600;
             letter-spacing: 1px;
         }
-    </style>
-    <script>
-        if (window.innerWidth > 1000) {
-            document.writeln("<style>div.software-box")
-        }
-    </script>
-    <script>
-        console.log("____________________\r\n< Welcome to Wervice >\r\n --------------------\r\n        \\   ^__^\r\n         \\  (oo)\\_______\r\n            (__)\\       )\\/\\\r\n                ||----w |\r\n                ||     ||")
-        console.log('Wervice | Visit: https://github.com/Wervice/Wervice')
-        function developerassistant() {
-            console.log('Hi, nice to see you! :-)')
-            console.log('What do you want to do?\n- Copy a picture: Enter allowContext()')
-        }
-        function allowContext() {
-            window.oncontextmenu = function () {
-                console.log('You may write: C.Volke, Wervice; Wervice.github.io\n Thank you for your fairness.')
-                return true;
-            }
-        }
-    </script>
-    <style>
-        button.code:focus {
-            background-color: #efefef;
+
+        h3.b {
+            font-size: 25px;
         }
     </style>
 </head>
@@ -259,8 +157,7 @@
     <table class="nav" style="width: 100%; height: 50px;" cellpadding="0" cellspacing="0" id="nav">
         <tr>
             <td style="font-size: 14pt;">
-                <a href="/index.html"><img src="/images/logo-tagline.png" height="45"
-                        alt="Wervice Software solutions everywhere for business and home"></a>
+                <a href="/index.html"><img src="/images/logo-tagline.png" height="45" alt="Wervice Software solutions everywhere for business and home"></a>
             </td>
             <td style="font-size: small;">
                 <div align="right">
@@ -273,17 +170,17 @@
             </td>
         </tr>
     </table>
+
+
     <div class="cover">
         <div style="height:70px;"></div>
         <div style="margin:10px;" align="center">
             <br>
             <h1 style="font-size: 35pt;">Wervice - Software everywhere</h1>
-            <img src="hero.webp" alt="An illustration for software and IT solutions"
-                style="height:250px;max-height: 30vh;">
+            <img src="hero.webp" alt="An illustration for software and IT solutions" style="height:250px;max-height: 30vh;">
             <div style="width: 70vw; min-width: 1cm; font-size: calc(2.0vh + 5px);" align="justify"><br>
                 We need software every day and everywhere. Here are
-                free <a href="http://localhost/index.html#opensource" class="h">open source</a> <a
-                    href="http://localhost/index.html#pwas" class="h">applications and
+                free <a href="http://localhost/index.html#opensource" class="h">open source</a> <a href="http://localhost/index.html#pwas" class="h">applications and
                     solutions</a> for
                 business and home. The programs use modern <a href="http://localhost/index.html#techs" class="h">web
                     technologies</a>
@@ -302,25 +199,27 @@
                 <br>
                 <div align="right">
                     <small style="font-size: small;">
-                        <a href="https://www.github.com/Wervice" style="color: rgb(0, 62, 196);"><img
-                                src="/images/github.png" alt="GitHub" height="30"></a>
-                        <a href="https://www.dribbble.com/Wervice" style="color: rgb(255, 0, 76);"><img
-                                src="/images/dribbble.png" alt="Dribbble" height="30"></a>
+                        <a href="https://www.github.com/Wervice" style="color: rgb(0, 62, 196);"><img src="/images/github.png" alt="GitHub" height="30"></a>
+                        <a href="https://www.dribbble.com/Wervice" style="color: rgb(255, 0, 76);"><img src="/images/dribbble.png" alt="Dribbble" height="30"></a>
                     </small>
                 </div>
             </div>
         </div>
     </div>
-    <div style="height: 100px;" id="pwas">
-    </div>
+
+
+    <div style="height: 100px;" id="pwas"></div>
+
+
     <h2 style="color: rgb(0, 0, 0); font-size: 35px;" align="center">
         Software and solutions
     </h2>
+
     <div align="center">
+
         <div class="software-box" id="whitespace">
-            <h3>Whitespace</h3>
-            <img src="/images/whitespace.webp"
-                alt="Wervice Whitespace is a modern desktop system emulator for business and home." class="blog">
+            <h4>Whitespace</h4>
+            <img src="/images/whitespace.webp" alt="Wervice Whitespace is a modern desktop system emulator for business and home." class="blog">
             <div class="caption" align="justify">
                 Wervice Whitespace is an online emulator for a modern, clean, and fast* desktop environment. It has
                 helpful and free
@@ -329,16 +228,17 @@
                 browser, and you can store your own files and information on your device and not in a third-party cloud.
                 <br>
                 <br>
-                <a href="/pages/whitespace/index.html" class="blbtn">Learn more about Whitespace</a>
+                <a href="/pages/whitespace/index.html" class="h">Learn more about Whitespace</a>
                 <br>
                 <br>
-                <a href="/projects/Whitespace/" class="blbtn">Open Whitespace</a>
+                <a href="/projects/whitespace/" class="h">Open Whitespace</a>
                 <br>
                 <br>
             </div>
         </div>
+
         <div class="software-box" id="interlineword">
-            <h3>Interline Word</h3>
+            <h4>Interline Word</h4>
             <img src="/images/iword.webp" alt="Interline is a free text-only editor for mails and notes." class="blog">
             <div class="caption" align="justify">
                 Interline Word is a free text editor on the web for simple text-only files. The interface is of modern
@@ -348,13 +248,13 @@
                 is helpful when writing long mails, shopping lists or a fast* note.
                 <br>
                 <br>
-                <a href="/projects/interlineword/" class="blbtn">Open Interline Word</a>
+                <a href="/projects/interlineword/" class="h">Open Interline Word</a>
             </div>
         </div>
+
         <div class="software-box" id="lockscreencrypter">
-            <h3>LockScreenCrypter</h3>
-            <img src="/images/lockscreencrypter.webp" alt="LockScreenCrypter helps you by messaging private."
-                class="blog">
+            <h4>LockScreenCrypter</h4>
+            <img src="/images/lockscreencrypter.webp" alt="LockScreenCrypter helps you by messaging private." class="blog">
             <div class="caption" align="justify">
                 Wervice LockScreenCrypter is a web app to encrypt your private or sensible messages on your device. For
                 example, you
@@ -365,11 +265,28 @@
                 your recipient also needs to know this tool, and that's not a replacement for other important measures.
                 <br>
                 <br>
-                <a href="/projects/lockscreencrypter/" class="blbtn">Open the app</a>
+                <a href="/projects/lockscreencrypter/" class="h">Open the app</a>
             </div>
         </div>
+
+
+        <div class="software-box" id="lockscreencrypter">
+            <h4>NoteDash</h4>
+            <img src="/images/notedash.webp" alt="NoteDash is a simple tools to write notes." class="blog">
+            <div class="caption" align="justify">
+                NoteDash is a simple tool to organize notes on a virtual wall.
+                You can write, edit and delete notes and sort on the dashboard with a color.
+                And there is a nice dark mode for night owls.
+                <br>
+                <br>
+                <a href="/projects/notedash/" class="h">Write Notes</a>
+            </div>
+        </div>
+
+        <h3 class="b">Developement</h3>
+
         <div class="software-box" id="webuild">
-            <h3>Webuild</h3>
+            <h4>Webuild</h4>
             <img src="/images/themes.webp" alt="Webuild has nice themes for your own website." class="blog">
             <div class="caption" align="justify">
                 Use Webuild to build your own website from a good theme. You don't have to know much about web design or
@@ -378,11 +295,12 @@
                 as much as options like building your own website in HTML and CSS.
                 <br>
                 <br>
-                <a href="/projects/webuild/index.html" class="blbtn">Let's go</a>
+                <a href="/projects/webuild/index.html" class="h">Let's go</a>
             </div>
         </div>
+
         <div class="software-box" id="opensource">
-            <h3>Open source</h3>
+            <h4>Open source</h4>
             <img src="/images/osource.webp" alt="Wervice's code is open source and on github." class="blog">
             <div class="caption" align="justify">
                 Wervice's code is open source and on GitHub. Everyone can edit, read or copy my code for the own
@@ -390,13 +308,14 @@
                 add a small disclaimer to your new projects, if you use my code.
                 <br>
                 <br>
-                <a href="https://github.com/Wervice" class="blbtn">Open my GitHub profile</a>
+                <a href="https://github.com/Wervice" class="h">Open my GitHub profile</a>
                 |
-                <a href="https://dribbble.com/Wervice" class="blbtn">Open my Dribble profile</a>
+                <a href="https://dribbble.com/Wervice" class="h">Open my Dribble profile</a>
             </div>
         </div>
+
         <div class="software-box" id="techs">
-            <h3>Web techs</h3>
+            <h4>Web techs</h4>
             <img src="/images/webtechs.webp" alt="Wervice's code is open source and on github." class="blog">
             <div class="caption" align="justify">
                 In most cases, my apps run in the browser. Thanks to web APIs and web techs, that's possible. By using
@@ -406,33 +325,36 @@
                 <br>
             </div>
         </div>
+
         <br>
         <h2 style="color: rgb(0, 0, 0); font-size: 35px;" align="center">
             Why Wervice?
         </h2>
+
         <div align="center">
             <p align="justify" style="width: 50vw; min-width: 8cm; font-size: 27px;">
-                All wervice apps work in any browser, so, it works cross-platform and with less device-resources.
-                Wervice values your privacy. If something changes,
-                we'll tell it to you. And Wervice can change and work in every direction.
+                All wervice apps work in any browser, so, it works cross-platform and with few device-resources. Wervice values your privacy. If something changes, we'll tell it to you. And Wervice can change and work in every direction.
             </p>
+
             <div align="left" style="width: 50vw; min-width: 8cm; font-size: 13pt;">
                 <div class="check-line"><img src="/images/check.png" alt="✅">My software is <b>secure</b>.</div>
-                <div class="check-line"><img src="/images/check.png" alt="✅">It values your <b>privacy</b> and doesn't
-                    share your data.</div>
-                <div class="check-line"><img src="/images/check.png" alt="✅"><b>Fast.</b> Faster. Wervice. Every thing
-                    runs fast¹.</div>
-                <div class="check-line"><img src="/images/check.png" alt="✅">It performs cross-platform in any
-                    <b>browser²</b>.</div>
+                <div class="check-line"><img src="/images/check.png" alt="✅">It values your <b>privacy</b> and doesn't share your data.</div>
+                <div class="check-line"><img src="/images/check.png" alt="✅"><b>Fast.</b> Faster. Wervice. Every thing runs fast¹.</div>
+                <div class="check-line"><img src="/images/check.png" alt="✅">It performs cross-platform in any <b>browser²</b>.
+                </div>
             </div>
         </div>
     </div>
+
     <br>
+
     <div style="padding: 10px;">
         <small>¹ Fast: Depending on the end device, internet connection and other factors.</small><br>
         <small>² Any browser: Depending on the end device, internet connection, other factors and browser.</small>
     </div>
+
     <!-- Cookies -->
+
     <div class="cookies" align="center" id="cookies">
         <script>
             function nocookies() {
@@ -460,18 +382,21 @@
         <br><br>
         <div align="justify" style="width: 80%;">This website needs cookies and
             other cookie-like
-            technologies (like the Storage API). You can always change your selection in the <a href="/cookies/"
-                style="color: black; text-decoration: underline;">cookie settings</a>. By using this page you agree.
+            technologies (like the Storage API). You can always change your selection in the <a href="/cookies/" style="color: black; text-decoration: underline;">cookie settings</a>. By using this page you agree.
         </div>
         <br>
         <button class="cookie-focus" onclick="nocookies()">Reject all</button><br>
         <button class="cookie-focus" onclick="allcookies()">Accept all</button><br>
-        <a href="/pages/privacy-policy/">
+        <a href="/privacy policy/">
             <button class="cookie-text">Privacy policy</button><br>
         </a>
     </div>
-    <footer><a href="/privacy policy/index.html">Privacy Policy</a> | <a href="/impress/index.html">Impress</a> | <a
-            href="/legal.html">Credits</a> | Icons by <a href="https://www.icons8.com">Icons8</a>. Illustrations
+    <br>
+
+    <div class="social-share" id="social-share"></div>
+
+    <!-- Footer -->
+    <footer><a href="/privacy policy/index.html">Privacy Policy</a> | <a href="/impress/index.html">Impress</a> | <a href="/legal.html">Credits</a> | Icons by <a href="https://www.icons8.com">Icons8</a>. Illustrations
         made
         with <a href="https://www.icons8.com/lunacy">Lunacy by Icons8</a>. |
         Designed by Wervice | <a href="/cookies/">Cookies</a>
