@@ -299,12 +299,7 @@
 
         window.onload = function () { // From down
 
-            if (localStorage.getItem('welcome') == null || localStorage.getItem('welcome') == '') {
-                window.open('privacy.html', 'window')
-
-            }
-
-            if (localStorage.getItem("/pswd") == "" || localStorage.getItem("/pswd") == null) {
+                        if (localStorage.getItem("/pswd") == "" || localStorage.getItem("/pswd") == null) {
                 var lsess = true
                 document.getElementById('secure').hidden = false;
             }
