@@ -192,9 +192,10 @@ div#main {
 }
 
 div.showcase-launcher {
+    display: inline-block;
     border-radius: 5px;
     padding: 10px 10px 20px 10px;
-    max-width: 150px;
+    width: 200px;
     background-color: #252525;
     font-size: 20px;
     box-shadow: 0px 0px 5px black;
@@ -209,4 +210,19 @@ div.showcase-launcher:hover {
 div.showcase-launcher img {
     height: 50px;
     padding-top: 5px;
+}
+
+div.header {
+    width: 100%;
+}
+div.wrapper {
+    font-size: xx-large;
+    width: 50vw;
+    min-width: 7cm;
+}
+
+span.cs-badge {
+    padding: 2px 2px 2px 2px;
+    border-radius: 1px;
+    color: #006aff !important;
 }
