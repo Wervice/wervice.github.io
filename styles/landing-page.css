@@ -1,0 +1,10 @@
+* div.caption {width: 30vw;padding-top: 30px;min-width: 7cm;}
+div.check-line {font-size: 27px;color: black;cursor: default;padding: 5px;}
+div.check-line img {margin-right: 10px;height: 20px;}
+b {font-weight: 600;letter-spacing: 1px;}
+h3.b {font-size: 25px;}
+a.h {color: #0077ff;text-decoration-color: black;text-decoration-line: none;text-decoration-style: none;}
+a.h:hover {color: #006fee;text-decoration-color: #0a6cdd;}
+a.h:focus {color: rgb(7, 5, 128);}
+img.blog{width: 15vw;min-width: 7cm;max-width: 8cm;border-radius: 5px;}
+.hero{height:250px;max-height: 30vh;}

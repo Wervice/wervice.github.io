@@ -10,6 +10,11 @@
   <priority>1.00</priority>
 </url>
 <url>
+  <loc>https://wervice.github.io/archon/</loc>
+  <lastmod>2023-03-1T00:00:00+00:00</lastmod>
+  <priority>1.00</priority>
+</url>
+<url>
   <loc>https://wervice.github.io/index.html</loc>
   <lastmod>2022-07-31T09:51:31+00:00</lastmod>
   <priority>0.80</priority>
@@ -42,7 +47,7 @@
 <url>
   <loc>https://wervice.github.io/privacy%20policy/index.html</loc>
   <lastmod>2022-07-31T09:51:31+00:00</lastmod>
-  <priority>0.80</priority>
+  <priority>0.20</priority>
 </url>
 <url>
   <loc>https://wervice.github.io/impress/index.html</loc>
@@ -52,86 +57,7 @@
 <url>
   <loc>https://wervice.github.io/legal.html</loc>
   <lastmod>2022-07-31T09:51:31+00:00</lastmod>
-  <priority>0.80</priority>
+  <priority>0.20</priority>
 </url>
 <url>
-  <loc>https://wervice.github.io/projects/whitespace/System/index.html</loc>
-  <lastmod>2022-07-31T09:51:31+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://wervice.github.io/projects/whitespace/ListOrdner/index.html</loc>
-  <lastmod>2022-07-31T09:51:31+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://wervice.github.io/projects/whitespace/FinancesNoticeBoard/index.html</loc>
-  <lastmod>2022-07-31T09:51:31+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://wervice.github.io/projects/whitespace/store/index.html</loc>
-  <lastmod>2022-07-31T09:51:31+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://wervice.github.io/projects/whitespace/messageBoard/index.html</loc>
-  <lastmod>2022-07-31T09:51:31+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://wervice.github.io/projects/whitespace/timeline/index.html</loc>
-  <lastmod>2022-07-31T09:51:31+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://wervice.github.io/projects/whitespace/Formlary/index.html</loc>
-  <lastmod>2022-07-31T09:51:31+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://wervice.github.io/privacy%20policy/english.html</loc>
-  <lastmod>2022-07-31T09:51:31+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://wervice.github.io/impress/english.html</loc>
-  <lastmod>2022-07-31T09:51:31+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://wervice.github.io/projects/whitespace/legal/OFL%20-%20Montserrat.txt</loc>
-  <lastmod>2022-07-31T09:51:31+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://wervice.github.io/fonts/Poppins/OFL%20-%20Poppins.txt</loc>
-  <lastmod>2022-07-31T09:51:31+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://wervice.github.io/projects/whitespace/legal/OFL%20-%20GN.txt</loc>
-  <lastmod>2022-07-31T09:51:31+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://wervice.github.io/projects/whitespace/legal/OFL%20-%20NotoSerif.txt</loc>
-  <lastmod>2022-07-31T09:51:31+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://wervice.github.io/projects/whitespace/legal/OFL%20-%20PFD.txt</loc>
-  <lastmod>2022-07-31T09:51:31+00:00</lastmod>
-  <priority>0.51</priority>
-</url>
-<url>
-  <loc>https://wervice.github.io/projects/whitespace/legal.html</loc>
-  <lastmod>2022-07-31T09:51:31+00:00</lastmod>
-  <priority>0.51</priority>
-</url>
-<url>
-  <loc>https://wervice.github.io/projects/whitespace/messageBoard/mail.html</loc>
-  <lastmod>2022-07-31T09:51:31+00:00</lastmod>
-  <priority>0.51</priority>
-</url>
 </urlset>

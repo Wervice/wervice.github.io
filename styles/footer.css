@@ -1,21 +1,2 @@
-footer {
-    background: #022030;
-    color: #ffffff;
-    height: auto;
-    font-family: Poppins, sans-serif;
-    font-size: 12pt;
-    padding: 5pt;
-    margin: 0;
-    padding: 18pt;
-}
-
-footer a {
-    color: dodgerblue;
-    text-decoration: none;
-}
-
-footer a:hover {
-    animation-name: underl;
-    animation-duration: 1s;
-    animation-fill-mode: forwards;
-}
+footer {background: #022030;color: #ffffff;height: auto;font-family: Poppins, sans-serif;font-size: 12pt;padding: 5pt;margin: 0;padding: 18pt;}
+footer a {color: dodgerblue;text-decoration: none;}
