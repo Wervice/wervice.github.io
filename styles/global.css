@@ -201,6 +201,7 @@ div.showcase-launcher {
     box-shadow: 0px 0px 5px black;
     cursor: pointer;
     transition: all 0.25s ease-in-out;
+    margin-bottom: 5px;
 }
 
 div.showcase-launcher:hover {
@@ -216,7 +217,7 @@ div.header {
     width: 100%;
 }
 div.wrapper {
-    font-size: xx-large;
+    font-size: x-large;
     width: 50vw;
     min-width: 7cm;
 }
