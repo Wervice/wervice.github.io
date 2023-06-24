@@ -1,10 +1,96 @@
-* div.caption {width: 30vw;padding-top: 30px;min-width: 7cm;}
-div.check-line {font-size: 27px;color: black;cursor: default;padding: 5px;}
-div.check-line img {margin-right: 10px;height: 20px;}
-b {font-weight: 600;letter-spacing: 1px;}
-h3.b {font-size: 25px;}
-a.h {color: #0077ff;text-decoration-color: black;text-decoration-line: none;text-decoration-style: none;}
-a.h:hover {color: #006fee;text-decoration-color: #0a6cdd;}
-a.h:focus {color: rgb(7, 5, 128);}
-img.blog{width: 15vw;min-width: 7cm;max-width: 8cm;border-radius: 5px;}
-.hero{height:250px;max-height: 30vh;}
+::selection {
+    background-color: transparent;
+}
+
+nav {
+    padding: 20px;
+    background-color: black;
+    color: white;
+}
+
+nav a {
+    text-decoration: none;
+    font-size: 18px;
+    margin-right: 20px;
+}
+
+h1 {
+    text-align: center;
+    font-weight: 900;
+    font-size: calc((4vw + 4vh)/2);
+    margin-bottom: 40px;
+}
+
+h1 strong.blue {
+    color: dodgerblue !important;
+}
+
+div#short_info {
+    width: 300px;
+    margin-bottom: 50px;
+    max-width: 90vw;
+}
+
+button.filled {
+    padding: 20px;
+    background-color: dodgerblue;
+    color: white;
+    border-width: 0px;
+    border-radius: 5px;
+    font-size: large;
+    margin-right: 10px;
+    margin-bottom: 10px;
+}
+
+button.outline {
+    padding: 20px;
+    background-color: transparent;
+    color: white;
+    border-width: 2px;
+    border-style: solid;
+    border-color: white;
+    border-radius: 5px;
+    font-size: large;
+    margin-right: 10px;
+}
+
+strong.neutral {
+    font-weight: bold;
+}
+
+div#products {
+    padding: 20px;
+}
+
+div#products .application {
+    background-color: #141414;
+    padding: 20px;
+    width: 20vw;
+    min-width: 300px;
+    max-width: 400px;
+    display: inline-table;
+    min-height: 400px;
+    margin-right: 20px;
+    margin-bottom: 20px;
+    border-radius: 20px;
+    transition: ease-in-out 100ms;
+    text-align: left;
+}
+
+div#products .application:hover {
+    background-color: #242424;
+}
+
+div#products .application h3 {
+    font-size: xx-large;
+    text-align: left;
+    width: 100%;
+    margin: 0px;
+    padding: 10px;
+    font-weight: 900;
+}
+
+div#products .application h4, img, div {
+    margin: 0px;
+    padding: 10px;
+}
