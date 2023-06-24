@@ -40,6 +40,8 @@ button.filled {
     font-size: large;
     margin-right: 10px;
     margin-bottom: 10px;
+    border-radius: 100px;
+    width: 200px;
 }
 
 button.outline {
@@ -52,6 +54,8 @@ button.outline {
     border-radius: 5px;
     font-size: large;
     margin-right: 10px;
+    border-radius: 100px;
+    width: 200px;
 }
 
 strong.neutral {
