@@ -89,13 +89,34 @@ span#hero_buttons button.second {
 }
 
 #features #feature {
-    width: calc(100vw / 3 - 200px);
     min-width: 300px;
     background-color: #1f1f1f;
-    display: inline-table;
-    margin: 10px;
+    margin: 25vw;
+    margin-top: 30px;
+    margin-bottom: 30px;
     padding: 20px;
     border-radius: 10px;
     font-size: large;
-    text-align: left;
+    text-align: center;
+    height: 330px;
+}
+
+#features #feature strong {
+    font-size: large;
+}
+
+span.text_container {
+    width: 30vw;
+    display: inline-block;
+    text-align: justify;
+}
+
+#release_notes {
+    padding: 20px;
+    margin-left: 20vw;
+    margin-top: 50px;
+    width: 60vw;
+    background-color: #2a2a2a;
+    color: white; 
+    border-radius: 10px; 
 }
