@@ -10,9 +10,14 @@
   <priority>1.00</priority>
 </url>
 <url>
+  <loc>https://wervice.github.io/lumos/</loc>
+  <lastmod>2023-07-7T00:00:00+00:00</lastmod>
+  <priority>1.00</priority>
+</url>
+<url>
   <loc>https://wervice.github.io/archon/</loc>
   <lastmod>2023-03-1T00:00:00+00:00</lastmod>
-  <priority>1.00</priority>
+  <priority>0.90</priority>
 </url>
 <url>
   <loc>https://wervice.github.io/index.html</loc>
