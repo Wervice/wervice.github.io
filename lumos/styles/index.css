@@ -90,7 +90,7 @@ span#hero_buttons button.second {
 
 #features #feature {
     min-width: 300px;
-    background-color: #1f1f1f;
+    background-color: transparent;
     margin: 25vw;
     margin-top: 30px;
     margin-bottom: 30px;
@@ -99,10 +99,17 @@ span#hero_buttons button.second {
     font-size: large;
     text-align: center;
     height: 330px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #333333;
 }
 
 #features #feature strong {
     font-size: large;
+}
+
+#features #feature img {
+    max-height: 128px;
 }
 
 span.text_container {
