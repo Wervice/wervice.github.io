@@ -66,6 +66,11 @@ div#main {
     min-height: 100vh;
 }
 
+div#main #main-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(550px, 1fr));
+}
+
 div#main h2 {
     font-size: 12pt;
     opacity: 70%;
