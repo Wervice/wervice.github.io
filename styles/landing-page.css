@@ -42,6 +42,7 @@ button.filled {
     margin-bottom: 10px;
     border-radius: 100px;
     width: 200px;
+    transition: ease-in-out 0.25s;
 }
 
 button.filled:hover {
