@@ -97,6 +97,7 @@ div#products .application h3 {
     margin: 0px;
     padding: 10px;
     font-weight: 900;
+    cursor: pointer;
 }
 
 div#products .application h4, img, div {
