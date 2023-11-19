@@ -116,7 +116,7 @@ footer {
 }
 
 footer small {
-  display: inline-block;
+  display: block;
   margin-bottom: 10px;
 }
 
@@ -128,15 +128,22 @@ footer hr {
 footer > div {
   width: 100%;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  justify-items: center;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  justify-content: space-between;
+  gap: 2rem;     
 }
 
 footer > div > div {
   display: flex;
   flex-direction: column;
-  gap: 10px;
-  text-align: center;
+}
+footer > div > div ul {
+list-style: none;
+padding-inline-start: 0;
+margin-block: 0
+}
+footer > div > div ul li {
+padding-block: 0.8rem;
 }
 
 footer a {
