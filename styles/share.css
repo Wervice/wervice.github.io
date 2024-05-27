@@ -1,72 +1,77 @@
 @font-face {
-    /* Poppins */
-    font-family: 'Poppins';
-    font-style: normal;
-    font-weight: 400;
-    src: url('/fonts/Poppins-Medium.woff') format('woff');
+	/* Poppins */
+	font-family: "Poppins";
+	font-style: normal;
+	font-weight: 400;
+	src: url("/fonts/Poppins-Medium.woff") format("woff");
 }
 ::selection {
-    background-color: #7AA2F8;
-    color: #1a1b25;
+	background-color: #7aa2f8;
+	color: #1a1b25;
 }
 
 body {
-    background-color: #000000;
-    color: white;
-    font-family: "Poppins", sans-serif;
-    margin: 5px;
-    padding: 0px;
+	background-color: #000000;
+	color: white;
+	font-family: "Poppins", sans-serif;
+	margin: 5px;
+	padding: 0px;
 }
-h1, h2, h3, h4, h5, h6 {
-    margin: 0px;
-    padding: 5px;
-    color: #7AA2F8;
-    font-family: "Poppins", sans-serif;
-    cursor: default;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	margin: 0px;
+	padding: 5px;
+	color: #7aa2f8;
+	font-family: "Poppins", sans-serif;
+	cursor: default;
 }
 p {
-    margin: 0px;
-    padding: 5px;
-    max-width: 50vw;
-    min-width: 7cm;
-    text-align: justify;
+	margin: 0px;
+	padding: 5px;
+	max-width: 50vw;
+	min-width: 7cm;
+	text-align: justify;
 }
 button {
-    margin: 5px;
-    transition: all 0.25s ease-in-out;
+	margin: 5px;
+	transition: all 0.25s ease-in-out;
 }
 button:hover {
-    filter: brightness(90%);
+	filter: brightness(90%);
 }
 button.whatsapp {
-    background-color: #0BDA51;
-    color: white;
-    border-width: 0px;
-    padding: 10px;
-    border-radius: 5px;
-    font-family: "Poppins", sans-serif;
+	background-color: #0bda51;
+	color: white;
+	border-width: 0px;
+	padding: 10px;
+	border-radius: 5px;
+	font-family: "Poppins", sans-serif;
 }
 button.twitter {
-    background-color: #0b76da;
-    color: white;
-    border-width: 0px;
-    padding: 10px;
-    border-radius: 5px;
-    font-family: "Poppins", sans-serif;
+	background-color: #0b76da;
+	color: white;
+	border-width: 0px;
+	padding: 10px;
+	border-radius: 5px;
+	font-family: "Poppins", sans-serif;
 }
 button.mail {
-    background-color: #8e0bda;
-    color: white;
-    border-width: 0px;
-    padding: 10px;
-    border-radius: 5px;
-    font-family: "Poppins", sans-serif;
+	background-color: #8e0bda;
+	color: white;
+	border-width: 0px;
+	padding: 10px;
+	border-radius: 5px;
+	font-family: "Poppins", sans-serif;
 }
 button.back {
-    background-color: #e0f9ea;
-    color: #002217;
-    border-width: 0px;
-    padding: 10px;
-    border-radius: 5px;
-    font-family: "Poppins", sans-serif;
+	background-color: #e0f9ea;
+	color: #002217;
+	border-width: 0px;
+	padding: 10px;
+	border-radius: 5px;
+	font-family: "Poppins", sans-serif;
 }

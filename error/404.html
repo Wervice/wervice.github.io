@@ -1,68 +1,86 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="/styles/global.css" />
+		<link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon" />
+		<title>Error 404</title>
+		<style>
+			img.error-image {
+				width: 15vw;
+				min-width: 5cm;
+				border-radius: 5px;
+			}
+		</style>
+	</head>
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/styles/global.css">
-    <link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon">
-    <title>Error 404</title>
-    <style>
-        img.error-image {
-            width: 15vw;
-            min-width: 5cm;
-            border-radius: 5px;
-        }
-    </style>
-</head>
-
-<body>
-    <table class="nav" style="width: 100%; height: 50px;" cellpadding="0" cellspacing="0" id="nav">
-        <tr>
-            <td style="font-size: 14pt;">
-                <a href="/index.html"><img src="/images/logo-tagline.png" height="45"
-                        alt="Wervice Software solutions everywhere for business and home"></a>
-            </td>
-            <td style="font-size: small;">
-                <div align="right">
-                    <a href="https:\\www.github.com\Wervice">
-                        <button class="BarButton">Fork code</button>
-                    </a>&nbsp;|&nbsp;<a href="/index.html#pwas">
-                        <button class="BarButton">Software</button>
-                    </a>
-                </div>
-            </td>
-        </tr>
-    </table>
-    <div style="min-height: calc(100vh - 73px);">
-    <div style="height: 70px"></div>
-    <div align="center">
-    <img src="/error/404.png" alt="Error 404 - Page not found" class="error-image">
-    </div>
-    <div align="center">
-        <h2>Error 404</h2>
-        <h3>Page not found</h3>
-        <div align="justify" style="width: 15vw; min-width: 5cm; font-size: large;">
-            The requested file, website or media does not exist.
-            Maybe the URL is wrong spelled, or you clicked a broken link.
-            <br><br>
-            <a href="/">Go home</a><br><br>
-            <script>
-                if (location.pathname.includes('whitespace')) {
-                    document.writeln("<a href='javascript:window.top.location.reload'>whitespace crashed</a>")
-                }
-            </script>
-        </div>
-    </div>
-    </div>
-    <footer><a href="/privacy/index.html">Privacy Policy</a> | <a href="/impress/index.html">Impress</a> | <a
-        href="/legal.html">Credits</a> | Icons by <a href="https://www.icons8.com">Icons8</a>. Illustrations
-    made
-    with <a href="https://www.icons8.com/lunacy">Lunacy by Icons8</a>. |
-    Designed by Wervice | <a href="javascript:webmanager.show('cookies')">Cookies</a>
-</footer>
-
-</body>
-
+	<body>
+		<table
+			class="nav"
+			style="width: 100%; height: 50px"
+			cellpadding="0"
+			cellspacing="0"
+			id="nav"
+		>
+			<tr>
+				<td style="font-size: 14pt">
+					<a href="/index.html"
+						><img
+							src="/images/logo-tagline.png"
+							height="45"
+							alt="Wervice Software solutions everywhere for business and home"
+					/></a>
+				</td>
+				<td style="font-size: small">
+					<div align="right">
+						<a href="https:\\www.github.com\Wervice">
+							<button class="BarButton">Fork code</button> </a
+						>&nbsp;|&nbsp;<a href="/index.html#pwas">
+							<button class="BarButton">Software</button>
+						</a>
+					</div>
+				</td>
+			</tr>
+		</table>
+		<div style="min-height: calc(100vh - 73px)">
+			<div style="height: 70px"></div>
+			<div align="center">
+				<img
+					src="/error/404.png"
+					alt="Error 404 - Page not found"
+					class="error-image"
+				/>
+			</div>
+			<div align="center">
+				<h2>Error 404</h2>
+				<h3>Page not found</h3>
+				<div
+					align="justify"
+					style="width: 15vw; min-width: 5cm; font-size: large"
+				>
+					The requested file, website or media does not exist. Maybe the URL is
+					wrong spelled, or you clicked a broken link.
+					<br /><br />
+					<a href="/">Go home</a><br /><br />
+					<script>
+						if (location.pathname.includes("whitespace")) {
+							document.writeln(
+								"<a href='javascript:window.top.location.reload'>whitespace crashed</a>",
+							);
+						}
+					</script>
+				</div>
+			</div>
+		</div>
+		<footer>
+			<a href="/privacy/index.html">Privacy Policy</a> |
+			<a href="/impress/index.html">Impress</a> |
+			<a href="/legal.html">Credits</a> | Icons by
+			<a href="https://www.icons8.com">Icons8</a>. Illustrations made with
+			<a href="https://www.icons8.com/lunacy">Lunacy by Icons8</a>. | Designed
+			by Wervice | <a href="javascript:webmanager.show('cookies')">Cookies</a>
+		</footer>
+	</body>
 </html>

@@ -1,0 +1,177 @@
+<html>
+	<head>
+		<title>Zentrox</title>
+		<link rel="stylesheet" href="index.css" />
+		<script src="index.js"></script>
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<meta charset="utf-8" />
+	</head>
+	<body>
+		<!-- Modals -->
+
+		<dialog id="copied_what_now">
+			<button id="close_modal">&times;</button>
+			<small> ✅ Installer command copied to your clipboard</small>
+			<h3>Finishing the installation</h3>
+			<p>
+				In the following, I will explain how you can finish the installation of
+				Zentrox.
+			</p>
+			<h4>1. Connect to your server</h4>
+			<p>
+				To set Zentrox up, you have to get a shell/terminal session on your
+				Linux server.<br />
+				This can be achieved using physical access or SSH ('Secure Shell' is a
+				remote control protocol).<br />
+				You will need a terminal connection either using SSH or a terminal app
+				on your server.<br />
+			</p>
+			<h4>2. Paste the copied command</h4>
+			<p>
+				You can now paste the command you just copied or enter it manually into
+				your terminal.<br />
+				The command is as follows:
+				<br />
+				<code
+					>curl -fsSL
+					https://raw.githubusercontent.com/Wervice/zentrox/main/install.bash -o
+					zentrox_installer.bash; bash zentrox_installer.bash</code
+				>
+			</p>
+			<h4>3. Follow the installer</h4>
+			<p>
+				The Zentrox installer will now start.<br />
+				Please follow the instructions in your terminal to finish the setup.
+			</p>
+			<h4>4. Start Zentrox server</h4>
+			<p>
+				The installer will provide you with another command.<br />
+				Please copy this command and save it somewhere where you can retrieve
+				it.<br />
+				You can then paste the command to your terminal and run it.<br />
+				In case you didn't get the command, here is it:<br />
+				<code>cd /home/YOUR_USERNAME/zentrox; node index.js</code>
+				<br />
+				Please replace "YOUR_USERNAME" with your actual username.<br />
+				If you do not know your username, you can get it by running the command
+				<code>whoami</code> in your terminal.
+				<br />
+				Your Zentrox instance can now be accessed on
+				<code>https://IP_ADDRESS_OF_YOUR_HOME_SERVER:3000</code><br />
+				Please replace "IP_ADDRESS_OF_YOUR_HOME_SERVER" with the actual IP
+				adress of your server.<br />
+				If you do not know this, you can use the command <code>ip addr</code>.
+			</p>
+		</dialog>
+
+		<!-- Content -->
+
+		<span id="top_note" class="top_note">
+			Zentrox is a work in progress. Please do not treat the current state of
+			the project as the final result.
+		</span>
+		<div id="semi_hero" class="semi_hero">
+			<div id="overlay"></div>
+			<div id="text_wallpaper"></div>
+			<br />
+			<span id="semi_hero_contents">
+				<h1>Zentrox</h1>
+				<h2>Easy home server admin and setup</h2>
+				<small>Get started right from the terminal 👇</small>
+				<br /><br />
+				<button id="installer_command_copy" title="Click to copy">
+					curl -fsSL
+					https://raw.githubusercontent.com/Wervice/zentrox/main/install.bash -o
+					zentrox_installer.bash; bash zentrox_installer.bash
+				</button>
+				<div class="scroll_down_indicator">
+					<img src="../images/scroll_down.svg" />
+				</div>
+			</span>
+		</div>
+
+		<p id="explanation">
+			Zentrox is an open-source project that enables server remote control and
+			home server setup through an intuitive web interface. It includes
+			integrated tools for easy management. With Zentrox, you can efficiently
+			manage and maintain your servers from any location.
+		</p>
+
+		<div id="content_block" class="content_block">
+			<span class="content_card">
+				<h4>Servers</h4>
+				<p>
+					Zentrox supports basic and advanced
+					servers and options like FTP and SMB by default. They can be
+					configured and started using the web interface. Every server has
+					integrated encryption with easy setup.
+				</p>
+				<small>
+					Supported servers:<br />FTP | (Soon to be) in work: SMB, WebDAV, SSH
+				</small>
+			</span>
+
+			<span class="content_card">
+				<h4>Resources</h4>
+				<p>
+					Monitor your system's resources with an intuitive dashboard. Watch
+					real-time CPU, RAM, and disk usage, track running processes, and more.
+					Stay in control with easy-to-read metrics.
+				</p>
+				<small>
+					Measured resources:<br />CPU, RAM, System disk, Battery state, System
+					name
+				</small>
+			</span>
+
+			<span class="content_card">
+				<h4>Open source</h4>
+				<p>
+					Zentrox is a fully open source and free project. It has no interest in
+					tracking you or collection your data and also does not do so. You can
+					view the code on the GitHub repository.
+				</p>
+				<small
+						>GitHub repository:<br /><a href="https://github.com/wervice/zentrox
+														  ">https://github.com/wervice/zentrox</a>
+				</small>
+			</span>
+
+			<span class="content_card">
+				<h4>Packages</h4>
+				<p>
+					You can manage system packages & applications using a simple interface
+					that supports most Linux package managers. It lets you search, remove
+					and install tools onto your system with just a few clicks.
+				</p>
+				<small>
+					Supported package managers:
+					<br />
+					DNF (RHEL/Fedora), APT (Debian), Pacman (Arch)
+				</small>
+			</span>
+		</div>
+		<footer>
+			by Wervice (2024)
+			<ul>
+				Credits
+				<li>JetBrains Mono (<a href="../fonts/JetBrainsMono.txt">OFL</a>)</li>
+				<li>Poppins (<a href="../fonts/Poppins_OFL.txt">OFL</a>)</li>
+				<li>WorkSans (<a href="../fonts/WorkSans_OFL.txt">OFL</a>)</li>
+			</ul>
+			<ul>
+				Links
+				<li>
+					<a href="https://github.com/wervice/zentrox"
+						>https://github.com/wervice/zentrox</a
+					>
+				</li>
+				<li>
+					<a href="https://fosstodon.org/@wervice"
+						>https://fosstodon.org/@wervice</a
+					>
+				</li>
+			</ul>
+		</footer>
+	</body>
+</html>

@@ -1,0 +1,309 @@
+@font-face {
+	font-family: "Work_Sans";
+	src: url("../fonts/WorkSans.ttf");
+}
+
+@font-face {
+	font-family: "Poppins";
+	src: url("../fonts/Poppins-Regular.ttf");
+}
+
+@font-face {
+	font-family: "JetBrains_Mono";
+	src: url("../fonts/JetBrainsMono.ttf");
+}
+
+@keyframes popup {
+	0% {
+		opacity: 0%;
+		transform: scale(0);
+	}
+	60% {
+		opacity: 100%;
+		transform: scale(1.2);
+	}
+	100% {
+		opacity: 100%;
+		transform: scale(1);
+	}
+}
+
+@keyframes popin {
+	0% {
+		opacity: 100%;
+		transform: scale(1);
+	}
+	100% {
+		opacity: 0%;
+		transform: scale(0);
+	}
+}
+
+:root {
+	--background: black;
+	--foreground: white;
+	--purple: #e499ff;
+	--dark-purple: #15001f;
+	--blue: #0057ff;
+}
+
+::-webkit-scrollbar {
+	display: none;
+}
+
+/* Mobile devices */
+
+@media (max-width: 500px) {
+	h1 {
+		font-size: 16px !important;
+	}
+
+	#installer_command_copy {
+		width: calc(100vw - 30px) !important;
+		padding: 10px !important;
+	}
+
+	.content_card {
+		width: calc(100% - 70px) !important;
+
+		p,
+		small {
+			padding-left: 2.5%;
+			padding-right: 2.5%;
+		}
+	}
+
+	.scroll_down_indicator {
+		display: none;
+	}
+
+	dialog {
+		top: 2.5vh !important;
+		height: 80vh !important;
+		width: calc(100vw - 20px) !important;
+		letter-spacing: 0.75px;
+		line-height: 20px;
+		background: #000 !important;
+		backdrop-filter: none !important;
+	}
+}
+
+/* Default CSS */
+
+*:focus {
+	outline: none;
+}
+
+body {
+	background: var(--background);
+	color: var(--foreground);
+	overflow-x: hidden;
+	max-width: 100vw;
+	font-family: "Work_Sans";
+	margin: 0px;
+	padding: 0px;
+}
+
+a {
+	color: dodgerblue;
+
+	&:active {
+		color: dodgerblue;
+	}
+
+	&:after {
+		color: dodgerblue;
+	}
+}
+
+dialog {
+	z-index: 1000;
+	border: 1px solid #ffffff44;
+	box-shadow: 0px 0px 0px 100vw rgba(0, 0, 0, 75%);
+	border-radius: 5px;
+	height: 80vh;
+	top: 10vh;
+	font-size: 18px;
+	overflow-y: scroll;
+	background: #0000009f;
+	backdrop-filter: blur(50px);
+	color: white;
+	max-width: calc(100vw - 50px);
+	animation-name: popup;
+	animation-duration: 0.25s;
+
+	&.popin {
+		animation-name: popin;
+		animation-duration: 250ms;
+	}
+
+	button {
+		position: absolute;
+		right: 10px;
+		top: 5px;
+		padding: 5px;
+		border-radius: 2.5px;
+		background-color: #ffffff44;
+		width: 25px;
+		height: 25px;
+		border: 0px;
+		color: white;
+		cursor: pointer;
+	}
+
+	code {
+		background-color: #ffffff22;
+		max-width: 100%;
+		text-overflow: ellipsis;
+	}
+}
+
+#explanation {
+	padding-left: 20px;
+	font-size: 20px;
+	width: 60%;
+	min-width: 300px;
+}
+
+#top_note {
+	width: calc(100vw - 20px);
+	display: block;
+	background: var(--foreground);
+	color: var(--background);
+	font-size: 15px;
+	padding: 10px;
+	text-align: center;
+}
+
+#semi_hero {
+	height: calc(50vh);
+	text-align: center;
+	background: var(--blue);
+	z-index: 1;
+	#semi_hero_contents {
+		h1 {
+			margin-top: 0px;
+			margin-bottom: 20px;
+			font-size: 64px !important;
+			font-family: "Work Sans", sans-serif;
+			text-shadow:
+				0px 4px 20px rgba(0, 0, 0, 25%),
+				0px 4px 4px rgba(0, 0, 0, 50%);
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+
+		h2 {
+			margin-top: 0px;
+			font-weight: 300;
+		}
+		#installer_command_copy {
+			width: 350px !important;
+			display: inline-block;
+			text-overflow: ellipsis;
+			overflow: hidden;
+			white-space: nowrap;
+			padding: 15px;
+			border-radius: 30px;
+			background: rgba(255, 255, 255, 68%);
+			border: 1px solid white;
+			color: black;
+			font-family: "JetBrains_Mono", monospace;
+			font-weight: bold;
+			font-size: 15px;
+			cursor: pointer;
+			transition: ease-in-out 250ms;
+			backdrop-filter: blur(10px);
+
+			&:hover {
+				transform: scale(1.1);
+				filter: brightness(1.1);
+			}
+
+			&:active {
+				width: 70vw !important;
+			}
+		}
+		#installer_command_copy::selection {
+			background: rgba(0, 0, 0, 25%);
+		}
+		z-index: 3;
+		position: relative;
+		top: 40px;
+	}
+
+	#overlay {
+		background-image: linear-gradient(rgba(0, 0, 0, 30%), black);
+		height: calc(50vh);
+		display: block !important;
+		width: 100vw !important;
+		position: absolute;
+		z-index: 2;
+	}
+
+	.scroll_down_indicator {
+		margin-top: 20px;
+	}
+
+	#text_wallpaper {
+		height: 50vh;
+		overflow: hidden;
+		text-align: justify;
+		padding: 10px;
+		text-overflow: clip;
+		font-family: "JetBrains_Mono", monospace;
+		position: absolute;
+		top: 0px;
+		color: #ffffff88;
+	}
+
+	#text_wallpaper::selection {
+		background: transparent;
+	}
+}
+
+#content_block {
+	.content_card {
+		width: calc(25vw - 31px - 2.5%);
+		position: relative;
+		vertical-align: top;
+		top: 0px;
+		margin: 10px;
+		display: inline-block;
+		padding: 20px;
+		height: 300px;
+		border: 3px solid var(--purple);
+		background-color: var(--dark-purple);
+		border-radius: 10px;
+	}
+
+	h4 {
+		font-size: xx-large;
+		margin: 0px;
+		text-align: center;
+		font-weight: 500;
+	}
+
+	p {
+		font-size: 17px;
+		line-height: 20px;
+		padding-left: 5%;
+		padding-right: 5%;
+		text-align: left;
+	}
+
+	small {
+		margin: 5%;
+		position: absolute;
+		text-align: left;
+		display: block;
+		bottom: 10px;
+	}
+}
+
+footer {
+	border-top: 1px solid #ffffff88;
+	margin-top: 20px;
+	padding: 10px;
+}

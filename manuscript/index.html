@@ -1,80 +1,96 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Manuscript</title>
+		<link
+			rel="shortcut icon"
+			href="../images/manuscript.png"
+			type="image/png"
+		/>
+		<link rel="stylesheet" href="style.css" />
+		<script src="script.js"></script>
+	</head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Manuscript</title>
-  <link rel="shortcut icon" href="../images/manuscript.png" type="image/png" />
-  <link rel="stylesheet" href="style.css">
-  <script src="script.js"></script>
-</head>
+	<body>
+		<div id="mouseLight"></div>
+		<nav>
+			<img
+				src="manuscript_lined.svg"
+				alt="Lined logo"
+				style="height: 32px; vertical-align: middle; margin-right: 5px"
+			/>Manuscript
+			<a href="https://github.com/Wervice/Codelink/releases/tag/1.7"
+				><button id="downloadButton">Download</button></a
+			>
+		</nav>
+		<div id="hero_section">
+			<div id="hero_content">
+				<h1>Manuscript</h1>
+				<h2>Open source note management</h2>
 
-<body>
-  <div id="mouseLight"></div>
-  <nav>
-    <img src="manuscript_lined.svg" alt="Lined logo"
-      style="height: 32px; vertical-align: middle; margin-right: 5px;" />Manuscript
-    <a href="https://github.com/Wervice/Codelink/releases/tag/1.7"><button id="downloadButton">Download</button></a>
-  </nav>
-  <div id="hero_section">
-    <div id="hero_content">
-      <h1>Manuscript</h1>
-      <h2>Open source note management</h2>
+				<img src="../images/manuscript.png" alt="Manuscript Logo" />
+			</div>
+		</div>
 
-      <img src="../images/manuscript.png" alt="Manuscript Logo" />
-    </div>
-  </div>
+		<div class="information_card">
+			<img
+				src="code_with_hljs.png"
+				alt="Syntax Highlighting with colored code"
+				id="syntax_hl"
+			/>
+			<h3>Syntax Highlighting</h3>
+			<p>
+				Manuscript makes your notes look better & easier to read by highlighting
+				your code.
+			</p>
+		</div>
 
-  <div class="information_card">
-    <img src="code_with_hljs.png" alt="Syntax Highlighting with colored code" id="syntax_hl" />
-    <h3>Syntax Highlighting</h3>
-    <p>
-      Manuscript makes your notes look better & easier to read by highlighting
-      your code.
-    </p>
-  </div>
+		<div class="information_card_turned">
+			<img
+				src="embedded_files.png"
+				alt="Embedded video player in a markdown file"
+			/>
+			<h3>Embedded files</h3>
+			<p>
+				You can include any video, picture or code sample to make referencing
+				more visual.
+			</p>
+		</div>
 
-  <div class="information_card_turned">
-    <img src="embedded_files.png" alt="Embedded video player in a markdown file" />
-    <h3>Embedded files</h3>
-    <p>
-      You can include any video, picture or code sample to make referencing
-      more visual.
-    </p>
-  </div>
+		<div class="information_card">
+			<img src="linked_notes.png" alt="Yellow link to another note in a file" />
+			<h3>Linked notes</h3>
+			<p>
+				To write inteligent and informative notes, you can link notes in your
+				notes.
+			</p>
+		</div>
 
-  <div class="information_card">
-    <img src="linked_notes.png" alt="Yellow link to another note in a file" />
-    <h3>Linked notes</h3>
-    <p>
-      To write inteligent and informative notes, you can link notes in your
-      notes.
-    </p>
-  </div>
+		<div class="information_card_turned">
+			<img src="costumization.png" alt="Note with other colors and font" />
+			<h3>Make it yours</h3>
+			<p>
+				You can customize your Manuscript experience a lot and get comfortable
+				easily
+			</p>
+		</div>
 
-  <div class="information_card_turned">
-    <img src="costumization.png" alt="Note with other colors and font" />
-    <h3>Make it yours</h3>
-    <p>
-      You can customize your Manuscript experience a lot and get comfortable
-      easily
-    </p>
-  </div>
-  
-  <div id="download_section">
-    <div id="download_content">
-    <h2>Download?</h2>
-    <h5>Windows • Linux</h5>
-    <img src="../images/manuscript.png" alt="Manuscript Logo" /><br>
-    <a href="https://github.com/Wervice/Codelink/releases/tag/1.7"><button>Download</button></a>
-  <br><br>
-  <a href="https://github.com/Wervice/Codelink">GitHub</a>
-  </div>
-  </div>
-  <footer>
-    <!-- TODO Add footer -->
-  </footer>
-</body>
-
+		<div id="download_section">
+			<div id="download_content">
+				<h2>Download?</h2>
+				<h5>Windows • Linux</h5>
+				<img src="../images/manuscript.png" alt="Manuscript Logo" /><br />
+				<a href="https://github.com/Wervice/Codelink/releases/tag/1.7"
+					><button>Download</button></a
+				>
+				<br /><br />
+				<a href="https://github.com/Wervice/Codelink">GitHub</a>
+			</div>
+		</div>
+		<footer>
+			<!-- TODO Add footer -->
+		</footer>
+	</body>
 </html>

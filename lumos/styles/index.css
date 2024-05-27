@@ -1,130 +1,134 @@
 @font-face {
-    /* Poppins */
-    font-family: 'Poppins';
-    font-style: normal;
-    font-weight: 400;
-    src: url('/fonts/Poppins-Medium.woff') format('woff');
+	/* Poppins */
+	font-family: "Poppins";
+	font-style: normal;
+	font-weight: 400;
+	src: url("/fonts/Poppins-Medium.woff") format("woff");
 }
 
 ::selection {
-    background-color: transparent;
+	background-color: transparent;
 }
 
 body {
-    background-color: #000308;
-    color: #e9eef7;
-    font-family: "Poppins", sans-serif;
-    cursor: default;
+	background-color: #000308;
+	color: #e9eef7;
+	font-family: "Poppins", sans-serif;
+	cursor: default;
 }
 
 nav {
-    padding: 20px;
-    font-size: 15px;
-    margin-bottom: 40vh;
-    position: fixed;
-    top: 0px;
-    background-color: #000308;
-    z-index: 100;
-    width: calc(100vw - 40px);
+	padding: 20px;
+	font-size: 15px;
+	margin-bottom: 40vh;
+	position: fixed;
+	top: 0px;
+	background-color: #000308;
+	z-index: 100;
+	width: calc(100vw - 40px);
 }
 
-nav a, b {
-    color: white;
-    text-decoration: none;
-    padding-right: 15px;
-    font-size: 20px;
+nav a,
+b {
+	color: white;
+	text-decoration: none;
+	padding-right: 15px;
+	font-size: 20px;
 }
 
 h1 {
-    font-size: calc((5vw + 5vh) / 2);
-    padding: 10px;
+	font-size: calc((5vw + 5vh) / 2);
+	padding: 10px;
 }
 
 h1 span.blue {
-    color: #0091FF;
+	color: #0091ff;
 }
 
 div#information {
-    padding: 10px;
-    margin-bottom: 20px;
-    margin-top: 20px;
-    text-align: center;
-    font-size: calc((2vw + 2vh) / 2);
-    width: 30vw;
-    min-width: 300px;
+	padding: 10px;
+	margin-bottom: 20px;
+	margin-top: 20px;
+	text-align: center;
+	font-size: calc((2vw + 2vh) / 2);
+	width: 30vw;
+	min-width: 300px;
 }
 
 span#hero_buttons button {
-    padding: 15px;
-    border-radius: 100px;
-    min-width: 200px;
-    border-width: 0px;
-    background-color: #0083e8;
-    color: white;
-    font-size: 20px;
-    margin: 15px;
-    cursor: pointer;
-    transition: 0.25s ease-in-out;
+	padding: 15px;
+	border-radius: 100px;
+	min-width: 200px;
+	border-width: 0px;
+	background-color: #0083e8;
+	color: white;
+	font-size: 20px;
+	margin: 15px;
+	cursor: pointer;
+	transition: 0.25s ease-in-out;
 }
 
 span#hero_buttons a:nth-child(1) button:hover {
-    box-shadow: 0px 20px 25px 0px #0083e855;
+	box-shadow: 0px 20px 25px 0px #0083e855;
 }
 
 span#hero_buttons button.second {
-    border-style: solid;
-    border-width: 2px;
-    border-color: white;
-    background-color: transparent;
+	border-style: solid;
+	border-width: 2px;
+	border-color: white;
+	background-color: transparent;
 }
 
 #slideshow_image {
-    width: 50vw;
-    max-width: 1024px;
-    min-width: 300px;
-    border-radius: 10px;
-    border-width: 2px;
-    border-style: solid;
-    border-color: #ffffff1c;
-    transition: ease-in-out 1s;
+	width: 50vw;
+	max-width: 1024px;
+	min-width: 300px;
+	border-radius: 10px;
+	border-width: 2px;
+	border-style: solid;
+	border-color: #ffffff1c;
+	transition: ease-in-out 1s;
 }
 
 .feature {
-    --padding: 20px;
-    padding: 20px;
-    width: calc(50vw - var(--padding) - var(--padding));
-    min-width: 6cm;
-    border: #424242 solid 2px;
-    border-radius: calc(var(--padding) / 2);
-    margin-bottom: 50px;
+	--padding: 20px;
+	padding: 20px;
+	width: calc(50vw - var(--padding) - var(--padding));
+	min-width: 6cm;
+	border: #424242 solid 2px;
+	border-radius: calc(var(--padding) / 2);
+	margin-bottom: 50px;
 }
 
 .feature h2 {
-    font-size: x-large;
+	font-size: x-large;
 }
 
 .feature img {
-    width: 25vw;
-    min-width: 4cm;
-    max-width: 1920px;
-    border: #272727 solid 2px;
-    border-radius: 5px;
-    transition: ease-in-out 1s;
+	width: 25vw;
+	min-width: 4cm;
+	max-width: 1920px;
+	border: #272727 solid 2px;
+	border-radius: 5px;
+	transition: ease-in-out 1s;
 }
 
 .feature div {
-    width: 25vw;
-    min-width: 4cm;
-    text-align: justify;
-    margin-top: 20px;
+	width: 25vw;
+	min-width: 4cm;
+	text-align: justify;
+	margin-top: 20px;
 }
 
 #learnmorebox {
-    width: 50vw;
-    min-width: 5cm;
-    padding-left: 25vw;
+	width: 50vw;
+	min-width: 5cm;
+	padding-left: 25vw;
 }
 
-a, a:hover, a:active, a::after {
-    color: #0091FF;
+a,
+a:hover,
+a:active,
+a::after {
+	color: #0091ff;
 }

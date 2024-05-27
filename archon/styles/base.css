@@ -1,210 +1,216 @@
 @font-face {
-    font-family: "Montserrat";
-    src: url(/fonts/Montserrat-Medium.woff);
+	font-family: "Montserrat";
+	src: url(/fonts/Montserrat-Medium.woff);
 }
 
 @font-face {
-    font-family: "Poppins";
-    src: url(/fonts/Poppins-Medium.woff);
+	font-family: "Poppins";
+	src: url(/fonts/Poppins-Medium.woff);
 }
 
 @font-face {
-    font-family: "Poppins Black";
-    src: url(/fonts/Poppins-Black.woff);
+	font-family: "Poppins Black";
+	src: url(/fonts/Poppins-Black.woff);
 }
 
 @font-face {
-    font-family: "Poppins Semi Bold";
-    src: url(/fonts/Poppins-SemiBold.woff);
+	font-family: "Poppins Semi Bold";
+	src: url(/fonts/Poppins-SemiBold.woff);
 }
 
 ::selection {
-    background-color: #9c00d5;
+	background-color: #9c00d5;
 }
 
 body {
-    background-color: black;
-    color: white;
-    font-family: "Montserrat", sans-serif;
-    padding: 0px;
-    margin: 0px;
-    font-size: 14pt;
+	background-color: black;
+	color: white;
+	font-family: "Montserrat", sans-serif;
+	padding: 0px;
+	margin: 0px;
+	font-size: 14pt;
 }
 
 div#hero {
-    padding: 40px;
+	padding: 40px;
 }
 
 div#hero img {
-    width: 75px;
+	width: 75px;
 }
 
 div#hero h1 {
-    padding: 0px;
-    margin: 0px;
-    font-size: xx-large;
-    font-family: "Poppins", sans-serif;
+	padding: 0px;
+	margin: 0px;
+	font-size: xx-large;
+	font-family: "Poppins", sans-serif;
 }
 
 h1 {
-    font-size: x-large;
+	font-size: x-large;
 }
 
 small {
-    font-size: 10pt;
+	font-size: 10pt;
 }
 
-h2, h3, h4, h5, h6 {
-    padding-left: 10vw;
+h2,
+h3,
+h4,
+h5,
+h6 {
+	padding-left: 10vw;
 }
 
 h2 {
-    font-family: "Ubuntu Mono", "Roboto Mono", "Source Code Pro", "Consolas", monospace;
+	font-family: "Ubuntu Mono", "Roboto Mono", "Source Code Pro", "Consolas",
+		monospace;
 }
 
 div#main {
-    min-height: 100vh;
+	min-height: 100vh;
 }
 
 div#main #main-content {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(550px, 1fr));
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(550px, 1fr));
 }
 
 div#main h2 {
-    font-size: 12pt;
-    opacity: 70%;
+	font-size: 12pt;
+	opacity: 70%;
 }
 
 div#main p {
-    padding-left: 10vw;
-    padding-bottom: 20px;
-    max-width: 10cm;
-    width: 30vw;
-    min-width: 7cm;
-    font-size: large;
+	padding-left: 10vw;
+	padding-bottom: 20px;
+	max-width: 10cm;
+	width: 30vw;
+	min-width: 7cm;
+	font-size: large;
 }
 
 div#main div#img {
-    padding-left: 10vw;
+	padding-left: 10vw;
 }
 
 div#main div#img img {
-    height: 48px;
+	height: 48px;
 }
 
-div#main p.r , h2.r{
-    padding-right: 10vw !important;
+div#main p.r,
+h2.r {
+	padding-right: 10vw !important;
 }
 
 div#main *.n {
-    padding-left: 0px;
-    padding-right: 0px;
+	padding-left: 0px;
+	padding-right: 0px;
 }
 
 a {
-    color: #ffffff;
-    transition: all 0.25s ease-in-out;
-    text-decoration: underline;
-    text-decoration-thickness: 2px;
-    text-decoration-color: #ffffff42;
+	color: #ffffff;
+	transition: all 0.25s ease-in-out;
+	text-decoration: underline;
+	text-decoration-thickness: 2px;
+	text-decoration-color: #ffffff42;
 }
 a:hover {
-    color: #1173ea;
-    text-decoration-color: #1173ea42;
+	color: #1173ea;
+	text-decoration-color: #1173ea42;
 }
 
 nav {
-    position: sticky;
-    top: 0px;
-    background-color: #171717;
-    padding: 10px;
-    color: white;
-    z-index: 1;
+	position: sticky;
+	top: 0px;
+	background-color: #171717;
+	padding: 10px;
+	color: white;
+	z-index: 1;
 }
 
 nav a#logo img {
-    height: 30px;
+	height: 30px;
 }
 
 a#nav {
-    margin: -15px;
-    margin-left: 25px;
-    color: white !important;
-    text-decoration: underline #00000000;
-    vertical-align: 50%;
-    font-size: 15px;
-    transition: text-decoration 0.125s ease-in-out;
+	margin: -15px;
+	margin-left: 25px;
+	color: white !important;
+	text-decoration: underline #00000000;
+	vertical-align: 50%;
+	font-size: 15px;
+	transition: text-decoration 0.125s ease-in-out;
 }
 
 a:hover#nav {
-    text-decoration: underline #ffffff6f;
+	text-decoration: underline #ffffff6f;
 }
 
 @keyframes flow {
-    0% {
-        filter: hue-rotate(0deg);
-    }
-    50% {
-        filter: hue-rotate(-50deg);
-    }
-    100% {
-        filter: hue-rotate(0deg);
-    }
+	0% {
+		filter: hue-rotate(0deg);
+	}
+	50% {
+		filter: hue-rotate(-50deg);
+	}
+	100% {
+		filter: hue-rotate(0deg);
+	}
 }
 
 div#getstarted {
-    padding: 10px;
+	padding: 10px;
 }
 
 div#getstarted button {
-    margin: 20px;
-    border-width: 0px;
-    border-radius: 5px;
-    padding: 10px;
-    color: white;
-    background: linear-gradient(0.25turn, #c0185e, #007eb8) !important;
-    animation-name: flow;
-    animation-duration: 7.5s;
-    animation-iteration-count: infinite;
-    font-family: "Montserrat", sans-serif;
-    letter-spacing: 0.75px;
-    width: 90vw;
-    max-width: 200px;
-    cursor: pointer;
+	margin: 20px;
+	border-width: 0px;
+	border-radius: 5px;
+	padding: 10px;
+	color: white;
+	background: linear-gradient(0.25turn, #c0185e, #007eb8) !important;
+	animation-name: flow;
+	animation-duration: 7.5s;
+	animation-iteration-count: infinite;
+	font-family: "Montserrat", sans-serif;
+	letter-spacing: 0.75px;
+	width: 90vw;
+	max-width: 200px;
+	cursor: pointer;
 }
 
 div#getstarted button.second {
-    background: black !important;
-    color: #ffffff;
-    border-color: white;
-    border-style: solid;
-    border-width: 1px;
+	background: black !important;
+	color: #ffffff;
+	border-color: white;
+	border-style: solid;
+	border-width: 1px;
 }
 
 footer {
-    padding: 10px;
-    background-color: #171717;
+	padding: 10px;
+	background-color: #171717;
 }
 
 a.img {
-    text-decoration: none !important;
+	text-decoration: none !important;
 }
 
 div#showcase img {
-    filter: drop-shadow(0px 10px 25px #ffffffa0);
-    width: 225px;
-    max-width: 90vw;
-    transition: all 0.25s cubic-bezier(.41,.11,.31,1.55);
-    padding: 30px;
+	filter: drop-shadow(0px 10px 25px #ffffffa0);
+	width: 225px;
+	max-width: 90vw;
+	transition: all 0.25s cubic-bezier(0.41, 0.11, 0.31, 1.55);
+	padding: 30px;
 }
 div#showcase img:hover {
-    filter: drop-shadow(0px 15px 35px #e7b7ffd3);
-    margin-top: -45px;
-    margin-bottom: 20px;
-    width: 250px;
+	filter: drop-shadow(0px 15px 35px #e7b7ffd3);
+	margin-top: -45px;
+	margin-bottom: 20px;
+	width: 250px;
 }
 
 small.mini {
-    font-size: 9px;
+	font-size: 9px;
 }

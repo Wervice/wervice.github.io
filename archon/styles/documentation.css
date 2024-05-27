@@ -1,143 +1,153 @@
 @font-face {
-    font-family: "Montserrat";
-    src: url(/fonts/Montserrat-Medium.woff);
+	font-family: "Montserrat";
+	src: url(/fonts/Montserrat-Medium.woff);
 }
 
 @font-face {
-    font-family: "Poppins";
-    src: url(/fonts/Poppins-Medium.woff);
+	font-family: "Poppins";
+	src: url(/fonts/Poppins-Medium.woff);
 }
 
 @font-face {
-    font-family: "Poppins Black";
-    src: url(/fonts/Poppins-Black.woff);
+	font-family: "Poppins Black";
+	src: url(/fonts/Poppins-Black.woff);
 }
 
 @font-face {
-    font-family: "Poppins Semi Bold";
-    src: url(/fonts/Poppins-SemiBold.woff);
+	font-family: "Poppins Semi Bold";
+	src: url(/fonts/Poppins-SemiBold.woff);
 }
 
 ::selection {
-    background-color: white;
-    color: black;
+	background-color: white;
+	color: black;
 }
 
 body {
-    background-color: #00050a;
-    color: white;
-    font-family: "Montserrat", sans-serif;
-    padding: 0px;
-    margin: 0px;
-    font-size: 14pt;
+	background-color: #00050a;
+	color: white;
+	font-family: "Montserrat", sans-serif;
+	padding: 0px;
+	margin: 0px;
+	font-size: 14pt;
 }
 
-h1, h2, h3, h4, h5, h6 {
-    margin-left: 5vw;
-    margin-bottom: 20px;
-    border-left-style: solid;
-    border-left-width: 10px;
-    border-left-color: #ffffff00;
-    padding: 10px;
-    transition: all 0.125s ease-in-out;
-    cursor: default;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	margin-left: 5vw;
+	margin-bottom: 20px;
+	border-left-style: solid;
+	border-left-width: 10px;
+	border-left-color: #ffffff00;
+	padding: 10px;
+	transition: all 0.125s ease-in-out;
+	cursor: default;
 }
 
 h3 {
-    color: #ecf4ff;
+	color: #ecf4ff;
 }
 
-h1:hover, h2:hover, h3:hover, h4:hover, h5:hover, h6:hover {
-    border-left-color: #00ffa2;
+h1:hover,
+h2:hover,
+h3:hover,
+h4:hover,
+h5:hover,
+h6:hover {
+	border-left-color: #00ffa2;
 }
 
 li {
-    margin-left: 5vw;
-    padding: 10px;
+	margin-left: 5vw;
+	padding: 10px;
 }
 
 a {
-    color: #ffffff;
-    transition: all 0.25s ease-in-out;
-    text-decoration: underline;
-    text-decoration-thickness: 2px;
-    text-decoration-color: #ffffff42;
+	color: #ffffff;
+	transition: all 0.25s ease-in-out;
+	text-decoration: underline;
+	text-decoration-thickness: 2px;
+	text-decoration-color: #ffffff42;
 }
 
 a:hover {
-    color: #1173ea;
-    text-decoration-color: #1173ea42;
+	color: #1173ea;
+	text-decoration-color: #1173ea42;
 }
 
 p {
-    margin-left: 5vw;
-    padding-left: 20px;
-    cursor: default;
-    width: 50vw;
-    min-width: 7cm;
-    line-height: 30px;
+	margin-left: 5vw;
+	padding-left: 20px;
+	cursor: default;
+	width: 50vw;
+	min-width: 7cm;
+	line-height: 30px;
 }
 
 code {
-    border-radius: 5px;
-    border-style: solid;
-    border-width: 1px;
-    border-color: white;
-    margin: 4px 4px 4px 4px;
-    padding: 3px;
+	border-radius: 5px;
+	border-style: solid;
+	border-width: 1px;
+	border-color: white;
+	margin: 4px 4px 4px 4px;
+	padding: 3px;
 }
 code:hover {
-    background-color: #ffffff38;
+	background-color: #ffffff38;
 }
 
 code::selection {
-    background-color: #011910;
-    color: #00ffa2;
+	background-color: #011910;
+	color: #00ffa2;
 }
 
 div.box {
-    border-top-style: solid;
-    border-top-width: 1px;
-    border-top-color: #ffffff6e;
-    border-bottom-style: solid;
-    border-bottom-width: 1px;
-    border-bottom-color: #ffffff6e;
+	border-top-style: solid;
+	border-top-width: 1px;
+	border-top-color: #ffffff6e;
+	border-bottom-style: solid;
+	border-bottom-width: 1px;
+	border-bottom-color: #ffffff6e;
 }
 
 button {
-    padding: 10px;
-    border-width: 1px;
-    border-color: #ffffff00;
-    border-radius: 5px;
-    font-family: "Montserrat", sans-serif;
-    transition: all 0.25s ease-in-out;
+	padding: 10px;
+	border-width: 1px;
+	border-color: #ffffff00;
+	border-radius: 5px;
+	font-family: "Montserrat", sans-serif;
+	transition: all 0.25s ease-in-out;
 }
 
 button:hover {
-    background-color: #ffffff1a;
-    color: white;
-    border-style: solid;
-    border-width: 1px;
-    border-color: white;
+	background-color: #ffffff1a;
+	color: white;
+	border-style: solid;
+	border-width: 1px;
+	border-color: white;
 }
 
 div#glow button {
-    margin: 20px;
-    border-width: 0px;
-    border-radius: 5px;
-    padding: 10px;
-    color: white;
-    background: linear-gradient(0.25turn, #c0185e, #007eb8) !important;
-    animation-name: flow;
-    animation-duration: 7.5s;
-    animation-iteration-count: infinite;
-    font-family: "Montserrat", sans-serif;
-    letter-spacing: 0.75px;
-    width: 90vw;
-    max-width: 200px;
-    cursor: pointer;
+	margin: 20px;
+	border-width: 0px;
+	border-radius: 5px;
+	padding: 10px;
+	color: white;
+	background: linear-gradient(0.25turn, #c0185e, #007eb8) !important;
+	animation-name: flow;
+	animation-duration: 7.5s;
+	animation-iteration-count: infinite;
+	font-family: "Montserrat", sans-serif;
+	letter-spacing: 0.75px;
+	width: 90vw;
+	max-width: 200px;
+	cursor: pointer;
 }
 
 span#hashtag {
-    opacity: 10%;
+	opacity: 10%;
 }

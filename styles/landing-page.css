@@ -1,243 +1,255 @@
 ::selection {
-    background-color: transparent;
+	background-color: transparent;
 }
 
 @media only screen and (max-width: 600px) {
-  h1 {
-    font-size: 40px !important;
-  }
+	h1 {
+		font-size: 40px !important;
+	}
 
-  #projects {
-    padding: 0px;
-    margin: 0px;
+	#projects {
+		padding: 0px;
+		margin: 0px;
 
-    .project {
-      box-shadow: none;
-      width: 100%;
-      height: 145px;
-      overflow-y: hidden;
-      transition: height ease-in-out 1s;
+		.project {
+			box-shadow: none;
+			width: 100%;
+			height: 145px;
+			overflow-y: hidden;
+			transition: height ease-in-out 1s;
 
-      h4 {
-        margin-bottom: 20px !important;
-      }
-    
-      &:hover {
-        transform: scale(1) !important;
-        height: 360px !important;
-      }
-    }
-  }
+			h4 {
+				margin-bottom: 20px !important;
+			}
 
-  nav {
-    display: none;
-  }
+			&:hover {
+				transform: scale(1) !important;
+				height: 360px !important;
+			}
+		}
+	}
+
+	nav {
+		display: none;
+	}
 }
 
 @keyframes fade_in {
-  0% {
-   opacity: 0;
-  }
+	0% {
+		opacity: 0;
+	}
 }
 
 @keyframes fade_out {
-  100% {
-    opacity: 0;
-  }
+	100% {
+		opacity: 0;
+	}
 }
 
 nav {
-    padding: 20px;
-    background-color: black;
-    color: white;
+	padding: 20px;
+	background-color: black;
+	color: white;
 }
 
 nav a {
-    text-decoration: none;
-    font-size: 18px;
-    margin-right: 20px;
+	text-decoration: none;
+	font-size: 18px;
+	margin-right: 20px;
 }
 
 h1 {
-    text-align: center;
-    font-weight: 900;
-    font-size: calc((4vw + 4vh)/2);
-    margin-bottom: 20px;
-    background: linear-gradient(0deg, black 10%, #fff 90%);
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
+	text-align: center;
+	font-weight: 900;
+	font-size: calc((4vw + 4vh) / 2);
+	margin-bottom: 20px;
+	background: linear-gradient(0deg, black 10%, #fff 90%);
+	background-clip: text;
+	-webkit-text-fill-color: transparent;
 }
 
 h1 strong.blue {
-    background: linear-gradient(0deg, #0088FF 20%, #00A2FF 60%);
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
-    filter: drop-shadow(0px 0px 15px #ffffff33);
-    cursor: pointer;
+	background: linear-gradient(0deg, #0088ff 20%, #00a2ff 60%);
+	background-clip: text;
+	-webkit-text-fill-color: transparent;
+	filter: drop-shadow(0px 0px 15px #ffffff33);
+	cursor: pointer;
 }
 
 div#short_info {
-    width: 300px;
-    margin-bottom: 50px;
-    max-width: 90vw;
+	width: 300px;
+	margin-bottom: 50px;
+	max-width: 90vw;
 }
 
 button.filled {
-    padding: 20px;
-    background-color: dodgerblue;
-    color: white;
-    border-width: 0px;
-    border-radius: 5px;
-    font-size: large;
-    margin-right: 10px;
-    margin-bottom: 10px;
-    border-radius: 100px;
-    width: 200px;
-    transition: ease-in-out 0.125s;
+	padding: 20px;
+	background-color: dodgerblue;
+	color: white;
+	border-width: 0px;
+	border-radius: 5px;
+	font-size: large;
+	margin-right: 10px;
+	margin-bottom: 10px;
+	border-radius: 100px;
+	width: 200px;
+	transition: ease-in-out 0.125s;
 }
 
 button.filled:hover {
-    box-shadow: 0px 0px 30px 0px #0083e899, 0px 1px 2px 0px #ffffff55 inset, 0px -1px 2px 0px #00000033;
-    filter: brightness(1.1);
-    transform: scale(1.05);
+	box-shadow:
+		0px 0px 30px 0px #0083e899,
+		0px 1px 2px 0px #ffffff55 inset,
+		0px -1px 2px 0px #00000033;
+	filter: brightness(1.1);
+	transform: scale(1.05);
 }
 
 button.filled:active {
-  transition: 0.05s;
-  transform: scale(0.95);
-  filter: brightness(0.95);
+	transition: 0.05s;
+	transform: scale(0.95);
+	filter: brightness(0.95);
 }
 
 button.outline {
-    padding: 20px;
-    background-color: transparent;
-    color: white;
-    border-width: 2px;
-    border-style: solid;
-    border-color: white;
-    border-radius: 5px;
-    font-size: large;
-    margin-right: 10px;
-    border-radius: 100px;
-    width: 200px;
-    transition: ease-in-out 0.125s;
-    background-position: 130px;
-    background-size: 0%;
-    background-repeat: no-repeat;
-    background-image: url("/images/arrow.png");
+	padding: 20px;
+	background-color: transparent;
+	color: white;
+	border-width: 2px;
+	border-style: solid;
+	border-color: white;
+	border-radius: 5px;
+	font-size: large;
+	margin-right: 10px;
+	border-radius: 100px;
+	width: 200px;
+	transition: ease-in-out 0.125s;
+	background-position: 130px;
+	background-size: 0%;
+	background-repeat: no-repeat;
+	background-image: url("/images/arrow.png");
 }
 
 button.outline:hover {
-  padding-left: 0px; 
-  background-size: 10%;
+	padding-left: 0px;
+	background-size: 10%;
 }
 
 button.outline:active {
-  transition: 0.05s;
-  transform: scale(0.95);
-  filter: brightness(0.95);
+	transition: 0.05s;
+	transform: scale(0.95);
+	filter: brightness(0.95);
 }
 
 strong.neutral {
-    font-weight: bold;
+	font-weight: bold;
 }
 
 div#projects {
-  padding: 20px;
-  text-align: center;
-  align-items: middle;
-  
-  * {
-    text-decoration: none;
-  }
+	padding: 20px;
+	text-align: center;
+	align-items: middle;
 
-  .project {
-    margin-right: auto;
-    margin-left: auto;
-    width: 420px;
-    max-width: calc(100vw - 80px);
-    padding: 20px;
-    border-radius: 5px;
-    background: #111111 !important;
-    box-shadow: 0px 1px 1px #ffffff55 inset, 0px -1px 1px #00000055 inset !important; 
-    transition: 0.25s ease-in-out;
-   
-    h4 {
-      margin: 10px;
-    }
+	* {
+		text-decoration: none;
+	}
 
-    img {
-      height: 80px;
-      margin: 10px;
-    }
+	.project {
+		margin-right: auto;
+		margin-left: auto;
+		width: 420px;
+		max-width: calc(100vw - 80px);
+		padding: 20px;
+		border-radius: 5px;
+		background: #111111 !important;
+		box-shadow:
+			0px 1px 1px #ffffff55 inset,
+			0px -1px 1px #00000055 inset !important;
+		transition: 0.25s ease-in-out;
 
-    a {
-      color: dodgerblue !important;
-      text-decoration: underline !important;
-    }
+		h4 {
+			margin: 10px;
+		}
 
-    &:hover {
-      filter: brightness(1.1);
-      transform: scale(1.1);
-    }
-  }
+		img {
+			height: 80px;
+			margin: 10px;
+		}
+
+		a {
+			color: dodgerblue !important;
+			text-decoration: underline !important;
+		}
+
+		&:hover {
+			filter: brightness(1.1);
+			transform: scale(1.1);
+		}
+	}
 }
 
 div#me {
-  padding: 20px;
-  text-align: center;
-  align-items: middle; 
+	padding: 20px;
+	text-align: center;
+	align-items: middle;
 }
 
 h3 {
-  small {
-    font-size: 12px;
-    opacity: 90%;
-  }
+	small {
+		font-size: 12px;
+		opacity: 90%;
+	}
 }
 
 button.language_button {
-  width: 120px;
-  height: 60px;
-  padding: 10px;
-  border-radius: 5px;
-  background: #222;
-  border: 1px solid #333;
-  box-shadow: 0px 5px black;
-  transition: ease-in-out 0.125s;
-  margin: 5px;
-  margin-bottom: 10px;
-  text-align: left;
+	width: 120px;
+	height: 60px;
+	padding: 10px;
+	border-radius: 5px;
+	background: #222;
+	border: 1px solid #333;
+	box-shadow: 0px 5px black;
+	transition: ease-in-out 0.125s;
+	margin: 5px;
+	margin-bottom: 10px;
+	text-align: left;
 
-  &:hover {
-    filter: brightness(1.1);
-    transform: scale(1.05); 
-    box-shadow: 0px 5px black, 0px 1px 0px #999 inset, 0px -1px 0px #222 inset;
-  }
+	&:hover {
+		filter: brightness(1.1);
+		transform: scale(1.05);
+		box-shadow:
+			0px 5px black,
+			0px 1px 0px #999 inset,
+			0px -1px 0px #222 inset;
+	}
 }
 
 .lang_related {
-  background: #333 !important;
-  transform: scale(1.1);
-  box-shadow: 0px 1px 1px #ffffff55 inset, 0px -1px 1px #00000055 inset !important;
+	background: #333 !important;
+	transform: scale(1.1);
+	box-shadow:
+		0px 1px 1px #ffffff55 inset,
+		0px -1px 1px #00000055 inset !important;
 }
 
 .lang_not_related {
-  opacity: 60%;
-  transform: scale(0.9);
+	opacity: 60%;
+	transform: scale(0.9);
 }
 
 .lang_related_main {
-  background: #333 !important;
-  transform: scale(1.1);
-  box-shadow: 0px 1px 1px #ffffff55 inset, 0px -1px 1px #00000055 inset !important;
+	background: #333 !important;
+	transform: scale(1.1);
+	box-shadow:
+		0px 1px 1px #ffffff55 inset,
+		0px -1px 1px #00000055 inset !important;
 }
 
 .info {
-  height: 30px !important;
+	height: 30px !important;
 }
 
 .fade_out {
-  animation-name: fade_out;
-  animation-duration: 0.25s;
+	animation-name: fade_out;
+	animation-duration: 0.25s;
 }

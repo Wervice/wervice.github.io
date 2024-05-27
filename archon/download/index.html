@@ -1,65 +1,70 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Download Archon Backup Utility</title>
+		<link rel="stylesheet" href="../styles/base.css" />
+		<style>
+			h6 {
+				padding-left: 0px !important;
+			}
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Download Archon Backup Utility</title>
-    <link rel="stylesheet" href="../styles/base.css">
-    <style>
-        h6 {
-            padding-left: 0px !important;
-        }
+			img {
+				margin: 20px;
+				height: 75px;
+				cursor: pointer;
+			}
 
-        img {
-            margin: 20px;
-            height: 75px;
-            cursor: pointer;
-        }
+			div#main p {
+				width: 100vw;
+				max-width: 100% !important;
+			}
 
-        div#main p {
-            width: 100vw;
-            max-width: 100% !important;
-        }
+			button#getstarted {
+				margin: 20px;
+				border-width: 0px;
+				border-radius: 5px;
+				padding: 10px;
+				color: white;
+				background: linear-gradient(0.25turn, #c0185e, #007eb8) !important;
+				animation-name: flow;
+				animation-duration: 7.5s;
+				animation-iteration-count: infinite;
+				font-family: "Montserrat", sans-serif;
+				letter-spacing: 0.75px;
+				width: 90vw;
+				max-width: 200px;
+				cursor: pointer;
+			}
+		</style>
+	</head>
 
-        button#getstarted {
-            margin: 20px;
-            border-width: 0px;
-            border-radius: 5px;
-            padding: 10px;
-            color: white;
-            background: linear-gradient(0.25turn, #c0185e, #007eb8) !important;
-            animation-name: flow;
-            animation-duration: 7.5s;
-            animation-iteration-count: infinite;
-            font-family: "Montserrat", sans-serif;
-            letter-spacing: 0.75px;
-            width: 90vw;
-            max-width: 200px;
-            cursor: pointer;
-        }
-    </style>
-</head>
-
-<body>
-    <div id="main">
-        <div align="center" id="hero">
-            <img src="/images/logos/archon.png" alt="The Archon Logo">
-            <h1 align="center">Archon</h1>
-            <small>Download</small>
-        </div>
-        <p align="center" class="n"><button id="getstarted"
-                onclick="window.open('https://github.com/Wervice/archon/archive/refs/heads/main.zip')">Download<br><small class="mini">For free</small></button>
-        </p>
-        <h6 align="center"><a href="javascript:history.back()">Or get back.</a></h6>
-    </div>
-    <footer>
-        <small>
-            <a target="_blank" href="https://icons8.com/icon/17842/linux">Linux</a> icon by <a target="_blank"
-                href="https://icons8.com">Icons8</a>
-        </small>
-    </footer>
-</body>
-
+	<body>
+		<div id="main">
+			<div align="center" id="hero">
+				<img src="/images/logos/archon.png" alt="The Archon Logo" />
+				<h1 align="center">Archon</h1>
+				<small>Download</small>
+			</div>
+			<p align="center" class="n">
+				<button
+					id="getstarted"
+					onclick="window.open('https://github.com/Wervice/archon/archive/refs/heads/main.zip')"
+				>
+					Download<br /><small class="mini">For free</small>
+				</button>
+			</p>
+			<h6 align="center">
+				<a href="javascript:history.back()">Or get back.</a>
+			</h6>
+		</div>
+		<footer>
+			<small>
+				<a target="_blank" href="https://icons8.com/icon/17842/linux">Linux</a>
+				icon by <a target="_blank" href="https://icons8.com">Icons8</a>
+			</small>
+		</footer>
+	</body>
 </html>

@@ -1,33 +1,39 @@
 @font-face {
-    /* Poppins */
-    font-family: 'Poppins';
-    font-style: normal;
-    font-weight: 400;
-    src: url('/fonts/Poppins-Medium.woff') format('woff');
+	/* Poppins */
+	font-family: "Poppins";
+	font-style: normal;
+	font-weight: 400;
+	src: url("/fonts/Poppins-Medium.woff") format("woff");
 }
 ::selection {
-    background-color: #7AA2F8;
-    color: #1a1b25;
+	background-color: #7aa2f8;
+	color: #1a1b25;
 }
 
 body {
-    background-color: #1a1b25;
-    color: white;
-    font-family: "Poppins", sans-serif;
-    margin: 5px;
-    padding: 0px;
+	background-color: #1a1b25;
+	color: white;
+	font-family: "Poppins", sans-serif;
+	margin: 5px;
+	padding: 0px;
 }
-h1, h2, h3, h4, h5, h6 {
-    margin: 0px;
-    padding: 5px;
-    color: #7AA2F8;
-    font-family: "Consolas", "Source Code Pro", "Noto Mono", "Ubuntu Mono", monospace;
-    cursor: default;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	margin: 0px;
+	padding: 5px;
+	color: #7aa2f8;
+	font-family: "Consolas", "Source Code Pro", "Noto Mono", "Ubuntu Mono",
+		monospace;
+	cursor: default;
 }
 p {
-    margin: 0px;
-    padding: 5px;
-    max-width: 50vw;
-    min-width: 7cm;
-    text-align: justify;
+	margin: 0px;
+	padding: 5px;
+	max-width: 50vw;
+	min-width: 7cm;
+	text-align: justify;
 }
