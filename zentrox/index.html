@@ -11,61 +11,86 @@
 
 		<dialog id="copied_what_now">
 			<button id="close_modal">&times;</button>
-			<small> ✅ Installer command copied to your clipboard</small>
-			<h3>Finishing the installation</h3>
+			<h4>Installing Zentrox</h4>
+			<h5>Table of contents</h5>
+			<ol>
+				<li>
+					Connecting with your computer
+				</li>
+				<li>
+					Starting the installer
+				</li>
+				<li>
+					Running the server
+				</li>
+				<li>
+					First steps
+				</li>
+			</ol>
+			<h5 id="connecting_with_your_server">
+				1. Connecting with your computer
+			</h5>
+			<small><em>Zentrox only works on Linux. (Supported distros and branches: Debian, Arch and RHEL)</em></small>
 			<p>
-				In the following, I will explain how you can finish the installation of
-				Zentrox.
+				To install Zentrox, please open a terminal on the server you want to install Zentrox on.<br>
+				<br>
+				You have two options to do this.<br>
+				You can use <b>a terminal emulator or tty</b> by opening a terminal window or local TTY on your device.
+				This requires a GUI or physical access to the device with a screen.<br>
+				Alternatively, you can <b>open a remote connection</b> to your server using SSH (Secure Shell), VNC or Telnet.
 			</p>
-			<h4>1. Connect to your server</h4>
+			<h5 id="starting_the_installer">
+				2. Starting the installer
+			</h5>
 			<p>
-				To set Zentrox up, you have to get a shell/terminal session on your
-				Linux server.<br />
-				This can be achieved using physical access or SSH ('Secure Shell' is a
-				remote control protocol).<br />
-				You will need a terminal connection either using SSH or a terminal app
-				on your server.<br />
+			With your terminal ready, you can run the command that was just copied to your clipboard on the machine.<br>
+			If you have to enter the command manually, here is it:
+			<code>
+				curl -fsSL https://raw.githubusercontent.com/Wervice/zentrox/main/install.bash -o zentrox_installer.bash;
+				bash zentrox_installer.bash
+			</code><br>
+			This command will download the installer to your system and run it.<br>
+			During the installation the installer will:
+			<ul>
+				<li>
+					create a new user called <code>zentrox</code> with a random password
+				</li>
+				<li>
+					create the folders <code>~/zentrox</code> and <code>~/zentrox_data</code>
+				</li>
+				<li>
+					create the data structure in the <code>~/zentrox</code> and <code>~/zentrox_data</code> folders
+				</li>
+				<li>
+					make a new pair of selfsigned keys and certificates for secure connection
+				</li>
+			</ul>
 			</p>
-			<h4>2. Paste the copied command</h4>
+			<h5 id="running_the_server">3. Running the server</h5>
 			<p>
-				You can now paste the command you just copied or enter it manually into
-				your terminal.<br />
-				The command is as follows:
-				<br />
-				<code
-					>curl -fsSL
-					https://raw.githubusercontent.com/Wervice/zentrox/main/install.bash -o
-					zentrox_installer.bash; bash zentrox_installer.bash</code
-				>
+				After the installation is done, you can start the Zentrox server.<br>
+				The installer will provide you with a command that you can copy to run Zentrox.<br>
+				Alternatively you can also use this command:<br>
+				<code>cd ~/zentrox; node index.js</code>
+				<br>
+				This will start Zentrox on <code>https://IP-TO-YOUR-SERVER:3000/</code>
+				<br>
+				Please store this command somewhere or remember it, if you want to restart Zentrox after it was stopped or it crashed.<br>
+				If you want to restart the server. Please press CTRL+C in your terminal or use the UI to stop Zentrox.<br>
+				You can now re-run the command from above.
 			</p>
-			<h4>3. Follow the installer</h4>
+			<h5 id="first_steps">4. First steps</h5>
 			<p>
-				The Zentrox installer will now start.<br />
-				Please follow the instructions in your terminal to finish the setup.
-			</p>
-			<h4>4. Start Zentrox server</h4>
-			<p>
-				The installer will provide you with another command.<br />
-				Please copy this command and save it somewhere where you can retrieve
-				it.<br />
-				You can then paste the command to your terminal and run it.<br />
-				In case you didn't get the command, here is it:<br />
-				<code>cd /home/YOUR_USERNAME/zentrox; node index.js</code>
-				<br />
-				Please replace "YOUR_USERNAME" with your actual username.<br />
-				If you do not know your username, you can get it by running the command
-				<code>whoami</code> in your terminal.
-				<br />
-				Your Zentrox instance can now be accessed on
-				<code>https://IP_ADDRESS_OF_YOUR_HOME_SERVER:3000</code><br />
-				Please replace "IP_ADDRESS_OF_YOUR_HOME_SERVER" with the actual IP
-				adress of your server.<br />
-				If you do not know this, you can use the command <code>ip addr</code>.
+			You can now access Zentrox under <code>https://IP-TO-YOUR-SERVER:3000/</code>.<br>
+				Using the username and password you configured in the installer, you can login and view the dashboard.<br>
+				From there, please follow the <a href="------------------------------">documentation</a>.
 			</p>
 		</dialog>
 
 		<!-- Content -->
-
+		<a href="https://github.com/wervice/zentrox"><button id="cash_grabber" title="Open Zentrox repository on GitHub">
+			<img src="../images/github.svg" alt="Official GitHub Logo Zentrox is not related to GitHub">
+		</button></a>
 		<span id="top_note" class="top_note">
 			Zentrox is a work in progress. Please do not treat the current state of
 			the project as the final result.
@@ -76,7 +101,7 @@
 			<br />
 			<span id="semi_hero_contents">
 				<h1>Zentrox</h1>
-				<h2>Easy home server admin and setup</h2>
+				<h2>Beginner friendly home server admin and setup</h2>
 				<small>Get started right from the terminal 👇</small>
 				<br /><br />
 				<button id="installer_command_copy" title="Click to copy">
@@ -89,15 +114,16 @@
 				</div>
 			</span>
 		</div>
-
+		
+		<h3>💡 What problem does Zentrox solve?</h3>
 		<p id="explanation">
-			Zentrox is an open-source project that enables server remote control and
-			home server setup through an intuitive web interface. It includes
-			integrated tools for easy management. With Zentrox, you can efficiently
-			manage and maintain your servers from any location.
+		Zentrox makes home server administration easy by providing tools and features that make sure you stay in control.<br>
+		It helps you with getting an overview of your system and managing what runs on it and when.<br>
+		You will not be met with a chaotic mess, but with a clean interface for your device.
 		</p>
 
 		<div id="content_block" class="content_block">
+			<h3>❓ Why should I choose Zentrox?</h3>
 			<span class="content_card">
 				<h4>Servers</h4>
 				<p>

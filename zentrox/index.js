@@ -8,21 +8,12 @@ function hideModal(id) {
 }
 
 function copyToClipboard(text) {
-	// Create a temporary textarea element to hold the text
 	const textarea = document.createElement("textarea");
 	textarea.value = text;
-
-	// Append the textarea element to the document body
 	document.body.appendChild(textarea);
-
-	// Select the text in the textarea
 	textarea.select();
 	textarea.setSelectionRange(0, 99999); // For mobile devices
-
-	// Execute the copy command
 	document.execCommand("copy");
-
-	// Remove the textarea element from the document body
 	document.body.removeChild(textarea);
 }
 
@@ -33,9 +24,7 @@ window.onload = () => {
 			copyToClipboard(
 				"curl -fsSL https://raw.githubusercontent.com/Wervice/zentrox/main/install.bash -o zentrox_installer.bash; bash zentrox_installer.bash",
 			);
-			document.getElementById("copied_what_now").open =
-				!document.getElementById("copied_what_now").open;
-			document.documentElement.style.overflowY = "hidden";
+		document.getElementById("installer_command_copy").innerHTML = "Copied to clipboard"	
 		});
 
 	document.getElementById("close_modal").addEventListener("click", () => {
