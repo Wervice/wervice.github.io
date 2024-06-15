@@ -6,52 +6,110 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>Zentrox Vault</title>
 		<link rel="stylesheet" href="/styles/blog.css" />
+		<script src="/scripts/highligt.js"></script>
+		<script>
+			hljs.highlightAll();
+			window.onload = () => {
+				document.getElementById("date_select").onchange = () => {
+					document.getElementById(document.getElementById("date_select").value).scrollIntoView()
+				}
+			}
+		</script>
+		<link rel="favicon" href="/images/favicon.ico" />
 	</head>
 	<body>
 		<a href="/blog"><button>Home</button></a>
-		<h1>Working on Zentrox vault</h1> <!-- <- I just like serif fonts, ok? -->
-		<small>Published 6/15/24</small>
+		<h1>Working on Zentrox vault</h1>
+		<!-- <- I just like serif fonts, ok? -->
+		<small
+			>📆 6/15/24 - 6/16/24 &bullet; 🔗
+			<a href="https://github.com/wervice/zentrox">Zentrox</a></small
+		>
 		<div id="content">
 			<h2>Intro</h2>
-			I am working on a project called <a href="https://github.com/wervice/zentrox">Zentrox</a> for a while now.<br>
-			This project lets you set up a server admin-dashboard on your home server, laptop...<br>
-			By now, some of the features are already partially done. i.e A FTP server, system stats overview,...<br>
-			Another part of Zentrox is "Vault".<br>
-			<br><h2>What is Vault</h2>
-			Vault will let you set up a simple but secure folder on your server.<br>
-			In this folder, you can store private files like photos, documents,...<br>
-			It is/will be integrated with Zentrox by default and place under Storage &gt; Vault.<br><br>
+			I have working on a project called
+			<a href="https://github.com/wervice/zentrox">Zentrox</a> (which you really
+			should star) for a while now.<br />
+			This project lets you set up a server admin-dashboard on your home server,
+			laptop...<br />
+			By now, some of the features are already partially done. i.e A FTP server,
+			system stats overview,...<br />
+			Another part of Zentrox is "Vault".<br />
+			<br />
+			<h2>What is Vault</h2>
+			Vault will let you set up a simple but secure folder on your server.<br />
+			In this folder, you can store private files like photos, documents,...<br />
+			It is/will be integrated with Zentrox by default and place under Storage
+			&gt; Vault.<br /><br />
 			<h2>How does it work</h2>
-			<i> ⚠️ This may all change 👇</i><br>
-			<h3>6/15/24</h3>
-			First of all, the user has to configure a key for Zentrox Vault.<br>
-			Vault will then take the key and perform hashing on it for 1000 times. That way, it will be very hard to brute force the password later,
-			as the hashing takes a bit of time and would slow brute forcing a lot.<br>
-			After the password is hashed, it is used as the key for a AES 256 GCM encryption.<br>
-			The encryption is applied to a gziped tar archive. By now, this only includes a single file with no relevant content.<br>
-			As soon as the encryption is finished, the result may look like this:<br>
-			<code class="multiline">
-				{"c":"18e2c33ccfa4817b4fd8b27131bdb9fb8aaccd12051655ba7e3481b1df7d6d8ce17ec1c09abfac0f4655b5cedba8ca04cada1e6f505d3d25586ebeb92120842780c0169ece821ef439f8905e2...","i":"fbabce2b28474067b08a75af06d1bced75e770c16c0e3ff787562b26d40e41da2240cda46276a6f7ae8ff47396cbed945573e7d960869bb957b8345316e3499602b0b1d83f71dd992de66c7a4bcb627041df078340638c12f9355499d2d3d48a","t":"e4f6ba670160923d7f8aa6543ad95ab1","s":"c661f93d7e09d68f3195c910e98a94c452e22156c491c0b2c8eeedd7898b6e59"}
-			</code>
+			<select id="date_select">
+				<option value="6-15-24">6/15/24</option>
+				<option value="6-16-24">6/16/24</option>
+			</select>
 			<br>
-			There is only one big problem with this. The file is <strong>way</strong> to big for a tar archive with a 4 letter string inside.<br>
-			So, lets explore the content of this file.<br>
-			We can see four different parts in this JSON: c, i, t and s.<br>
+			<i> ⚠️ This may all change 👇</i><br />
+			<h3 id="6-15-24">6/15/24</h3>
+			Firstly, the user has to configure a key for Zentrox Vault.<br />
+			Vault will then take the key and perform hashing on it for 1000 times.
+			That way, it will be very hard to brute force the password later, as the
+			hashing takes a bit of time and would slow brute forcing a lot.<br />
+			After the password is hashed, it is used as the key for a AES 256 GCM
+			encryption.<br />
+			The encryption is applied to a gziped tar archive. By now, this only
+			includes a single file with no relevant content.<br />
+			As soon as the encryption is finished, the result may look like this:<br />
+			<pre><code class="language-json">{
+  "c": "18e2c33ccfa4817b4fd8b27131bdb9fb8aaccd12051655ba7e3481b1df7d6d8ce17ec1c09abfac0f4655b5cedba8ca04cada1e6f505d3d25586ebeb92120842780c0169ece821ef439f8905e2...",
+  "i": "fbabce2b28474067b08a75af06d1bced75e770c16c0e3ff787562b26d40e41da2240cda46276a6f7ae8ff47396cbed945573e7d960869bb957b8345316e3499602b0b1d83f71dd992de66c7a4bcb627041df078340638c12f9355499d2d3d48a",
+  "t": "e4f6ba670160923d7f8aa6543ad95ab1",
+  "s": "c661f93d7e09d68f3195c910e98a94c452e22156c491c0b2c8eeedd7898b6e59"
+}</code></pre>
+			<br />
+			There is only one big problem with this. The file is
+			<strong>way</strong> to big for a tar archive with a 4 letter string
+			inside.<br />
+			So, lets explore the content of this file.<br />
+			We can see four different parts in this JSON: c, i, t and s.<br />
 			<table>
-				<tr><td>c</td><td>Ciphertext</td></tr>
-				<tr><td>i</td><td>Initialization Vector</td<</tr>
-				<tr><td>t</td><td>Tag</td></tr>
-				<tr><td>s</td><td>Salt</td></tr>
+				<tr>
+					<td>c</td>
+					<td>Ciphertext</td>
+				</tr>
+				<tr>
+					<td>i</td>
+					<td>Initialization Vector</td>
+				</tr>
+				<tr>
+					<td>t</td>
+					<td>Tag</td>
+				</tr>
+				<tr>
+					<td>s</td>
+					<td>Salt</td>
+				</tr>
 			</table>
-			The ciphertext contains the actual encrypted data. It may vary in size a lot.<br>
-			The <a href="https://en.wikipedia.org/wiki/Initialization_vector">IV</a> is used for AES encryption and stays around 96 bits.<br>
-			The tag is used to check if the decrypted data can be authenticated. It should not vary in size a lot.<br>
-			Lastly the salt is used to hash the key one last time, thus making the vault resistant agains <a href="https://en.wikipedia.org/wiki/Rainbow_table">rainbow tables</a>.
-			<br>
-			<br>
-			The problem with all of this is, that the data is stored in <b>hexadecimal</b> 🤦. Yes, Binary data is converted into Hex, so I can store it in my JSON.
-			<br>
-			This means, that the next thing I will have to do is to use a <code>Buffer</code> instead of JSON.
+			The ciphertext contains the actual encrypted data. It may vary in size a
+			lot.<br />
+			The
+			<a href="https://en.wikipedia.org/wiki/Initialization_vector">IV</a> is
+			used for AES encryption and stays around 96 bits.<br />
+			The tag is used to check if the decrypted data can be authenticated. It
+			should not vary in size a lot.<br />
+			Lastly the salt is used to hash the key one last time, thus making the
+			vault resistant agains
+			<a href="https://en.wikipedia.org/wiki/Rainbow_table">rainbow tables</a>.
+			<br />
+			<br />
+			The problem with all of this is, that the data is stored in
+			<b>hexadecimal</b> 🤦. Yes, Binary data is converted into Hex, so I can
+			store it in my JSON.
+			<br />
+			This means, that the next thing I will have to do is to use a
+			<code>Buffer</code> instead of JSON.
+			<h3 id="6-16-24">6/16/24</h3>
+			After I replaced the JSON with a Buffer and am not storing binary as hex
+			data anymore, the encrypted data is now half as big.<br />
+			The next part of Vault is adding support for uploading and downloading files.
 		</div>
 	</body>
 </html>
