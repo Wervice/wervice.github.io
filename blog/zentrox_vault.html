@@ -16,6 +16,7 @@
 			}
 		</script>
 		<link rel="favicon" href="/images/favicon.ico" />
+		<meta property="og:image" content="/images/zentrox_vault.png" />
 	</head>
 	<body>
 		<a href="/blog"><button>Home</button></a>
@@ -107,9 +108,25 @@
 			This means, that the next thing I will have to do is to use a
 			<code>Buffer</code> instead of JSON.
 			<h3 id="6-16-24">6/16/24</h3>
+			<h4>Part 1</h4>
 			After I replaced the JSON with a Buffer and am not storing binary as hex
 			data anymore, the encrypted data is now half as big.<br />
-			The next part of Vault is adding support for uploading and downloading files.
+			The next part of Vault is adding support for uploading and downloading files.<br>
+			<br>
+			<h4>Part 2</h4>
+			I added a basic file overview. This sounds easier than it actually is.<br>
+			There were some problems with the FE (it has to be easy to use...) and the BE.<br>
+			On the back-end site I encountered some problems with listing the files in the terminal.<br>
+			Next thing is to add support for uploading files and viewing the files.<br>
+			The encrypted file looks like that now btw.:<br>
+			<pre><code>
+			*0],@6VPMK/eto^=RˈvB    Rhg#N_ZplV{6}dm9UUg4$MdL'Q}d9B?0> mM"X¥=7=;
+                                                                   6H`g(?DԚw.y貚TjJ_w=rPX5MAYky
+ǧC旜O2{Aj0;ǳ}I7[]nWIcy[j}"bZ1x"@v
+			</code></pre>
+
+			<br>
+			🤓👆I resampled the CSS class I use for file manager for the vault file manager. 
 		</div>
 	</body>
 </html>
