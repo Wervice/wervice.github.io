@@ -11,9 +11,11 @@
 			hljs.highlightAll();
 			window.onload = () => {
 				document.getElementById("date_select").onchange = () => {
-					document.getElementById(document.getElementById("date_select").value).scrollIntoView()
-				}
-			}
+					document
+						.getElementById(document.getElementById("date_select").value)
+						.scrollIntoView();
+				};
+			};
 		</script>
 		<link rel="favicon" href="/images/favicon.ico" />
 		<meta property="og:image" content="/images/zentrox_vault.png" />
@@ -28,7 +30,7 @@
 		>
 		<div id="content">
 			<h2>Intro</h2>
-			I have working on a project called
+			I have been working on a project called
 			<a href="https://github.com/wervice/zentrox">Zentrox</a> (which you really
 			should star) for a while now.<br />
 			This project lets you set up a server admin-dashboard on your home server,
@@ -48,7 +50,7 @@
 				<option value="6-16-24">6/16/24</option>
 				<option value="6-17-24">6/17/24</option>
 			</select>
-			<br>
+			<br />
 			<i> ⚠️ This may all change 👇</i><br />
 			<h3 id="6-15-24">6/15/24</h3>
 			Firstly, the user has to configure a key for Zentrox Vault.<br />
@@ -90,6 +92,7 @@
 					<td>Salt</td>
 				</tr>
 			</table>
+
 			The ciphertext contains the actual encrypted data. It may vary in size a
 			lot.<br />
 			The
@@ -97,13 +100,13 @@
 			used for AES encryption and stays around 96 bits.<br />
 			The tag is used to check if the decrypted data can be authenticated. It
 			should not vary in size a lot.<br />
-			Lastly the salt is used to hash the key one last time, thus making the
-			vault resistant agains
+			Lastly, the salt is used to hash the key one last time, thus making the
+			vault resistant against
 			<a href="https://en.wikipedia.org/wiki/Rainbow_table">rainbow tables</a>.
 			<br />
 			<br />
 			The problem with all of this is, that the data is stored in
-			<b>hexadecimal</b> 🤦. Yes, Binary data is converted into Hex, so I can
+			<b>hexadecimal</b> 🤦. Yes, binary data is converted into hex, so I can
 			store it in my JSON.
 			<br />
 			This means, that the next thing I will have to do is to use a
@@ -112,22 +115,26 @@
 			<h4>Part 1</h4>
 			After I replaced the JSON with a Buffer and am not storing binary as hex
 			data anymore, the encrypted data is now half as big.<br />
-			The next part of Vault is adding support for uploading and downloading files.<br>
-			<br>
+			The next part of Vault is adding support for uploading and downloading
+			files.<br />
+			<br />
 			<h4>Part 2</h4>
-			I added a basic file overview. This sounds easier than it actually is.<br>
-			There were some problems with the FE (it has to be easy to use...) and the BE.<br>
-			On the back-end site I encountered some problems with listing the files in the terminal.<br>
-			Next thing is to add support for uploading files and viewing the files.<br>
-			The encrypted file looks like that now btw.:<br>
+			I added a basic file overview. This sounds easier than it actually is.<br />
+			There were some problems with the FE (it has to be easy to use...) and the
+			BE.<br />
+			On the back-end side I encountered some problems with listing the files in
+			the terminal.<br />
+			Next thing is to add support for uploading files and viewing the files.<br />
+			The encrypted file looks like that now btw.:<br />
 			<pre><code>
 			*0],@6VPMK/eto^=RˈvB    Rhg#N_ZplV{6}dm9UUg4$MdL'Q}d9B?0> mM"X¥=7=;
                                                                    6H`g(?DԚw.y貚TjJ_w=rPX5MAYky
 ǧC旜O2{Aj0;ǳ}I7[]nWIcy[j}"bZ1x"@v
 			</code></pre>
 
-			<br>
-			🤓👆I resampled the CSS class I use for file manager for the vault file manager.
+			<br />
+			🤓👆I resampled the CSS class I use for file manager for the vault file
+			manager.
 			<h3 id="6-17-24">6/17/24</h3>
 			The code for downloading a file is done. It works like this:
 			<ol>
@@ -139,10 +146,13 @@
 				<li>Temp file get overwritten 3 times with random data</li>
 				<li>Data is sent to the frontend and downloaded from there</li>
 			</ol>
-			<em>There belongs a "The" in front of all of these points, I know</em>
-			Now, that the FE has a nice loader and smooth animations, I will continue with addind support for uploading files.
-			<br>
-			If anyone wonders, this is the code to send the data to the frontend and download it:<br>
+			<em>There belongs a "The" in front of all of these points, I know.</em
+			><br />
+			Now, that the FE has a nice loader and smooth animations, I will continue
+			with adding support for uploading files.
+			<br />
+			If anyone wonders, this is the code I use to send the data to the frontend
+			and download it:<br />
 			<pre class="language-css"><code>res.writeHead(200, {
   "Content-Type": "application/binary",
   "Content-disposition": "attachment;filename=" + path.basename(fpath),
