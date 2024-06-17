@@ -23,7 +23,7 @@
 		<h1>Working on Zentrox vault</h1>
 		<!-- <- I just like serif fonts, ok? -->
 		<small
-			>📆 6/15/24 - 6/16/24 &bullet; 🔗
+			>📆 6/15/24 - 6/17/24 &bullet; 🔗
 			<a href="https://github.com/wervice/zentrox">Zentrox</a></small
 		>
 		<div id="content">
@@ -46,6 +46,7 @@
 			<select id="date_select">
 				<option value="6-15-24">6/15/24</option>
 				<option value="6-16-24">6/16/24</option>
+				<option value="6-17-24">6/17/24</option>
 			</select>
 			<br>
 			<i> ⚠️ This may all change 👇</i><br />
@@ -126,7 +127,28 @@
 			</code></pre>
 
 			<br>
-			🤓👆I resampled the CSS class I use for file manager for the vault file manager. 
+			🤓👆I resampled the CSS class I use for file manager for the vault file manager.
+			<h3 id="6-17-24">6/17/24</h3>
+			The code for downloading a file is done. It works like this:
+			<ol>
+				<li>User requests a file</li>
+				<li>Vault is decrypted</li>
+				<li>File is extracted from the archive to a temp folder</li>
+				<li>Vault is encrypted again</li>
+				<li>Temp file is stored in a variable</li>
+				<li>Temp file get overwritten 3 times with random data</li>
+				<li>Data is sent to the frontend and downloaded from there</li>
+			</ol>
+			<em>There belongs a "The" in front of all of these points, I know</em>
+			Now, that the FE has a nice loader and smooth animations, I will continue with addind support for uploading files.
+			<br>
+			If anyone wonders, this is the code to send the data to the frontend and download it:<br>
+			<pre class="language-css"><code>res.writeHead(200, {
+  "Content-Type": "application/binary",
+  "Content-disposition": "attachment;filename=" + path.basename(fpath),
+  "Content-Length": data.length,
+});
+res.end(Buffer.from(data, "binary"));</code></pre>
 		</div>
 	</body>
 </html>
