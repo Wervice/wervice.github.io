@@ -49,6 +49,7 @@
 				<option value="6-15-24">6/15/24</option>
 				<option value="6-16-24">6/16/24</option>
 				<option value="6-17-24">6/17/24</option>
+				<option value="6-19-24">6/19/24</option>
 			</select>
 			<br />
 			<i> ⚠️ This may all change 👇</i><br />
@@ -159,6 +160,27 @@
   "Content-Length": data.length,
 });
 res.end(Buffer.from(data, "binary"));</code></pre>
+			<h3 id="6-19-24">6/19/24</h3>
+Today, I added support for uploading files to Vault. It took me way too long to figure out how to do proper file uploads to Express.<br>
+In the end, I settled with using <code>multipart/form-data</code> and <code>multiparty</code> for handling the upload.<br>
+On the way to the upload, I also fixed some bugs like race conditions and made sure that the vault would be safely created, locked, and unlocked.<br>
+This part is handled using some <code>try catch</code> tags.<br>
+<br>
+The upload works like this:
+<ol>
+    <li>The user opens the vault and the key gets stored into the <code>sessionStorage</code> on the client side for further use.</li>
+    <li>The upload picker is selected and a file is opened.</li>
+    <li>The file gets put into a <code>FormData</code> object together with the cached key and some information.</li>
+    <li>The server parses the file and copies it to a second tmp location.</li>
+    <li>The file is added to the vault.</li>
+    <li>Every temp file is deleted and overwritten 3 times.</li>
+</ol>
+Some other "happy little undocumented features" aka bugs I encountered were checking that a file does not have the same name as a file that is already in the vault.<br>
+Sadly, I had to stop compressing the files for now because you can't add files to a compressed tar file.<br>
+This means that the next thing on the list is adding support for renaming, deleting, and compressing the file.<br>
+<br>
+In the few days I did not work on this, I was fixing some security and DoS bugs.<br>
+Please star the project here: <a href="https://github.com/wervice/zentrox">Repo</a>
 		</div>
 	</body>
 </html>
