@@ -25,7 +25,7 @@
 		<h1>Working on Zentrox vault</h1>
 		<!-- <- I just like serif fonts, ok? -->
 		<small
-			>📆 6/15/24 - 6/17/24 &bullet; 🔗
+			>📆 6/15/24 - 6/20/24 &bullet; 🔗
 			<a href="https://github.com/wervice/zentrox">Zentrox</a></small
 		>
 		<div id="content">
@@ -50,6 +50,7 @@
 				<option value="6-16-24">6/16/24</option>
 				<option value="6-17-24">6/17/24</option>
 				<option value="6-19-24">6/19/24</option>
+				<option value="6-20-24">6/20/24</option>
 			</select>
 			<br />
 			<i> ⚠️ This may all change 👇</i><br />
@@ -161,26 +162,60 @@
 });
 res.end(Buffer.from(data, "binary"));</code></pre>
 			<h3 id="6-19-24">6/19/24</h3>
-Today, I added support for uploading files to Vault. It took me way too long to figure out how to do proper file uploads to Express.<br>
-In the end, I settled with using <code>multipart/form-data</code> and <code>multiparty</code> for handling the upload.<br>
-On the way to the upload, I also fixed some bugs like race conditions and made sure that the vault would be safely created, locked, and unlocked.<br>
-This part is handled using some <code>try catch</code> tags.<br>
-<br>
-The upload works like this:
-<ol>
-    <li>The user opens the vault and the key gets stored into the <code>sessionStorage</code> on the client side for further use.</li>
-    <li>The upload picker is selected and a file is opened.</li>
-    <li>The file gets put into a <code>FormData</code> object together with the cached key and some information.</li>
-    <li>The server parses the file and copies it to a second tmp location.</li>
-    <li>The file is added to the vault.</li>
-    <li>Every temp file is deleted and overwritten 3 times.</li>
-</ol>
-Some other "happy little undocumented features" aka bugs I encountered were checking that a file does not have the same name as a file that is already in the vault.<br>
-Sadly, I had to stop compressing the files for now because you can't add files to a compressed tar file.<br>
-This means that the next thing on the list is adding support for renaming, deleting, and compressing the file.<br>
-<br>
-In the few days I did not work on this, I was fixing some security and DoS bugs.<br>
-Please star the project here: <a href="https://github.com/wervice/zentrox">Repo</a>
+			Today, I added support for uploading files to Vault. It took me way too
+			long to figure out how to do proper file uploads to Express.<br />
+			In the end, I settled with using <code>multipart/form-data</code> and
+			<code>multiparty</code> for handling the upload.<br />
+			On the way to the upload, I also fixed some bugs like race conditions and
+			made sure that the vault would be safely created, locked, and unlocked.<br />
+			This part is handled using some <code>try catch</code> tags.<br />
+			<br />
+			The upload works like this:
+			<ol>
+				<li>
+					The user opens the vault and the key gets stored into the
+					<code>sessionStorage</code> on the client side for further use.
+				</li>
+				<li>The upload picker is selected and a file is opened.</li>
+				<li>
+					The file gets put into a <code>FormData</code> object together with
+					the cached key and some information.
+				</li>
+				<li>
+					The server parses the file and copies it to a second tmp location.
+				</li>
+				<li>The file is added to the vault.</li>
+				<li>Every temp file is deleted and overwritten 3 times.</li>
+			</ol>
+			Some other "happy little undocumented features" aka bugs I encountered
+			were checking that a file does not have the same name as a file that is
+			already in the vault.<br />
+			Sadly, I had to stop compressing the files for now because you can't add
+			files to a compressed tar file.<br />
+			This means that the next thing on the list is adding support for renaming,
+			deleting, and compressing the file.<br />
+			<br />
+			In the few days I did not work on this, I was fixing some security and DoS
+			bugs.<br />
+			Please star the project here:
+			<a href="https://github.com/wervice/zentrox">Repo</a>
+			<h3 id="6-20-24">6/20/24</h3>
+			Today, I wrote file deletion support for Zentrox Vault.<br />
+			This works by unpacking the vault, removing the file, and packing it
+			again.<br />
+			In addition to that, I started working on the backup feature for
+			Zentrox.<br />
+			In my opinion, Vault is nice for protecting your data from being stolen,
+			but not from being overwritten or broken.<br />
+			Therefore, I am planning, but cannot promise, that I will implement Google
+			Drive connection.<br />
+			To connect with Drive, I am trying to use
+			<a href="https://developers.google.com/drive/api/guides/about-sdk"
+				>Google Drive API</a
+			>. <br /><br />
+			The next thing on the agenda is adding folders and finishing the
+			backup.<br />
+			I also changed the frontend a bit and started cleaning up the code.
 		</div>
 	</body>
 </html>
