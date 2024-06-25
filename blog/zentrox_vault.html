@@ -51,6 +51,7 @@
 				<option value="6-17-24">6/17/24</option>
 				<option value="6-19-24">6/19/24</option>
 				<option value="6-20-24">6/20/24</option>
+				<option value="6-24-24">6/24/24</option>
 			</select>
 			<br />
 			<i> ⚠️ This may all change 👇</i><br />
@@ -216,6 +217,43 @@ res.end(Buffer.from(data, "binary"));</code></pre>
 			The next thing on the agenda is adding folders and finishing the
 			backup.<br />
 			I also changed the frontend a bit and started cleaning up the code.
+			<h3 id="6-24-24">6/24/24</h3>
+
+			I worked on the Vault's virtual file system (aka v²fs) the last few
+			days.<br />
+			It allows the user to create files and folders and delete files.<br />
+			The system is built around a tar archive with compressed files and AES
+			encryption.<br />
+			The user can unlock it and from there manage their files.<br />
+			The backup feature announced on 6/20/24 is currently just a button that
+			lets you download<br />
+			the entire vault as an encrypted blob. This is far from the experience I
+			want to create, but<br />
+			for now I want to take a small break from Vault and v²fs for the next few
+			days.<br />
+			<br />
+			I also have started the development of a client for Vault that is written
+			in Go.<br />
+			<details>
+				<summary>Why another project?</summary>
+				I have started this project because I really want to learn something
+				more than<br />
+				just the next cool JS loop feature.<br />
+				In addition to the Go-based client, I also started something else:
+				Infothing.<br />
+				I do not think that I will release this; it is just a small project that
+				lets you view information<br />
+				about <i>put cool information here</i>. It is mainly for learning React
+				since I actually have avoided<br />
+				big frameworks like React, Vue, or Angular until now.
+			</details>
+			In the next few days, I am looking forward to trying something new like
+			the SMB implementation for Zentrox<br />
+			or extending the file manager.<br />
+			Feel free to vote
+			<a href="https://fosstodon.org/@wervice/112673018892215713">here</a> about
+			what I do next.<br />
+			<i>Can't promise I can/will actually do this, though.</i>
 		</div>
 	</body>
 </html>
