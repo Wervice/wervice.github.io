@@ -1,12 +1,14 @@
 function show_relations(lang) {
 	var related = {
-		javascript: ["css", "html", "php", "express", "nodejs"],
+		javascript: ["css", "html", "php", "express", "nodejs", "react"],
+		react: ["javascript", "expressjs", "html", "css"],
+		tailwind: ["react", "css"],
 		html: ["css", "javascript", "php"],
 		css: ["html", "javascript", "php"],
 		python: ["flask"],
 		c: ["linux"],
 		php: ["html", "css", "javascript"],
-		express: ["javascript", "nodejs"],
+		express: ["javascript", "nodejs", "react"],
 		flask: ["python"],
 		nodejs: ["javascript", "express"],
 		linux: ["c"],
@@ -14,6 +16,7 @@ function show_relations(lang) {
 		figma: ["gimp", "inkscape"],
 		gimp: ["figma", "inkscape"],
 		git: [],
+		go: []
 	}[lang];
 	if (related == null) return;
 	for (element of document.querySelectorAll("#me button")) {
