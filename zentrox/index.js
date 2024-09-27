@@ -1,54 +1,38 @@
-function hideModal(id) {
-	document.getElementById(id).classList.toggle("popin");
-	setTimeout(() => {
-		document.getElementById(id).open = false;
-		document.documentElement.style.overflowY = "";
-		document.getElementById(id).classList.toggle("popin");
-	}, 240);
+function showScreenshot(imageSrc) {
+	var modal = document.getElementById("screenshotModal");
+	var image = document.querySelector("#screenshotModal img");
+	modal.hidden = false;
+	image.src = imageSrc;
 }
 
-function copyToClipboard(text) {
-	const textarea = document.createElement("textarea");
-	textarea.value = text;
-	document.body.appendChild(textarea);
-	textarea.select();
-	textarea.setSelectionRange(0, 99999); // For mobile devices
-	document.execCommand("copy");
-	document.body.removeChild(textarea);
-}
+window.addEventListener("load", () => {
+	var modal = document.getElementById("screenshotModal");
+	var baticon = document.getElementById("bat");
 
-window.onload = () => {
-	document
-		.getElementById("installer_command_copy")
-		.addEventListener("click", () => {
-			copyToClipboard(
-				"curl -fsSL https://raw.githubusercontent.com/Wervice/zentrox/main/install.bash -o zentrox_installer.bash; bash zentrox_installer.bash",
-			);
-		document.getElementById("installer_command_copy").innerHTML = "Copied to clipboard"	
-		});
+	let batSources = ["bat_low.svg", "bat_mid.svg", "bat_full.svg"];
+	let batI = 0;
+	let batGI = 0;
 
-	document.getElementById("close_modal").addEventListener("click", () => {
-		hideModal("copied_what_now");
+	setInterval(() => {
+		if (batGI > 2) {
+			return
+		}
+		baticon.src = batSources[batI];
+		batI++;
+		if (batI > 2) {
+			batI = 0;
+			batGI++
+		}
+	}, 500)
+
+	modal.addEventListener("click", () => {
+		modal.hidden = true;
 	});
 
 	window.addEventListener("keydown", (key) => {
-		console.log(key);
-		if (key.key === "Escape") {
-			hideModal("copied_what_now");
+		if (key.key == "Escape") {
+			var modal = document.getElementById("screenshotModal");
+			modal.hidden = true;
 		}
 	});
-
-	showFlickeringText = true
-	setInterval(() => {
-	let zentroxWordsI = 0
-	let zentroxWords = ""
-	while (zentroxWordsI != 1000) {
-		zentroxWords += ["server", "remote", "admin", "control", "resources", "open source", "packages", "connections", "tasks"][Math.floor(Math.random()*10)]+" "
-		zentroxWordsI++;
-	}
-		if (showFlickeringText) {
-			document.getElementById("text_wallpaper").innerHTML = zentroxWords}}, 100)
-	setTimeout(() => {
-		showFlickeringText = false
-	}, 1500)
-};
+});
