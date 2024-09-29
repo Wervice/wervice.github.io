@@ -13,6 +13,15 @@
 	src: url("../fonts/JetBrainsMono.ttf");
 }
 
+@keyframes fade {
+	0% {
+		opacity: 0%;
+	}
+	100% {
+		opacity: 100%;
+	}
+}
+
 ::selection {
 	background-color: #94e2d5;
 	color: black;
@@ -64,6 +73,26 @@ body {
 	background-color: #f0c6c611 !important;
 }
 
+div.delay_1 {
+	animation-duration: 100ms;
+}
+
+div.delay_2 {
+	animation-duration: 200ms;
+}
+
+div.delay_3 {
+	animation-duration: 400ms;
+}
+
+div.delay_4 {
+	animation-duration: 800ms;
+}
+
+div.delay_5 {
+	animation-duration: 1600ms;
+}
+
 div.box {
 	margin-top: 1em;
 	margin-bottom: 1em;
@@ -71,6 +100,7 @@ div.box {
 	border-radius: 2em;
 	background: #181825;
 	flex: 1;
+	animation-name: fade;
 }
 
 div.full {
