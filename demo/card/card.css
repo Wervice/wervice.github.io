@@ -1,0 +1,118 @@
+body {
+	background-color: #d7d2e8;
+}
+
+#card {
+	background-color: #FEFFFF;
+	border-radius: 60px;
+	width: 438px;
+	height: 581px;
+	display: block;
+	padding: 43px;
+	border: solid white 1px;
+	overflow: hidden;
+	text-overflow: clip;
+}
+
+.high-blur {
+	filter: blur(100px);
+}
+
+#purple-background-light {
+	background: #FF006B33;
+	display: block;
+	width: 400px;
+	height: 400px;
+	position: relative;
+	top: -400px;
+	left: -100px;
+}
+
+#grey-background-light {
+	background: #8C95BC77;
+	display: block;
+	width: 300px;
+	height: 300px;
+	position: relative;
+	bottom: -300px;
+	right: -300px;
+}
+
+#top-contents {
+	position: fixed;
+	top: 50px;
+	left: 50px;
+	width: calc(438px);
+	height: calc(581px + 45px);
+	text-align: center;
+}
+
+#information-text {
+	position: absolute;
+	bottom: 40px;
+	background-color: red;
+	display: block;
+	width: calc(100% - 30px);
+	padding: 10px;
+	padding-top: 20px;
+	padding-bottom: 20px;
+	padding-left: 20px;
+	border-radius: 30px;
+	background: linear-gradient(360deg, rgba(226,225,239,0.5) 20%, rgba(235,235,247,1) 80%);
+	border: 1px solid white;
+	box-shadow: 0px 6px 16px #00085233, 0px 2px 4px #00085222;
+	font-family: "Poppins", "Inter", sans-serif;
+	text-align: left;
+	transition: ease-in-out 0.25s;
+}
+
+#information-text:hover {
+	bottom: 45px;
+	transform: scale(1.05);
+	box-shadow: 0px 8px 32px #00085233, 0px 4px 8px #00085222;
+}
+
+strong {
+	display: block;
+}
+
+a {
+	color: black;
+}
+
+#outer-cirlce {
+	border-radius: 200px;
+	height: 300px;
+	width: 300px;
+	background-color: #ECDAE8;
+	display: block;
+	margin: 0 auto;
+	border: 2px solid white;
+	box-shadow: 0px 8px 64px #24004833, 0px -15px 20px #ffffff11 inset;
+}
+
+#inner-circle {
+	margin: 75px auto;
+	border-radius: 75px;
+	height: 150px;
+	width: 150px;
+	display: block;
+	border: 2px solid #ffffff77;
+	background-position: center;
+	box-shadow: 0px 0px 40px #24004844, 0px 15px 30px #ffffff22 inset, 0px -15px 30px #00000033 inset, 0px 0px 50px #ff00ff44;
+	
+	background-image: url(inner.svg);
+
+	img {
+		height: 80px;
+		margin: calc(50% - 40px) auto;
+		display: block;
+		filter: invert();
+		opacity: 60%;
+	}
+}
+
+.credit {
+	padding: 10px;
+	font-family: sans-serif;
+}
